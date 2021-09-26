@@ -26,8 +26,8 @@ module.exports = {
 
         menuBg: "rgba(80, 71, 70, 0.9)",
         // aliases
-        bg: "$lightGray",
-        text: "$lightBrown",
+        bg: "#F2F2F2", // lightGray
+        text: "#504746", // lightBrown
       },
       fontSize: {
         xxs: ".625rem", // 10px
