@@ -5,5 +5,5 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
-  "cSpell.words": ["geikouten"]
+  "cSpell.words": ["geikouten", "clsx"]
 }
