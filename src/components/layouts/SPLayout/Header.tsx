@@ -3,10 +3,11 @@ import Link from "next/link";
 import type { ComponentProps, VFC } from "react";
 import React, { useState } from "react";
 
-import { HamburgerMenu, SiteLogo } from "@/components/basics";
 import useBackfaceFixed from "@/hooks/useBackfaceFixed";
 import useOnScrolling from "@/hooks/useOnScrolling";
 
+import { HamburgerMenu } from "./HamburgerMenu";
+import { SiteLogo } from "./SiteLogo";
 // import GlobalNavModal from "./GlobalNavModal";
 
 export const Header: VFC<ComponentProps<"header">> = ({ className, ...attrs }) => {
