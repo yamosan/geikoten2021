@@ -6,9 +6,9 @@ import React, { useState } from "react";
 import useBackfaceFixed from "@/hooks/useBackfaceFixed";
 import useOnScrolling from "@/hooks/useOnScrolling";
 
+import { GlobalNavModal } from "./GlobalNavModal";
 import { HamburgerMenu } from "./HamburgerMenu";
 import { SiteLogo } from "./SiteLogo";
-// import GlobalNavModal from "./GlobalNavModal";
 
 export const Header: VFC<ComponentProps<"header">> = ({ className, ...attrs }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,12 +40,11 @@ export const Header: VFC<ComponentProps<"header">> = ({ className, ...attrs }) =
                 "pointer-events-none": !isOpen,
               },
               transition,
-              "fixed inset-0 bg-primary"
+              "fixed inset-0 bg-green-10"
             )}
           >
-            {/* <GlobalNavModal onLinkClick={toggleOpen} isOpen={isOpen} /> */}
+            <GlobalNavModal onLinkClick={toggleOpen} isOpen={isOpen} />
           </div>
-
           <HamburgerMenu
             transition={transition}
             isOpen={isOpen}

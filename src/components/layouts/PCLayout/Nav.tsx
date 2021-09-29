@@ -9,7 +9,7 @@ export const Nav: VFC = () => {
   const router = useRouter();
 
   return (
-    <ul className="pl-8 flex flex-col space-y-6">
+    <ul className="flex flex-col pl-8 space-y-6">
       {NAV_LINKS.map((item) => (
         <li key={item.id}>
           <Link href={item.path}>
@@ -20,10 +20,10 @@ export const Nav: VFC = () => {
                     "border-green-10": item.activePatterns.includes(router.asPath),
                   })}
                 >
-                  <p className="text-white leading-none text-2xl font-genuine transform duration-300 group-hover:scale-90">
+                  <p className="text-2xl leading-none text-white duration-300 transform font-genuine group-hover:scale-90">
                     {item.text}
                   </p>
-                  <p className="text-white leading-none text-xxs font-genuine mt-1 transform duration-300 group-hover:scale-90">
+                  <p className="mt-1 leading-none text-white duration-300 transform text-xxs font-genuine group-hover:scale-90">
                     {item.subText}
                   </p>
                 </div>

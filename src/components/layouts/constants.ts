@@ -1,4 +1,4 @@
-type TLink = {
+export type TLink = {
   id: string;
   text: string;
   subText: string;
