@@ -14,3 +14,5 @@ export const NAV_LINKS: TLink[] = [
 ];
 
 export const SIDE_NAV_WIDTH = "176px";
+
+export const HEADER_HEIGHT = "64px";

@@ -15,7 +15,7 @@ export const VisitorCounter: VFC<Props> = ({ count, size = "sm" }) => {
       : new Array(MAX_DIGIT).fill("9");
 
   return (
-    <div className="flex items-center overflow-hidden border-2 rounded-md text-text filter drop-shadow-solid bg-green-10">
+    <div className="flex items-center overflow-hidden border-2 rounded-md text-text filter drop-shadow-solid bg-green-10 w-max">
       <div
         className={clsx("font-bold", {
           "text-xs pl-2 pr-1": size === "sm",
