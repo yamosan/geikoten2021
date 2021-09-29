@@ -1,4 +1,5 @@
-import type { VFC } from "react";
+import clsx from "clsx";
+import type { ComponentProps, VFC } from "react";
 
 import { ExternalLink } from "@/components/basics/ExternalLink";
 import Image from "@/components/basics/Image";
@@ -8,9 +9,9 @@ import { INSTAGRAM_URL, TWITTER_URL } from "@/constants/urls";
 
 import { Nav } from "./Nav";
 
-export const Header: VFC = () => {
+export const Header: VFC<ComponentProps<"header">> = ({ className, ...attrs }) => {
   return (
-    <header className="py-16 flex flex-col space-y-10">
+    <header className={clsx("flex flex-col py-16 space-y-10", className)} {...attrs}>
       <div className="mx-auto">
         <Image src="/images/logo.png" alt="logo" width={123} height={116} />
       </div>

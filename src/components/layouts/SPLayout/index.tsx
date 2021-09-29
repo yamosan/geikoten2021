@@ -9,9 +9,9 @@ type Props = {
 export const SPLayout: VFC<Props> = ({ children }) => {
   return (
     <>
-      <Header />
+      <Header className="fixed top-0 left-0 z-50" />
       <div className="flex flex-col justify-between w-full min-h-screen">
-        <div>{children}</div>
+        <main className="bg-bg">{children}</main>
         <Footer />
       </div>
     </>

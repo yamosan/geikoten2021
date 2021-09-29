@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import Link from "next/link";
-import React, { useState, VFC } from "react";
+import type { ComponentProps, VFC } from "react";
+import React, { useState } from "react";
 
 import { HamburgerMenu, SiteLogo } from "@/components/basics";
 import useBackfaceFixed from "@/hooks/useBackfaceFixed";
@@ -8,7 +9,7 @@ import useOnScrolling from "@/hooks/useOnScrolling";
 
 // import GlobalNavModal from "./GlobalNavModal";
 
-export const Header: VFC = () => {
+export const Header: VFC<ComponentProps<"header">> = ({ className, ...attrs }) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleOpen = () => {
     setIsOpen((state) => !state);
@@ -19,7 +20,10 @@ export const Header: VFC = () => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 z-50 flex items-center justify-between w-full h-16 px-4 bg-transparent">
+      <header
+        className={clsx("flex items-center justify-between w-full h-16 px-4 bg-transparent", className)}
+        {...attrs}
+      >
         <div className="z-50">
           <Link href="/">
             <a className="flex items-center">
