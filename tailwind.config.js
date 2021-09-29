@@ -22,6 +22,7 @@ module.exports = {
       gray: "#BFBFBF",
       lightGray: "#F2F2F2",
       white: "#FFFFFF",
+      current: "currentColor",
 
       menuBg: "rgba(80, 71, 70, 0.9)",
       // aliases
