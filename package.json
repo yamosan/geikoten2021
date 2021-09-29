@@ -11,8 +11,7 @@
     "lint:prettier": "prettier --check .",
     "fix": "run-s -l -c fix:eslint fix:prettier",
     "fix:eslint": "eslint --cache --fix .",
-    "fix:prettier": "prettier --write .",
-    "prepare": "husky install"
+    "fix:prettier": "prettier --write ."
   },
   "dependencies": {
     "next": "11.1.2",
