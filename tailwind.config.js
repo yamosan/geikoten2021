@@ -43,6 +43,9 @@ module.exports = {
       fontSize: {
         xxs: ".625rem", // 10px
       },
+      dropShadow: {
+        solid: "2px 2px 0px currentColor",
+      },
     },
   },
   variants: {
