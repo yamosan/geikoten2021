@@ -10,7 +10,7 @@ export const SiteLogo: VFC<Props> = (props) => {
   const classes = clsx(
     {
       "text-white": props.color === "white",
-      "text-black": props.color === "black",
+      "text-brown": props.color === "black",
     },
     props.className
   );

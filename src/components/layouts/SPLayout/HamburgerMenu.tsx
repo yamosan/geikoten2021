@@ -14,7 +14,7 @@ export const HamburgerMenu: VFC<Props> = ({ onClick, isOpen, color, transition }
       onClick={onClick}
       className={clsx(" w-10 h-10 relative focus:outline-none", {
         "text-white": color === "white",
-        "text-black": color === "black",
+        "text-brown": color === "black",
       })}
     >
       <div className="absolute left-1/2 top-3.5 transform -translate-x-1/2 -translate-y-1/2">
