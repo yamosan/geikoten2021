@@ -4,6 +4,7 @@ import Div100vh from "react-div-100vh";
 import { Highlight } from "@/components/basics/Highlight";
 import Image from "@/components/basics/Image";
 import { Paragraph } from "@/components/basics/Paragraph";
+import { Button } from "@/components/Button";
 import { HEADER_HEIGHT } from "@/components/layouts/constants";
 import { Layout } from "@/components/layouts/Layout";
 import { ScrollDown } from "@/components/ScrollDown";
@@ -40,7 +41,9 @@ const Root: NextPage = () => {
         </Div100vh>
         <div className="absolute">{/* TODO: カルーセル */}</div>
       </div>
+
       <div className="mt-[175px] lg:mt-[285px] flex flex-col space-y-12">
+        {/* ABOUT */}
         <Section heading="About" subHeading="芸工展示とは">
           <div className="px-5">
             <Paragraph>
@@ -53,9 +56,31 @@ const Root: NextPage = () => {
               <Highlight>バーチャル会場</Highlight>
               の2つで開催します！
             </Paragraph>
+            <div className="mt-8">
+              <div className="text-xxs text-text">開催日時</div>
+              <p className="font-bold text-text">
+                <time dateTime="2021-10-23">10/23(sat)</time>~<time dateTime="2021-10-24">10/24(sun)</time>
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-col my-4 space-y-12 ">
+            <div className="flex flex-col space-y-4">
+              <div className="h-[210px] bg-sky"></div>
+              <div className="mx-auto">
+                <Button direction="bottom">企画を見る</Button>
+              </div>
+            </div>
+            <div className="flex flex-col space-y-4">
+              <div className="h-[210px] bg-sky"></div>
+              <div className="mx-auto">
+                <Button direction="right">バーチャル会場について</Button>
+              </div>
+            </div>
           </div>
         </Section>
 
+        {/* EVENT */}
         <Section heading="Event" subHeading="イベント"></Section>
 
         <section className="bg-white"></section>
