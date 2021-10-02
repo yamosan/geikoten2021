@@ -5,6 +5,7 @@ import React, { useState } from "react";
 
 import useBackfaceFixed from "@/hooks/useBackfaceFixed";
 import useOnScrolling from "@/hooks/useOnScrolling";
+import useWindowSize from "@/hooks/useWindowSize";
 
 import { HEADER_HEIGHT } from "../constants";
 import { GlobalNavModal } from "./GlobalNavModal";
@@ -17,13 +18,18 @@ export const Header: VFC<ComponentProps<"header">> = ({ className, ...attrs }) =
     setIsOpen((state) => !state);
   };
   useBackfaceFixed(isOpen);
-  const isScrolled = useOnScrolling();
+  const { height } = useWindowSize();
+  const isScrolled = useOnScrolling(height);
   const transition = clsx("transform transition duration-500 ease-in-out");
 
   return (
     <>
       <header
-        className={clsx("flex items-center justify-between w-full px-4 bg-transparent", className)}
+        className={clsx(
+          "flex items-center justify-between w-full px-4 bg-transparent",
+          isScrolled && "active",
+          className
+        )}
         style={{ height: HEADER_HEIGHT }}
         {...attrs}
       >
@@ -55,6 +61,13 @@ export const Header: VFC<ComponentProps<"header">> = ({ className, ...attrs }) =
           />
         </nav>
       </header>
+
+      <style jsx>{`
+        .active {
+          background: rgba(255, 255, 255, 0.8);
+          backdrop-filter: blur(1px);
+        }
+      `}</style>
     </>
   );
 };
