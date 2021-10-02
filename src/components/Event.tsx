@@ -5,7 +5,7 @@ import { Section } from "@/components/ui";
 
 export const Event: VFC = () => {
   return (
-    <Section heading="Event" subHeading="イベント">
+    <Section heading="EVENT" subHeading="イベント">
       <div className="px-5">
         <Paragraph>
           10/23.24の間にクラスターで開催されるイベントです！チェックしておこう
@@ -14,6 +14,7 @@ export const Event: VFC = () => {
           </span>
         </Paragraph>
       </div>
+      {/* TODO: 広告 */}
     </Section>
   );
 };
