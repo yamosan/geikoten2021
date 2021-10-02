@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import React, { ComponentProps, ComponentPropsWithoutRef, forwardRef } from "react";
 
-import Image from "./basics/Image";
+import { Image } from "@/components/basics";
 
 type ColorLevel = 10 | 20 | 30 | 40 | 50 | 60 | 70 | 80;
 
