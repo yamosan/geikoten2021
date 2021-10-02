@@ -55,7 +55,7 @@ export const Header: VFC<ComponentProps<"header">> = ({ className, ...attrs }) =
           </div>
           <HamburgerMenu
             transition={transition}
-            isOpen={isOpen}
+            buttonRole={isOpen ? "close" : "open"}
             onClick={toggleOpen}
             color={isScrolled ? "black" : "white"}
           />
