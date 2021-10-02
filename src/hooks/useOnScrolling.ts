@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 // TODO: debounceを使う
-const useOnScrolling = () => {
+const useOnScrolling = (offset = 0) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -16,7 +16,7 @@ const useOnScrolling = () => {
 
     const handleOnScroll = () => {
       const scrollY = scrollingElement().scrollTop;
-      if (scrollY === 0) {
+      if (scrollY <= offset) {
         setScrolled(false);
       } else {
         setScrolled(true);
@@ -27,7 +27,7 @@ const useOnScrolling = () => {
     return () => {
       document.removeEventListener("scroll", handleOnScroll);
     };
-  }, []);
+  }, [offset]);
 
   return scrolled;
 };
