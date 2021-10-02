@@ -3,7 +3,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import type { VFC } from "react";
 import { useEffect, useRef } from "react";
 
-import { Highlight, Paragraph } from "@/components/basics";
+import { Highlight, Image, Paragraph } from "@/components/basics";
 import { ProjectCard, Section } from "@/components/ui";
 import useWindowSize from "@/hooks/useWindowSize";
 
@@ -47,6 +47,7 @@ export const Project: VFC = () => {
         </Paragraph>
       </div>
       <div className="flex items-center h-[512px] bg-lightGray relative overflow-x-hidden">
+        <Image src="/images/top_bg.jpg" alt="背景" layout="fill" objectFit="cover" />
         <div className="absolute flex pl-12 my-auto space-x-24" ref={boxRef}>
           {new Array(8).fill(0).map((v, i) => (
             <ProjectCard
