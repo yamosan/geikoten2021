@@ -1,8 +1,8 @@
 import clsx from "clsx";
 import type { ComponentProps, VFC } from "react";
 
+import { Image } from "@/components/basics/";
 import { ExternalLink } from "@/components/basics/ExternalLink";
-import Image from "@/components/basics/Image";
 import { InstagramIcon } from "@/components/icons/InstagramIcon";
 import { TwitterIcon } from "@/components/icons/TwitterIcon";
 import { INSTAGRAM_URL, TWITTER_URL } from "@/constants/urls";
