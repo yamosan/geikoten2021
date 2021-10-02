@@ -1,7 +1,7 @@
 import type { VFC } from "react";
 
-import { Highlight, Paragraph } from "./basics";
-import { Button, Section } from "./ui";
+import { Highlight, Paragraph } from "@/components/basics";
+import { Button, Section } from "@/components/ui";
 
 export const About: VFC = () => {
   return (

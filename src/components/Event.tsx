@@ -1,7 +1,7 @@
 import type { VFC } from "react";
 
-import { Paragraph } from "./basics";
-import { Section } from "./ui";
+import { Paragraph } from "@/components/basics";
+import { Section } from "@/components/ui";
 
 export const Event: VFC = () => {
   return (
