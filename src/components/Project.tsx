@@ -4,7 +4,7 @@ import type { VFC } from "react";
 import { useEffect, useRef } from "react";
 
 import { Highlight, Paragraph } from "@/components/basics";
-import { Card, Section } from "@/components/ui";
+import { ProjectCard, Section } from "@/components/ui";
 import useWindowSize from "@/hooks/useWindowSize";
 
 export const Project: VFC = () => {
@@ -49,7 +49,7 @@ export const Project: VFC = () => {
       <div className="flex items-center h-[512px] bg-lightGray relative overflow-x-hidden">
         <div className="absolute flex pl-12 my-auto space-x-24" ref={boxRef}>
           {new Array(8).fill(0).map((v, i) => (
-            <Card
+            <ProjectCard
               key={i.toString()}
               index={1}
               title={"作品展示"}

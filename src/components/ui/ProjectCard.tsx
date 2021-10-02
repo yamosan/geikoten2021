@@ -25,7 +25,7 @@ const textColorMap = {
   80: "text-green-80",
 };
 
-export const Card = forwardRef<HTMLDivElement, Props>((props, ref) => {
+export const ProjectCard = forwardRef<HTMLDivElement, Props>((props, ref) => {
   const { index, title, description, colorLevel, imageSrc, className, ...attrs } = props;
 
   return (
@@ -73,4 +73,4 @@ export const Card = forwardRef<HTMLDivElement, Props>((props, ref) => {
   );
 });
 
-Card.displayName = "Card";
+ProjectCard.displayName = "ProjectCard";
