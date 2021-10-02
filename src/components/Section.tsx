@@ -1,16 +1,16 @@
 import clsx from "clsx";
-import React, { ComponentProps, ReactNode, VFC } from "react";
+import React, { ComponentPropsWithoutRef, forwardRef, ReactNode } from "react";
 
 type Props = {
   heading: string;
   subHeading: string;
   children?: ReactNode;
-} & ComponentProps<"section">;
+} & ComponentPropsWithoutRef<"section">;
 
-export const Section: VFC<Props> = (props) => {
+export const Section = forwardRef<HTMLElement, Props>((props, ref) => {
   const { heading, subHeading, children, className, ...attrs } = props;
   return (
-    <section className={clsx("bg-white py-10", className)} {...attrs}>
+    <section className={clsx("bg-white py-10", className)} {...attrs} ref={ref}>
       <header className="mx-5">
         <h2 className="text-5xl leading-10 font-genuine text-green-10">{heading}</h2>
         <p role="doc-subtitle" className="font-bold text-text">
@@ -21,4 +21,6 @@ export const Section: VFC<Props> = (props) => {
       <div>{children}</div>
     </section>
   );
-};
+});
+
+Section.displayName = "Section";
