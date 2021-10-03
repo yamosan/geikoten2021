@@ -4,7 +4,7 @@ export type Sponsor = {
   businessHours?: string;
   tel?: string;
   comment: string;
-  rank: number;
+  rank: "gold" | "silver" | "bronze";
   images: {
     thumbnailUrl: string;
     mainUrl: string;
