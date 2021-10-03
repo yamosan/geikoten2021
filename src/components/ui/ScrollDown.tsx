@@ -21,7 +21,7 @@ export const ScrollDown: VFC = () => {
         .bar::after {
           @apply block absolute h-16 w-0.5 bg-white rounded-full;
           content: "";
-          animation: fade-in-down 3.2s cubic-bezier(0.75, 0, 0.25, 1) infinite;
+          animation: fade-in-down 2.8s cubic-bezier(0.75, 0, 0.25, 1) infinite;
         }
 
         @keyframes fade-in-down {
