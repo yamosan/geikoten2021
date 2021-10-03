@@ -40,7 +40,7 @@ export const Project: VFC = () => {
 
   return (
     <Section heading="PROJECT" subHeading="プロジェクト" ref={triggerRef}>
-      <div className="px-5 mb-4">
+      <div className="px-5 mb-4 md:ml-shead">
         <Paragraph>
           web会場限定！芸工生が力を合わせて企画しました！
           <Highlight>ぜったい全部見てね〜！</Highlight>
@@ -48,7 +48,7 @@ export const Project: VFC = () => {
       </div>
       <div className="flex items-center h-[512px] bg-lightGray relative overflow-x-hidden">
         <Image src="/images/top_bg.jpg" alt="背景" layout="fill" objectFit="cover" />
-        <div className="absolute flex pl-12 my-auto space-x-24" ref={boxRef}>
+        <div className="absolute flex pl-12 my-auto space-x-24 md:ml-shead" ref={boxRef}>
           {new Array(8).fill(0).map((v, i) => (
             <ProjectCard
               key={i.toString()}

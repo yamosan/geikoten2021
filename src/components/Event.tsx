@@ -39,8 +39,8 @@ export const Event: VFC = () => {
   }, [width]);
 
   return (
-    <Section heading="PROJECT" subHeading="プロジェクト" ref={triggerRef}>
-      <div className="px-5 pl-4">
+    <Section heading="EVENT" subHeading="イベント" ref={triggerRef}>
+      <div className="px-5 pl-4 md:ml-shead">
         <Paragraph>
           10/23.24の間にクラスターで開催されるイベントです！チェックしておこう
           <span role="img" aria-label="eyes">
@@ -49,7 +49,7 @@ export const Event: VFC = () => {
         </Paragraph>
       </div>
       <div className="flex items-center h-[512px] relative overflow-x-hidden">
-        <div className="absolute flex pl-12 my-auto space-x-24" ref={boxRef}>
+        <div className="absolute flex pl-12 my-auto space-x-24 md:ml-shead" ref={boxRef}>
           {new Array(8).fill(0).map((v, i) => (
             <EventCard
               key={i.toString()}
