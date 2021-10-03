@@ -44,6 +44,7 @@ export const SponsorDialog: VFC<Props> = (props) => {
                       width={287}
                       height={193}
                       layout="responsive"
+                      loading="lazy"
                       alt={sponsor.name}
                     />
                   </figure>
@@ -111,42 +112,3 @@ export const SponsorDialog: VFC<Props> = (props) => {
     </>
   );
 };
-
-// export const SponsorDialog: VFC<Props> = (props) => {
-//   return (
-//     <Transition.Root show={props.open} as={Fragment}>
-//       <Dialog static open={props.open} onClose={props.onClose} className="fixed inset-0 z-10 overflow-y-auto">
-//         <div className="min-h-screen text-center min-w-screen">
-//           <Transition.Child
-//             as={Fragment}
-//             enter="ease-out duration-300"
-//             enterFrom="opacity-0"
-//             enterTo="opacity-100"
-//             leave="ease-in duration-200"
-//             leaveFrom="opacity-100"
-//             leaveTo="opacity-0"
-//           >
-//             <Dialog.Overlay className="fixed inset-0 bg-black bg-opacity-40" />
-//           </Transition.Child>
-
-//           <div className="fixed w-full sm:align-middle sm:transform">
-//             <Transition.Child
-//               as={Fragment}
-//               enter="transform ease-in-out duration-300 sm:ease-out"
-//               enterFrom="translate-y-full sm:translate-y-0 sm:opacity-0 sm:scale-95"
-//               enterTo="translate-y-0 sm:opacity-100 sm:scale-100"
-//               leave="transform ease-in-out duration-200 sm:ease-in"
-//               leaveFrom="translate-y-0 sm:opacity-100 sm:scale-100"
-//               leaveTo="translate-y-full sm:translate-y-0 sm:opacity-0 sm:scale-95"
-//             >
-//               <div className="relative px-6 pt-20 pb-12 bg-white dark:bg-gray-800 rounded-t-3xl sm:rounded-2xl">
-//                 <HamburgerMenu buttonRole="close" onClick={props.onClose} />
-//                 <div>{props.children}</div>
-//               </div>
-//             </Transition.Child>
-//           </div>
-//         </div>
-//       </Dialog>
-//     </Transition.Root>
-//   );
-// };
