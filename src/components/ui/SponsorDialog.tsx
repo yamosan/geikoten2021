@@ -19,7 +19,7 @@ export const SponsorDialog: VFC<Props> = (props) => {
   return (
     <>
       <Transition show={open} as={Fragment}>
-        <Dialog static open={open} onClose={onClose} className="fixed inset-0 z-10 flex items-center justify-center">
+        <Dialog static open={open} onClose={onClose} className="fixed inset-0 z-50 flex items-center justify-center">
           <Dialog.Overlay className="fixed inset-0 bg-brown bg-opacity-80" />
 
           <Transition.Child
