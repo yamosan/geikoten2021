@@ -13,6 +13,6 @@ export const NAV_LINKS: TLink[] = [
   { id: "event", text: "EVENT", subText: "イベント", path: "/#event", activePatterns: ["/#event", "/event"] },
 ];
 
-export const SIDE_NAV_WIDTH = "176px";
+export const SIDE_HEADER_WIDTH = "176px";
 
 export const HEADER_HEIGHT = "64px";
