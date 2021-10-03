@@ -1,4 +1,5 @@
 export type Sponsor = {
+  id: number;
   name: string;
   address: string;
   businessHours?: string;
