@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import type { VFC } from "react";
 import { useState } from "react";
 
@@ -8,15 +9,21 @@ import { Sponsor } from "@/models/Sponsor";
 
 type Props = {
   sponsors: Sponsor[];
+  direction: "row" | "column";
 };
 
-export const SponsorsList: VFC<Props> = ({ sponsors }) => {
+export const SponsorsList: VFC<Props> = ({ sponsors, direction }) => {
   const [current, setCurrent] = useState<Sponsor | null>(null);
   return (
     <div>
       <SponsorDialog open={current !== null} onClose={() => setCurrent(null)} sponsor={current} />
 
-      <div className="flex flex-col w-full space-y-6">
+      <div
+        className={clsx("flex w-full", {
+          "flex-row": direction === "row",
+          "flex-col space-y-6": direction === "column",
+        })}
+      >
         {sponsors.map((sponsor) => (
           <button key={sponsor.id} onClick={() => setCurrent(sponsor)} className="w-full">
             <Image

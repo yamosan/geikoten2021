@@ -76,9 +76,11 @@ const Root: NextPage<Props> = ({ sponsors }) => {
         <Event />
       </div>
 
-      <div className="flex flex-col w-9/12 mx-auto my-16 space-y-12">
-        <SponsorsList sponsors={sponsors.silver} />
-        <SponsorsList sponsors={sponsors.bronze} />
+      <div className="md:ml-shead">
+        <div className="flex flex-col w-9/12 max-w-[1000px] mx-auto my-16 space-y-12 md:space-y-8">
+          <SponsorsList sponsors={sponsors.silver} direction={isWide ? "row" : "column"} />
+          <SponsorsList sponsors={sponsors.bronze} direction={isWide ? "row" : "column"} />
+        </div>
       </div>
     </Layout>
   );
