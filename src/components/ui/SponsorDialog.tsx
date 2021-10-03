@@ -5,7 +5,7 @@ import { Fragment } from "react";
 import { Image } from "@/components/basics";
 import { Comment, Place, Store, Tel, Time } from "@/components/icons";
 import { HamburgerMenu } from "@/components/layouts/SPLayout/HamburgerMenu";
-import type { Sponsor } from "@/types/Sponsor";
+import type { Sponsor } from "@/models/Sponsor";
 
 type Props = {
   open: boolean;
@@ -18,86 +18,96 @@ export const SponsorDialog: VFC<Props> = (props) => {
 
   return (
     <>
-      <Transition.Root show={open} as={Fragment}>
+      <Transition show={open} as={Fragment}>
         <Dialog static open={open} onClose={onClose} className="fixed inset-0 z-10 flex items-center justify-center">
           <Dialog.Overlay className="fixed inset-0 bg-brown bg-opacity-80" />
 
           <Transition.Child
             as={Fragment}
-            enter="transition duration-100 ease-out"
+            enter="transition duration-300 ease-out"
             enterFrom="transform scale-95 opacity-0"
             enterTo="transform scale-100 opacity-100"
-            leave="transition duration-75 ease-out"
-            leaveFrom="transform scale-100 opacity-100"
-            leaveTo="transform scale-95 opacity-0"
+            // TODO: アニメーションより先にsponsorがnullになる為CLSが起きる
+            // leave="transition duration-200 ease-out"
+            // leaveFrom="transform scale-100 opacity-100"
+            // leaveTo="transform scale-95 opacity-0"
           >
-            <div className="relative flex items-center justify-center w-11/12 h-5/6">
-              <div className="w-full max-h-full px-5 pt-16 pb-10 overflow-y-scroll bg-white border-4 rounded border-green-40">
+            <div className="flex items-center justify-center">
+              <div className="relative flex items-center justify-center bg-white border-4 rounded border-green-40">
                 <div className="absolute z-10 right-3 top-3">
                   <HamburgerMenu buttonRole="close" onClick={onClose} color="black" />
                 </div>
-
-                <div className="flex flex-col">
-                  <figure className="relative max-w-[400px] mx-auto w-full">
-                    <Image
-                      src={sponsor.images.mainUrl}
-                      width={287}
-                      height={193}
-                      layout="responsive"
-                      loading="lazy"
-                      alt={sponsor.name}
-                    />
-                  </figure>
-                  <div className="max-w-[560px] mx-auto mt-6 flex flex-col items-start space-y-3">
-                    {sponsor.name && (
-                      <dl className="table">
-                        <dt aria-label="店名">
-                          <Store />
-                        </dt>
-                        <dd>{sponsor.name}</dd>
-                      </dl>
-                    )}
-                    {sponsor.address && (
-                      <dl className="table">
-                        <dt aria-label="住所">
-                          <Place />
-                        </dt>
-                        <dd>{sponsor.address}</dd>
-                      </dl>
-                    )}
-                    {sponsor.name && (
-                      <dl className="table">
-                        <dt aria-label="営業日">
-                          <Time />
-                        </dt>
-                        <dd>{sponsor.businessHours}</dd>
-                      </dl>
-                    )}
-                    {sponsor.name && (
-                      <dl className="table">
-                        <dt aria-label="電話番号">
-                          <Tel />
-                        </dt>
-                        <dd>{sponsor.tel}</dd>
-                      </dl>
-                    )}
-                    {sponsor.name && (
-                      <dl className="table">
-                        <dt aria-label="コメント">
-                          <Comment />
-                        </dt>
-                        <dd>{sponsor.comment}</dd>
-                      </dl>
-                    )}
-                  </div>
+                <div className="flex justify-center px-5 pt-16 overflow-y-auto dimension">
+                  {sponsor && (
+                    <div className="flex flex-col items-center">
+                      <figure className="relative max-w-[400px] w-full">
+                        <Image
+                          src={sponsor.images.mainUrl}
+                          width={287}
+                          height={193}
+                          layout="responsive"
+                          loading="lazy"
+                          alt={sponsor.name}
+                        />
+                      </figure>
+                      <div className="max-w-[560px] mt-6 flex flex-col items-start space-y-3 pb-10">
+                        {sponsor.name && (
+                          <dl className="table">
+                            <dt aria-label="店名">
+                              <Store />
+                            </dt>
+                            <dd>{sponsor.name}</dd>
+                          </dl>
+                        )}
+                        {sponsor.address && (
+                          <dl className="table">
+                            <dt aria-label="住所">
+                              <Place />
+                            </dt>
+                            <dd>{sponsor.address}</dd>
+                          </dl>
+                        )}
+                        {sponsor.name && (
+                          <dl className="table">
+                            <dt aria-label="営業日">
+                              <Time />
+                            </dt>
+                            <dd>{sponsor.businessHours}</dd>
+                          </dl>
+                        )}
+                        {sponsor.name && (
+                          <dl className="table">
+                            <dt aria-label="電話番号">
+                              <Tel />
+                            </dt>
+                            <dd>{sponsor.tel}</dd>
+                          </dl>
+                        )}
+                        {sponsor.name && (
+                          <dl className="table">
+                            <dt aria-label="コメント">
+                              <Comment />
+                            </dt>
+                            <dd>{sponsor.comment}</dd>
+                          </dl>
+                        )}
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
           </Transition.Child>
         </Dialog>
-      </Transition.Root>
+      </Transition>
 
       <style jsx>{`
+        .dimension {
+          width: 91.6666vw;
+          max-height: 83.3333vh;
+          max-width: 1200px;
+        }
+
         .table {
           @apply flex space-x-4 items-start;
         }
