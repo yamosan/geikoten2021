@@ -1,4 +1,4 @@
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import Div100vh from "react-div-100vh";
 
 import { About } from "@/components/About";
@@ -8,9 +8,35 @@ import { HEADER_HEIGHT } from "@/components/layouts/constants";
 import { Layout } from "@/components/layouts/Layout";
 import { Project } from "@/components/Project";
 import { ScrollDown, VisitorCounter } from "@/components/ui";
+import { SponsorsList } from "@/components/ui/SponsorsList";
 import useMedia from "@/hooks/useMediaQuery";
+import { Sponsor } from "@/models/Sponsor";
+import { getSponsors } from "@/utils/getSponsors";
 
-const Root: NextPage = () => {
+type Props = {
+  sponsors: {
+    gold: Sponsor[];
+    silver: Sponsor[];
+    bronze: Sponsor[];
+  };
+};
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const gold = getSponsors({ rank: "gold" });
+  const silver = getSponsors({ rank: "silver" });
+  const bronze = getSponsors({ rank: "bronze" });
+  return {
+    props: {
+      sponsors: {
+        gold,
+        silver,
+        bronze,
+      },
+    },
+  };
+};
+
+const Root: NextPage<Props> = ({ sponsors }) => {
   const isWide = useMedia("(min-width: 768px)"); // TODO: tailwind.config.jsから取得
 
   return (
@@ -50,7 +76,11 @@ const Root: NextPage = () => {
         {/* EVENT */}
         <Event />
       </div>
-      <div>{/* TODO: 広告 */}</div>
+
+      <div className="flex flex-col w-9/12 mx-auto my-16 space-y-12">
+        <SponsorsList sponsors={sponsors.silver} />
+        <SponsorsList sponsors={sponsors.bronze} />
+      </div>
     </Layout>
   );
 };
