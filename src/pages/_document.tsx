@@ -25,19 +25,15 @@ export default class MyDocument extends Document {
             crossOrigin=""
           />
         </Head>
-        <style
-          dangerouslySetInnerHTML={{
-            __html: `
-@font-face {
-  font-family: "Genuine";
-  src: url("${resolvePath("/fonts/Genuine/Genuine400.ttf")}");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-`,
-          }}
-        />
+        <style jsx>{`
+          @font-face {
+            font-family: "Genuine";
+            src: url("${resolvePath("/fonts/Genuine/Genuine400.ttf")}");
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+          }
+        `}</style>
         <body>
           <Main />
           <NextScript />
