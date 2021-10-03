@@ -4,8 +4,6 @@ import { ExternalLink } from "@/components/basics/ExternalLink";
 import { ExternalLinkIcon } from "@/components/icons";
 import { HOMEPAGE_LINK } from "@/constants/urls";
 
-import { SIDE_HEADER_WIDTH } from "../constants";
-
 export const Footer: VFC = () => {
   const HomepageLink = () => (
     <ExternalLink href={HOMEPAGE_LINK}>
@@ -17,7 +15,7 @@ export const Footer: VFC = () => {
   );
 
   return (
-    <footer className="relative bg-lightBrown" style={{ paddingLeft: SIDE_HEADER_WIDTH }}>
+    <footer className="relative bg-lightBrown pl-shead">
       {/* TODO: ページ最上部にスクロールするボタン */}
       <div className="flex items-end justify-between w-full px-4 py-16 text-white lg:px-9">
         <div className="flex flex-col w-full space-y-5">

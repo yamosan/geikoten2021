@@ -4,7 +4,6 @@ import Div100vh from "react-div-100vh";
 import { About } from "@/components/About";
 import { Image } from "@/components/basics";
 import { Event } from "@/components/Event";
-import { HEADER_HEIGHT } from "@/components/layouts/constants";
 import { Layout } from "@/components/layouts/Layout";
 import { Project } from "@/components/Project";
 import { ScrollDown, VisitorCounter } from "@/components/ui";
@@ -45,7 +44,7 @@ const Root: NextPage<Props> = ({ sponsors }) => {
         <Div100vh className="relative">
           <Image src="/images/top_bg.jpg" alt="背景" layout="fill" objectFit="cover" />
 
-          <div className="relative w-full h-full" style={{ paddingTop: HEADER_HEIGHT }}>
+          <div className="relative w-full h-full pt-thead md:pt-14">
             {/* アクセスカウンタ */}
             {isWide ? (
               <div className="flex justify-end pr-4">

@@ -7,7 +7,6 @@ import useBackfaceFixed from "@/hooks/useBackfaceFixed";
 import useOnScrolling from "@/hooks/useOnScrolling";
 import useWindowSize from "@/hooks/useWindowSize";
 
-import { HEADER_HEIGHT } from "../constants";
 import { GlobalNavModal } from "./GlobalNavModal";
 import { HamburgerMenu } from "./HamburgerMenu";
 import { SiteLogo } from "./SiteLogo";
@@ -26,11 +25,10 @@ export const Header: VFC<ComponentProps<"header">> = ({ className, ...attrs }) =
     <>
       <header
         className={clsx(
-          "flex items-center justify-between w-full px-4 bg-transparent",
+          "flex items-center justify-between w-full px-4 bg-transparent h-thead",
           isScrolled && "active",
           className
         )}
-        style={{ height: HEADER_HEIGHT }}
         {...attrs}
       >
         <div className="z-50">

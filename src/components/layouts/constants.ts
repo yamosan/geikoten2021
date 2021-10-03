@@ -12,7 +12,3 @@ export const NAV_LINKS: TLink[] = [
   { id: "project", text: "PROJECT", subText: "企画", path: "/#project", activePatterns: ["/#project", "/project"] },
   { id: "event", text: "EVENT", subText: "イベント", path: "/#event", activePatterns: ["/#event", "/event"] },
 ];
-
-export const SIDE_HEADER_WIDTH = "176px";
-
-export const HEADER_HEIGHT = "64px";
