@@ -105,7 +105,7 @@ export const SponsorDialog: VFC<Props> = (props) => {
           margin-top: 0.2em;
         }
         .table > dd {
-          @apply text-xs text-text leading-loose;
+          @apply text-xs text-text leading-loose whitespace-pre-wrap;
         }
       `}</style>
     </>
