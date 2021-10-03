@@ -3,25 +3,28 @@ import { useState } from "react";
 
 import { Image } from "@/components/basics";
 import { SponsorDialog } from "@/components/ui/SponsorDialog";
+import { IMAGE_DIMENSIONS_BY_RANK } from "@/constants/sponsor";
 import { Sponsor } from "@/models/Sponsor";
-import { getSponsors } from "@/utils/getSponsors";
 
-const RANK_DIMENSION_MAP = {
-  silver: { width: 294, height: 137 },
-  bronze: { width: 218, height: 76 },
+type Props = {
+  sponsors: Sponsor[];
 };
 
-export const SponsorsList: VFC = () => {
-  const sponsors = getSponsors({ rank: ["silver", "bronze"] });
-  const [sponsor, setSponsor] = useState<Sponsor | null>(null);
+export const SponsorsList: VFC<Props> = ({ sponsors }) => {
+  const [current, setCurrent] = useState<Sponsor | null>(null);
   return (
-    <div className="flex items-center justify-center min-h-screen bg-lightGray">
-      <SponsorDialog open={sponsor !== null} onClose={() => setSponsor(null)} sponsor={sponsor} />
+    <div>
+      <SponsorDialog open={current !== null} onClose={() => setCurrent(null)} sponsor={current} />
 
       <div className="flex flex-col w-full space-y-6">
-        {sponsors.map((s) => (
-          <button key={s.id} onClick={() => setSponsor(s)} className="w-full">
-            <Image src={s.images.thumbnailUrl} {...RANK_DIMENSION_MAP[s.rank]} layout="responsive" alt={s.name} />
+        {sponsors.map((sponsor) => (
+          <button key={sponsor.id} onClick={() => setCurrent(sponsor)} className="w-full">
+            <Image
+              src={sponsor.images.thumbnailUrl}
+              {...IMAGE_DIMENSIONS_BY_RANK[sponsor.rank]}
+              layout="responsive"
+              alt={sponsor.name}
+            />
           </button>
         ))}
       </div>
