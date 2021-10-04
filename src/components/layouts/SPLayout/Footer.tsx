@@ -2,6 +2,7 @@ import type { VFC } from "react";
 
 import { ExternalLink } from "@/components/basics/ExternalLink";
 import { ExternalLinkIcon } from "@/components/icons";
+import { ScrollToTop } from "@/components/ui/ScrollToTop";
 import { HOMEPAGE_LINK } from "@/constants/urls";
 
 export const Footer: VFC = () => {
@@ -16,7 +17,8 @@ export const Footer: VFC = () => {
 
   return (
     <footer className="relative bg-lightBrown">
-      {/* TODO: ページ最上部にスクロールするボタン */}
+      <ScrollToTop className="absolute top-0 right-0" />
+
       <div className="flex flex-col items-center py-16 text-white">
         <div className="flex flex-col">
           <div className="flex flex-col items-start space-y-3">

@@ -1,3 +1,4 @@
+export * from "./ArrowUp";
 export * from "./Comment";
 export * from "./ExternalLinkIcon";
 export * from "./InstagramIcon";
