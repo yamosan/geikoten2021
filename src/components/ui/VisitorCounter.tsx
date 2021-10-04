@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { useRef, VFC } from "react";
+import { VFC } from "react";
 
 type Props = {
   count: number;
