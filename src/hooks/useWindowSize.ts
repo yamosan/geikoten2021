@@ -18,7 +18,7 @@ const useWindowSize = () => {
     onResize();
 
     // debounce
-    let timeoutId: NodeJS.Timeout | undefined = undefined;
+    let timeoutId: ReturnType<typeof setTimeout>;
     const onResizeDebounce = () => {
       if (timeoutId) clearTimeout(timeoutId);
       timeoutId = setTimeout(onResize, 200);
