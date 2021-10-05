@@ -19,7 +19,7 @@ export const Header: VFC<ComponentProps<"header">> = ({ className, ...attrs }) =
   useBackfaceFixed(isOpen);
   const { height } = useWindowSize();
   const isScrolled = useOnScrolling(height);
-  const transition = clsx("transform transition duration-500 ease-in-out");
+  const transition = clsx("transition duration-500 ease-in-out");
 
   return (
     <>
@@ -47,7 +47,7 @@ export const Header: VFC<ComponentProps<"header">> = ({ className, ...attrs }) =
                 "pointer-events-none": !isOpen,
               },
               transition,
-              "fixed inset-0 bg-green-10"
+              "fixed inset-0 h-screen bg-green-10"
             )}
           >
             <GlobalNavModal onLinkClick={toggleOpen} isOpen={isOpen} />
