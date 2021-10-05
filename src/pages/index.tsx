@@ -6,8 +6,7 @@ import { Image } from "@/components/basics";
 import { Event } from "@/components/Event";
 import { Layout } from "@/components/layouts/Layout";
 import { Project } from "@/components/Project";
-import { ScrollDown, VisitorCounter } from "@/components/ui";
-import { SponsorsList } from "@/components/ui/SponsorsList";
+import { ScrollDown, SponsorsCarousel, SponsorsList, VisitorCounter } from "@/components/ui";
 import useMedia from "@/hooks/useMediaQuery";
 import { Sponsor } from "@/models/Sponsor";
 import { getSponsors } from "@/utils/getSponsors";
@@ -42,7 +41,7 @@ const Root: NextPage<Props> = ({ sponsors }) => {
     <Layout>
       <div className="relative">
         <Div100vh className="relative">
-          <Image src="/images/top_bg.jpg" alt="背景" layout="fill" objectFit="cover" />
+          <Image src="/images/top_bg.jpg" alt="背景" layout="fill" objectFit="cover" priority />
 
           <div className="relative w-full h-full pt-thead md:pt-14">
             {/* アクセスカウンタ */}
@@ -55,17 +54,23 @@ const Root: NextPage<Props> = ({ sponsors }) => {
                 <VisitorCounter count={1234} size="sm" />
               </div>
             )}
-
-            {/* スクロールダウン */}
-            <div className="absolute bottom-0 transform -translate-x-1/2 left-1/2">
-              <ScrollDown />
-            </div>
           </div>
         </Div100vh>
-        <div className="absolute">{/* TODO: カルーセル */}</div>
+
+        {isWide ? (
+          <div className="flex flex-col items-center w-full mb-24 -mt-24 pl-shead">
+            <ScrollDown className="z-10" />
+            <SponsorsCarousel sponsors={sponsors.gold} className="w-4/5" navigationPosition="rl" />
+          </div>
+        ) : (
+          <div className="relative flex flex-col items-center pb-8 mb-24 -mt-24 overflow-x-hidden">
+            <ScrollDown className="z-10" />
+            <SponsorsCarousel sponsors={sponsors.gold} className="w-[125%]" navigationPosition="bottom" />
+          </div>
+        )}
       </div>
 
-      <div className="mt-[175px] lg:mt-[285px] flex flex-col space-y-12">
+      <div className="flex flex-col space-y-12">
         {/* ABOUT */}
         <About />
 
