@@ -27,6 +27,7 @@ export const Header: VFC<ComponentProps<"header">> = ({ className, ...attrs }) =
         className={clsx(
           "flex items-center justify-between w-full px-4 bg-transparent h-thead",
           isScrolled && "active",
+          transition,
           className
         )}
         {...attrs}
