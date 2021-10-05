@@ -1,9 +1,14 @@
+import clsx from "clsx";
 import type { VFC } from "react";
 
-export const ScrollDown: VFC = () => {
+type Props = {
+  className?: string;
+};
+
+export const ScrollDown: VFC<Props> = ({ className }) => {
   return (
     <>
-      <div className="flex flex-col items-center space-y-2">
+      <div className={clsx("flex flex-col items-center space-y-2", className)}>
         <p className="text-xs font-black tracking-widest text-white">scroll</p>
         <div className="bar"></div>
       </div>
