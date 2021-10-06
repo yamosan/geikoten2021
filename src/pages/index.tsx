@@ -33,7 +33,7 @@ const Root: NextPage<Props> = ({ sponsors }) => {
     <Layout>
       <Top goldSponsors={sponsors.gold} />
 
-      <div className="flex flex-col space-y-12">
+      <div className="bg-white">
         <About />
         <Project />
         <Event />
