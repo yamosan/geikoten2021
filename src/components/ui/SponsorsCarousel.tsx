@@ -53,7 +53,7 @@ export const SponsorsCarousel: VFC<Props> = ({ sponsors, className, navigationPo
                 onClick={() => setCurrent(sponsor)}
                 className={clsx(
                   "slide-content",
-                  "block w-full h-full transition-all duration-300 opacity-10 hover:opacity-80"
+                  "block w-full h-full transition-all duration-300 opacity-100 hover:opacity-80"
                 )}
               >
                 <Image
