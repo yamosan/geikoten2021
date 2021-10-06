@@ -20,7 +20,7 @@ export const EventCard = forwardRef<HTMLDivElement, Props>((props, ref) => {
         <div className="text-text">{description}</div>
       </div>
       <figure className="relative h-[236px] w-[420px] flex-shrink-0 transform duration-300 group-hover:opacity-70">
-        <Image src={imageSrc} alt={title} layout="fill" />
+        <Image src={imageSrc} alt={title} layout="responsive" height={236} width={420} />
       </figure>
     </div>
   );
