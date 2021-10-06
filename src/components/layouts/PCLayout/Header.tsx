@@ -7,7 +7,7 @@ import { InstagramIcon } from "@/components/icons/InstagramIcon";
 import { TwitterIcon } from "@/components/icons/TwitterIcon";
 import { INSTAGRAM_URL, TWITTER_URL } from "@/constants/urls";
 
-import { Nav } from "./Nav";
+import { GlobalNav } from "./GlobalNav";
 
 export const Header: VFC<ComponentProps<"header">> = ({ className, ...attrs }) => {
   return (
@@ -15,13 +15,13 @@ export const Header: VFC<ComponentProps<"header">> = ({ className, ...attrs }) =
       <div className="mx-auto">
         <Image src="/images/logo.png" alt="logo" width={123} height={116} />
       </div>
-      <Nav />
+      <GlobalNav />
       <div className="mx-auto">
-        <div className="flex flex-col space-y-6">
-          <ExternalLink href={TWITTER_URL}>
+        <div className="flex flex-col space-y-4">
+          <ExternalLink href={TWITTER_URL} className="p-2 duration-300 transform hover:scale-90">
             <TwitterIcon color="white" />
           </ExternalLink>
-          <ExternalLink href={INSTAGRAM_URL}>
+          <ExternalLink href={INSTAGRAM_URL} className="p-2 duration-300 transform hover:scale-90">
             <InstagramIcon color="white" />
           </ExternalLink>
         </div>
