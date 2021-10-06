@@ -19,7 +19,7 @@ export const GlobalNavModal: VFC<Props> = (props) => {
     (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, link: TLink) => {
       e.preventDefault();
       props.onLinkClick();
-      router.push(link.path);
+      router.push(link.path, undefined, { scroll: false });
     },
     [props, router]
   );
