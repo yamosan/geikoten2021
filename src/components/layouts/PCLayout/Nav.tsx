@@ -20,10 +20,13 @@ export const Nav: VFC = () => {
                     "border-green-10": item.activePatterns.includes(router.asPath),
                   })}
                 >
-                  <p className="text-2xl leading-none text-white duration-300 transform font-genuine group-hover:scale-90">
+                  <p
+                    className="text-2xl text-white duration-300 transform font-genuine group-hover:scale-90"
+                    style={{ position: "relative", top: "0.15em" }}
+                  >
                     {item.text}
                   </p>
-                  <p className="mt-1 leading-none text-white duration-300 transform text-xxs font-genuine group-hover:scale-90">
+                  <p className="mt-0.5 overflow-visible text-white duration-300 transform text-xxs font-genuine group-hover:scale-90">
                     {item.subText}
                   </p>
                 </div>
