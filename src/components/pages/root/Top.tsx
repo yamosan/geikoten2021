@@ -14,7 +14,7 @@ export const Top: VFC<Props> = ({ goldSponsors }) => {
   const isWide = useMedia("(min-width: 768px)"); // TODO: tailwind.config.jsから取得
 
   return (
-    <div className="relative">
+    <div className="relative" id="top">
       <Div100vh className="relative">
         <Image src="/images/top_bg.jpg" alt="背景" layout="fill" objectFit="cover" priority />
 

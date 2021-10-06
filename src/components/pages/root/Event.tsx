@@ -39,7 +39,7 @@ export const Event: VFC = () => {
   }, [width]);
 
   return (
-    <Section heading="EVENT" subHeading="イベント" ref={triggerRef}>
+    <Section heading="EVENT" subHeading="イベント" ref={triggerRef} id="event">
       <div className="px-5 pl-4 md:ml-shead">
         <Paragraph>
           10/23.24の間にクラスターで開催されるイベントです！チェックしておこう
