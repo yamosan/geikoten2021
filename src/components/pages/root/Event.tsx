@@ -6,7 +6,7 @@ import { EventCard, Section } from "@/components/ui";
 export const Event: VFC = () => {
   return (
     <Section heading="EVENT" subHeading="イベント" id="event">
-      <div className="px-5 pl-4 md:ml-shead">
+      <div className="px-5 pl-4 md:ml-shead lg:max-w-app lg:mx-auto">
         <Paragraph>
           10/23.24の間にクラスターで開催されるイベントです！チェックしておこう
           <span role="img" aria-label="eyes">

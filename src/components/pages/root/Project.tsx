@@ -40,7 +40,7 @@ export const Project: VFC = () => {
 
   return (
     <Section heading="PROJECT" subHeading="プロジェクト" ref={triggerRef} id="project">
-      <div className="px-5 mb-4 md:ml-shead">
+      <div className="px-5 mb-4 md:ml-shead lg:max-w-app lg:mx-auto">
         <Paragraph>
           web会場限定！芸工生が力を合わせて企画しました！
           <Highlight>ぜったい全部見てね〜！</Highlight>
