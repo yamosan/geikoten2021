@@ -5,7 +5,7 @@ import type { VFC } from "react";
 
 import { NAV_LINKS } from "../constants";
 
-export const Nav: VFC = () => {
+export const GlobalNav: VFC = () => {
   const router = useRouter();
 
   return (
