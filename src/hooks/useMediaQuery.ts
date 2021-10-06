@@ -9,14 +9,12 @@ const useMedia = (query: string, defaultState = false) => {
     let mounted = true;
     const mql = window.matchMedia(query);
     const onChange = () => {
-      if (!mounted) {
-        return;
+      if (mounted) {
+        setState(!!mql.matches);
       }
-      setState(!!mql.matches);
     };
-
+    onChange();
     mql.addListener(onChange);
-    setState(mql.matches);
 
     return () => {
       mounted = false;
