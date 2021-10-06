@@ -2,8 +2,10 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 
 const SIDE_HEADER_WIDTH = "176px";
 const TOP_HEADER_HEIGHT = "64px";
-const SIDE_HEADER_UTILS = { shead: SIDE_HEADER_WIDTH };
-const TOP_HEADER_UTILS = { thead: TOP_HEADER_HEIGHT };
+const SIDE_HEADER_UTIL = { shead: SIDE_HEADER_WIDTH };
+const TOP_HEADER_UTIL = { thead: TOP_HEADER_HEIGHT };
+const APP_MAX_WIDTH = "1000px";
+const APP_MAX_WIDTH_UTIL = { app: APP_MAX_WIDTH };
 
 module.exports = {
   mode: "jit",
@@ -51,10 +53,11 @@ module.exports = {
       dropShadow: {
         solid: "2px 2px 0px currentColor",
       },
-      height: TOP_HEADER_UTILS,
-      width: SIDE_HEADER_UTILS,
-      margin: { ...TOP_HEADER_UTILS, ...SIDE_HEADER_UTILS },
-      padding: { ...TOP_HEADER_UTILS, ...SIDE_HEADER_UTILS },
+      height: TOP_HEADER_UTIL,
+      width: { ...SIDE_HEADER_UTIL },
+      margin: { ...TOP_HEADER_UTIL, ...SIDE_HEADER_UTIL },
+      padding: { ...TOP_HEADER_UTIL, ...SIDE_HEADER_UTIL },
+      maxWidth: { ...APP_MAX_WIDTH_UTIL },
     },
   },
   variants: {
