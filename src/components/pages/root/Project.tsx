@@ -46,9 +46,9 @@ export const Project: VFC = () => {
           <Highlight>ぜったい全部見てね〜！</Highlight>
         </Paragraph>
       </div>
-      <div className="flex items-center h-[512px] bg-lightGray relative overflow-x-hidden">
+      <div className="flex items-center h-[66vh] bg-lightGray relative overflow-x-hidden">
         <Image src="/images/top_bg.jpg" alt="背景" layout="fill" objectFit="cover" />
-        <div className="absolute flex pl-12 my-auto space-x-24 md:ml-shead" ref={boxRef}>
+        <div className="absolute flex pl-12 my-auto space-x-24 h-4/5 md:ml-shead" ref={boxRef}>
           {new Array(8).fill(0).map((v, i) => (
             <ProjectCard
               key={i.toString()}

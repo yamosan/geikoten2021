@@ -30,24 +30,29 @@ export const ProjectCard = forwardRef<HTMLDivElement, Props>((props, ref) => {
 
   return (
     <>
-      <div className={clsx("relative flex flex-col space-y-3 bg-white p-6", className)} {...attrs} ref={ref}>
-        <figure className="relative h-[280px] w-[280px] flex-shrink-0 tape">
-          <Image src={imageSrc} alt={title} layout="fill" />
-          {/* テープ */}
-          <span className="tape"></span>
-        </figure>
-        <div className="flex items-center justify-between">
-          <div className="relative h-full">
-            <div
-              className={clsx("font-genuine text-6xl", textColorMap[colorLevel])}
-              style={{ position: "relative", top: "0.15em" }}
-            >
-              {`#${index.toString().padStart(2, "0")}`}
+      <div className={clsx("h-full", "relative", className)} {...attrs} ref={ref}>
+        <svg xmlns="http://www.w3.org/2000/svg" height="460" width="410" className="w-auto h-full" />
+
+        <div className="absolute inset-0 w-full h-full">
+          <div className="relative flex flex-col justify-between space-y-2 h-full p-[4%] bg-white">
+            <figure className="relative h-full tape">
+              <Image src={imageSrc} alt={title} layout="fill" objectFit="contain" width={280} height={280} />
+              <span className="tape" />
+            </figure>
+            <div className="flex items-center justify-between w-full">
+              <div className="relative h-full">
+                <div
+                  className={clsx("font-genuine text-6xl", textColorMap[colorLevel])}
+                  style={{ position: "relative", top: "0.15em" }}
+                >
+                  {`#${index.toString().padStart(2, "0")}`}
+                </div>
+              </div>
+              <div className="flex flex-col items-end">
+                <div className="text-2xl font-bold text-text">{title}</div>
+                <div className="text-text">{description}</div>
+              </div>
             </div>
-          </div>
-          <div className="flex flex-col items-end">
-            <div className="text-2xl font-bold text-text">{title}</div>
-            <div className="text-text">{description}</div>
           </div>
         </div>
       </div>
