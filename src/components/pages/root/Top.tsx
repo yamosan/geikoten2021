@@ -40,7 +40,7 @@ export const Top: VFC<Props> = ({ goldSponsors }) => {
       ) : (
         <div className="relative flex flex-col items-center pb-8 mb-24 -mt-24 overflow-x-hidden">
           <ScrollDown className="z-10" />
-          <SponsorsCarousel sponsors={goldSponsors} className="w-[125%]" navigationPosition="bottom" />
+          <SponsorsCarousel sponsors={goldSponsors} className="w-[150%]" navigationPosition="bottom" />
         </div>
       )}
     </div>
