@@ -1,7 +1,6 @@
-import type { ReactNode, VFC } from "react";
+import { ReactNode, VFC } from "react";
 
 import useMedia from "@/hooks/useMediaQuery";
-import useMounted from "@/hooks/useMounted";
 
 import { PCLayout } from "./PCLayout";
 import { SPLayout } from "./SPLayout";
@@ -11,10 +10,8 @@ type Props = {
 };
 
 export const Layout: VFC<Props> = ({ children }) => {
+  // TODO: 開発環境でハイドレーション関連のエラー 参考: https://mui.com/components/use-media-query/#server-side-rendering
   const isWide = useMedia("(min-width: 768px)"); // TODO: tailwind.config.jsから取得
-  const mounted = useMounted();
-
-  if (!mounted) return <></>;
 
   return isWide ? <PCLayout>{children}</PCLayout> : <SPLayout>{children}</SPLayout>;
 };
