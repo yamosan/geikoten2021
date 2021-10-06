@@ -48,6 +48,7 @@ export const Project: VFC = () => {
       </div>
       <div className="flex items-center h-[66vh] bg-lightGray relative overflow-x-hidden">
         <Image src="/images/top_bg.jpg" alt="背景" layout="fill" objectFit="cover" />
+        {/* TODO: max-height */}
         <div className="absolute flex pl-12 my-auto space-x-24 h-4/5 md:ml-shead" ref={boxRef}>
           {new Array(8).fill(0).map((v, i) => (
             <ProjectCard
