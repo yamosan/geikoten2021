@@ -11,7 +11,7 @@ import { GlobalNav } from "./GlobalNav";
 
 export const Header: VFC<ComponentProps<"header">> = ({ className, ...attrs }) => {
   return (
-    <header className={clsx("flex flex-col py-16 space-y-10", className)} {...attrs}>
+    <header className={clsx("flex flex-col justify-center space-y-10", className)} {...attrs}>
       {/* TODO: ページトップに遷移(データの取得なし) -> 再度アニメーション */}
       <div className="mx-auto">
         <Image src="/images/logo.png" alt="logo" width={123} height={116} />
