@@ -33,14 +33,18 @@ export const About: VFC = () => {
       <div className="flex flex-col my-4 space-y-12">
         <div className="flex flex-col space-y-4">
           <div className="h-[210px] bg-sky"></div>
-          <div className="mx-auto">
-            <Button direction="bottom">企画を見る</Button>
+          <div className="md:ml-shead">
+            <div className="flex justify-center">
+              <Button direction="bottom">企画を見る</Button>
+            </div>
           </div>
         </div>
         <div className="flex flex-col space-y-4">
           <div className="h-[210px] bg-sky"></div>
-          <div className="mx-auto">
-            <Button direction="right">バーチャル会場について</Button>
+          <div className="md:ml-shead">
+            <div className="flex justify-center">
+              <Button direction="right">バーチャル会場について</Button>
+            </div>
           </div>
         </div>
       </div>
