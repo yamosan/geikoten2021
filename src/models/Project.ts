@@ -7,4 +7,5 @@ export type Project = {
   //   thumbnailUrl: string;
   //   backgroundUrl: string;
   // };
+  siteUrl: string;
 };
