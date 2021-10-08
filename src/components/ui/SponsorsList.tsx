@@ -25,7 +25,11 @@ export const SponsorsList: VFC<Props> = ({ sponsors, direction }) => {
         })}
       >
         {sponsors.map((sponsor) => (
-          <button key={sponsor.id} onClick={() => setCurrent(sponsor)} className="w-full">
+          <button
+            key={sponsor.id}
+            onClick={() => setCurrent(sponsor)}
+            className="w-full transition-opacity duration-300 hover:opacity-80"
+          >
             <Image
               src={sponsor.images.thumbnailUrl}
               {...IMAGE_DIMENSIONS_BY_RANK[sponsor.rank]}
