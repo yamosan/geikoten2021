@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "NODE_ENV=production next build && next export",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "run-p -l -c --aggregate-output lint:*",
     "lint:eslint": "eslint --cache .",
@@ -17,6 +17,7 @@
     "@headlessui/react": "^1.4.1",
     "gsap": "^3.8.0",
     "next": "11.1.2",
+    "next-optimized-images": "^2.6.2",
     "react": "17.0.2",
     "react-div-100vh": "^0.6.0",
     "react-dom": "17.0.2",
