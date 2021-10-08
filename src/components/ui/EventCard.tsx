@@ -33,7 +33,7 @@ export const EventCard = forwardRef<HTMLDivElement, Props>((props, ref) => {
           {description}
         </div>
       </div>
-      <figure className="relative flex-shrink-0 duration-300 transform group-hover:opacity-70">
+      <figure className="relative flex-shrink-0 duration-300 transform group-hover:opacity-80">
         <Image src={imageSrc} alt={title} layout="responsive" height={236} width={420} />
       </figure>
     </div>
