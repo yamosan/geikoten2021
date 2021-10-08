@@ -1,7 +1,6 @@
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 
 import clsx from "clsx";
 import { useState, VFC } from "react";
