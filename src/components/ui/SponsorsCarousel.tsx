@@ -69,20 +69,26 @@ export const SponsorsCarousel: VFC<Props> = ({ sponsors, className, navigationPo
 
         {navigationPosition === "rl" && (
           <div className="absolute left-0 z-10 flex items-center justify-between w-full h-0 transform -translate-y-1/2 top-1/2">
-            <button className={clsx("prev", "transform -translate-x-1/2")} id="previousButton">
+            <button
+              className={clsx("prev", "transform -translate-x-1/2 duration-300 hover:scale-110")}
+              id="previousButton"
+            >
               <RoundedArrow direction="left" />
             </button>
-            <button className={clsx("next", "transform translate-x-1/2")} id="nextButton">
+            <button className={clsx("next", "transform translate-x-1/2 duration-300 hover:scale-110")} id="nextButton">
               <RoundedArrow direction="right" />
             </button>
           </div>
         )}
         {navigationPosition === "bottom" && (
           <div className="absolute bottom-0 z-10 flex items-center justify-between w-1/2 h-0 transform -translate-x-1/2 translate-y-1/2 left-1/2">
-            <button className={clsx("prev", "transform -translate-x-1/2")} id="previousButton">
+            <button
+              className={clsx("prev", "transform -translate-x-1/2 duration-300 hover:scale-110")}
+              id="previousButton"
+            >
               <RoundedArrow direction="left" />
             </button>
-            <button className={clsx("next", "transform translate-x-1/2")} id="nextButton">
+            <button className={clsx("next", "transform translate-x-1/2 duration-300 hover:scale-110")} id="nextButton">
               <RoundedArrow direction="right" />
             </button>
           </div>
