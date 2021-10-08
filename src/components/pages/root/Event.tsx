@@ -14,20 +14,24 @@ export const Event: VFC = () => {
           </span>
         </Paragraph>
       </div>
-      <div className="relative flex flex-col justify-center px-5 overflow-x-hidden md:space-x-6 md:p-0 md:items-center md:flex-row md:ml-shead">
-        {/* TODO: size propsでレスポンス。projectも同様 */}
-        <EventCard
-          title={"開会式"}
-          description={"芸工展の幕開けを見届けよう！"}
-          imageSrc={"/images/event.png"}
-          size="md"
-        />
-        <EventCard
-          title={"閉会式"}
-          description={"芸工祭も閉幕です！みんなで見届けよう"}
-          imageSrc={"/images/event.png"}
-          size="md"
-        />
+      <div className="px-5 mt-6 overflow-x-hidden md:ml-shead">
+        <div className="relative flex flex-col justify-center space-y-6 md:space-y-0 md:space-x-6 md:items-center md:flex-row lg:max-w-app lg:mx-auto">
+          {/* TODO: size propsでレスポンス。projectも同様 */}
+          <EventCard
+            title={"開会式"}
+            description={"芸工展の幕開けを見届けよう！"}
+            imageSrc={"/images/event.png"}
+            size="md"
+            className="flex-1"
+          />
+          <EventCard
+            title={"閉会式"}
+            description={"芸工祭も閉幕です！みんなで見届けよう"}
+            imageSrc={"/images/event.png"}
+            size="md"
+            className="flex-1"
+          />
+        </div>
       </div>
     </Section>
   );
