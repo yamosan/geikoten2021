@@ -4,28 +4,27 @@
 
 ### コンポーネント
 
-#### ① /pages
-
+###### ① /pages
 ② コンポーネントのレイアウトを組む。データを流す。
 
-#### ② /components/layouts
+###### ② /components/layouts
 
 PC/SP のレイアウト。ヘッダーフッター等の構成要素もここ。
 
-#### ③ /components/pages
+###### ③ /components/pages
 
 ① のセクションごとのコンポーネント。useMediaQuery を使ってアダプティブに ③ コンポーネントを出し分けする。
 
-#### ④ /components/ui
+###### ④ /components/ui
 
 レスポンシブスタイルは props によって制御される。(例; size: "md" | "lg")
 
-#### ⑤ /components/basics
+###### ⑤ /components/basics
 
 プリミティブなコンポーネントのみ。
 必ず forwardRef と ComponentProps を渡せるようにする。
 
-#### ⑥ /components/icons
+###### ⑥ /components/icons
 
 SVG 等のアイコン
 必要になったらバリアントを増やす。
