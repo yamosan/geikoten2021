@@ -2,40 +2,43 @@ import type { GetStaticProps, NextPage } from "next";
 
 import { Layout } from "@/components/layouts/Layout";
 import { About, Event, Project, SponsorAds, Top } from "@/components/pages/root";
-import type { Sponsor } from "@/models/Sponsor";
+import type { Project as TProject, Sponsor as TSponsor } from "@/models";
+import { getProjects } from "@/utils/getProjects";
 import { getSponsors } from "@/utils/getSponsors";
 
 type Props = {
   sponsors: {
-    gold: Sponsor[];
-    silver: Sponsor[];
-    bronze: Sponsor[];
+    gold: TSponsor[];
+    silver: TSponsor[];
+    bronze: TSponsor[];
   };
+  projects: TProject[];
 };
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const gold = getSponsors({ rank: "gold" });
-  const silver = getSponsors({ rank: "silver" });
-  const bronze = getSponsors({ rank: "bronze" });
+  const sponsors = {
+    gold: getSponsors({ rank: "gold" }),
+    silver: getSponsors({ rank: "silver" }),
+    bronze: getSponsors({ rank: "bronze" }),
+  };
+  const projects = getProjects();
+
   return {
     props: {
-      sponsors: {
-        gold,
-        silver,
-        bronze,
-      },
+      sponsors,
+      projects,
     },
   };
 };
 
-const Root: NextPage<Props> = ({ sponsors }) => {
+const Root: NextPage<Props> = ({ sponsors, projects }) => {
   return (
     <Layout>
       <Top goldSponsors={sponsors.gold} />
 
       <div className="bg-white">
         <About />
-        <Project />
+        <Project projects={projects} />
         <Event />
       </div>
 

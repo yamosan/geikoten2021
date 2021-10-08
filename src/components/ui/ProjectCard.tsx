@@ -3,7 +3,7 @@ import React, { ComponentProps, ComponentPropsWithoutRef, forwardRef } from "rea
 
 import { Image } from "@/components/basics";
 
-type ColorLevel = 10 | 20 | 30 | 40 | 50 | 60 | 70 | 80;
+export type ColorLevel = 10 | 20 | 30 | 40 | 50 | 60 | 70 | 80;
 
 type Props = {
   index: number;
@@ -40,7 +40,7 @@ export const ProjectCard = forwardRef<HTMLDivElement, Props>((props, ref) => {
               <Image src={imageSrc} alt={title} layout="fill" objectFit="contain" width={280} height={280} />
               <span className="tape" />
               <div className="opacity-0 transition-opacity group-hover:opacity-100 duration-300">
-                <p className="absolute inset-0 m-auto flex items-center w-full py-16 text-center text-white px-14 bg-lightBrown opacity-90 h-5/6">
+                <p className="absolute inset-0 m-auto flex justify-center items-center w-full py-16 text-center text-white px-14 bg-lightBrown opacity-90 h-5/6">
                   {description}
                 </p>
               </div>
