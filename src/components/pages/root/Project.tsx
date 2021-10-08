@@ -55,7 +55,10 @@ export const Project: VFC = () => {
               key={i.toString()}
               index={1}
               title={"作品展示"}
-              description={"芸工性による作品展示"}
+              subTitle={"芸工生による作品展示"}
+              description={
+                "あいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえお"
+              }
               colorLevel={10}
               imageSrc={"/images/project.png"}
               size="md"
