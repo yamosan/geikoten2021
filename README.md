@@ -2,29 +2,45 @@
 
 ## 開発
 
+### 環境構築
+
+```
+$ npm i
+$ npm run dev
+```
+
+
+
+
 ### コンポーネント
+1. コンポーネント内でデータ取得をしていいのは①, ②のみ。
+2. ページ内でしか使われないものは②にベタ書きを許容(程々に)。共通化の必要が出たら③に切り出す。
 
 ###### ① /pages
-② コンポーネントのレイアウトを組む。データを流す。
+- ② コンポーネントでページのレイアウトを組む。データを流す。
 
-###### ② /components/layouts
+###### ② /components/pages
 
-PC/SP のレイアウト。ヘッダーフッター等の構成要素もここ。
+- ① をセクションごとでコンポーネントに切り出したもの。
+- useMediaQuery を使ってアダプティブに ③ コンポーネントを出し分けする。
 
-###### ③ /components/pages
+###### ③ /components/ui
 
-① のセクションごとのコンポーネント。useMediaQuery を使ってアダプティブに ③ コンポーネントを出し分けする。
+- レスポンシブスタイルは props によって制御される。(例; size: "md" | "lg")
 
-###### ④ /components/ui
+###### ④ /components/basics
 
-レスポンシブスタイルは props によって制御される。(例; size: "md" | "lg")
+- プリミティブなコンポーネントのみ。
+- 必ず forwardRef と ComponentProps を渡せるようにする。
 
-###### ⑤ /components/basics
 
-プリミティブなコンポーネントのみ。
-必ず forwardRef と ComponentProps を渡せるようにする。
+###### ⑤ /components/icons
 
-###### ⑥ /components/icons
+- SVG 等のアイコン。
+- 必要になったらバリアントを増やす。
 
-SVG 等のアイコン。
-必要になったらバリアントを増やす。
+
+###### ⑥ /components/layouts
+
+- PC/SP のレイアウト。ヘッダーフッター等の構成要素もここ。
+
