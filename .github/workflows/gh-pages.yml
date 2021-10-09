@@ -29,11 +29,8 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
-      - name: Build
+      - name: Build And Export
         run: npm run build
-
-      - name: Export
-        run: npm run export
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
