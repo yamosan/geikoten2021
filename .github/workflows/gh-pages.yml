@@ -38,9 +38,6 @@ jobs:
         run: |
           npm run build
 
-      - name: Debug
-        run: ls -la ./out
-
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.ref == 'refs/heads/main' }}
