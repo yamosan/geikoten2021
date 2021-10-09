@@ -3,10 +3,12 @@ import type { ComponentPropsWithoutRef } from "react";
 
 import { resolvePath } from "@/utils/resolvePath";
 
-// src: string | StaticImport -> string
-type Props = ComponentPropsWithoutRef<typeof NextImage> & { src: string };
+type Props = ComponentPropsWithoutRef<typeof NextImage> & { src: string }; // src: string | StaticImport -> string
 
+const customLoader = ({ src }) => src;
+
+// TODO: next-optimized-imageを使ってビルド時に画像最適化
 export const Image = (props: Props) => {
   const url = props.src?.startsWith("/") ? resolvePath(props.src) : props.src;
-  return <NextImage {...props} src={url} />;
+  return <NextImage {...props} src={url} loader={customLoader} />;
 };
