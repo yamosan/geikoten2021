@@ -44,4 +44,3 @@ $ npm run dev
 ###### ⑥　/components/layouts
 
 - PC/SP のレイアウト。ヘッダーフッター等の構成要素もここ。
-
