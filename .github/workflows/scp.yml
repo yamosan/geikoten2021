@@ -50,4 +50,4 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           source: "out/**"
           target: ${{ secrets.DIR }}
-          # strip_components: 1
+          strip_components: 1
