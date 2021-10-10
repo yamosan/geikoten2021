@@ -67,7 +67,7 @@ export const ProjectCard = forwardRef<HTMLDivElement, Props>((props, ref) => {
         {...attrs}
         ref={ref}
       >
-        <div className="relative" ref={leftRef}>
+        <div className="relative h-full" ref={leftRef}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="460"

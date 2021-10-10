@@ -60,7 +60,7 @@ export const Project: VFC<Props> = ({ projects }) => {
         <div className="absolute flex pl-12 my-auto space-x-24 h-4/5 max-h-[800px] md:ml-shead" ref={boxRef}>
           {projects.map((project, i) => (
             <Link href={project.siteUrl.href} key={project.id.toString()}>
-              <a>
+              <a className="block h-full">
                 {isWide ? (
                   <ProjectCard
                     key={i.toString()}
