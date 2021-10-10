@@ -63,8 +63,9 @@ export const Project: VFC<Props> = ({ projects }) => {
                   key={i.toString()}
                   project={project}
                   index={project.id}
-                  colorLevel={(10 * (i + 1)) as ColorLevel}
+                  colorLevel={(10 * project.id) as ColorLevel}
                   size="md"
+                  base="height"
                 />
               </a>
             </Link>
