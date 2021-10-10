@@ -11,7 +11,7 @@ type Props = {
   project: Project;
 };
 
-const PROJECT_NAME = "cm";
+const PROJECT_NAME = "stage";
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const project = await findProject((project) => project.name === PROJECT_NAME);
