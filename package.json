@@ -16,6 +16,7 @@
   "dependencies": {
     "@headlessui/react": "^1.4.1",
     "gsap": "^3.8.0",
+    "minimatch": "^3.0.4",
     "next": "11.1.2",
     "react": "17.0.2",
     "react-div-100vh": "^0.6.0",
@@ -24,6 +25,7 @@
     "swiper": "^7.0.8"
   },
   "devDependencies": {
+    "@types/minimatch": "^3.0.5",
     "@types/react": "^17.0.24",
     "@typescript-eslint/eslint-plugin": "^4.31.2",
     "@typescript-eslint/parser": "^4.31.2",
