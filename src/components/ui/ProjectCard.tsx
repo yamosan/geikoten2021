@@ -26,6 +26,17 @@ const textColorMap = {
   80: "text-green-80",
 };
 
+const bgColorMap = {
+  10: "before:bg-green-10 after:bg-green-10",
+  20: "before:bg-green-20 after:bg-green-20",
+  30: "before:bg-green-30 after:bg-green-30",
+  40: "before:bg-green-40 after:bg-green-40",
+  50: "before:bg-green-50 after:bg-green-50",
+  60: "before:bg-green-60 after:bg-green-60",
+  70: "before:bg-green-70 after:bg-green-70",
+  80: "before:bg-green-80 after:bg-green-80",
+};
+
 export const ProjectCard = forwardRef<HTMLDivElement, Props>((props, ref) => {
   const { project, index, colorLevel, base, size, descriptionType, className, ...attrs } = props;
   const [{ width: fw, height: fh }, setDescriptionSize] = useState({ width: 0, height: 0 });
@@ -71,7 +82,7 @@ export const ProjectCard = forwardRef<HTMLDivElement, Props>((props, ref) => {
             <div className="relative flex flex-col justify-between space-y-2 h-full p-[4%] bg-white">
               <figure className="relative h-full tape">
                 <Image src={project.images.thumbnailUrl} alt={project.title} layout="fill" objectFit="contain" />
-                <span className="tape" />
+                <span className={clsx("tape", bgColorMap[colorLevel])} />
                 {descriptionType === "hover" && (
                   <div className="opacity-0 transition-opacity md:group-hover:opacity-100 duration-300">
                     <p
@@ -121,7 +132,7 @@ export const ProjectCard = forwardRef<HTMLDivElement, Props>((props, ref) => {
 
       <style jsx>{`
         .tape::before {
-          @apply bg-green-10 opacity-70 z-10 transform;
+          @apply opacity-70 z-10 transform;
           @apply absolute top-2 left-2 -translate-x-1/2 -translate-y-1/2 rotate-[-36deg];
           content: "";
           width: ${size === "md" ? "105px" : "112px"};
@@ -129,7 +140,7 @@ export const ProjectCard = forwardRef<HTMLDivElement, Props>((props, ref) => {
         }
 
         .tape::after {
-          @apply bg-green-10 opacity-70 z-10 transform;
+          @apply opacity-70 z-10 transform;
           @apply absolute top-2 right-2 translate-x-1/2 -translate-y-1/2 rotate-[36deg];
           content: "";
           width: ${size === "md" ? "105px" : "112px"};
