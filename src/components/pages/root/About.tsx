@@ -5,7 +5,7 @@ import { Button, Section } from "@/components/ui";
 
 export const About: VFC = () => {
   return (
-    <Section heading="ABOUT" subHeading="芸工展示とは" id="about">
+    <Section heading="ABOUT" subHeading="芸工展とは" id="about">
       <div className="px-5 md:ml-shead">
         <div className="lg:max-w-app lg:mx-auto">
           <Paragraph>

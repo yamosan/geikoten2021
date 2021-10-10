@@ -106,7 +106,7 @@ export const ProjectCard = forwardRef<HTMLDivElement, Props>((props, ref) => {
                   </div>
                 </div>
                 <div className="flex flex-col items-end">
-                  <div className={clsx("font-bold text-text", size === "md" ? "text-2xl" : "text-3xl")}>
+                  <div className={clsx("font-bold text-text", size === "md" ? "text-[22px]" : "text-[27px]")}>
                     {project.title}
                   </div>
                   <div className={clsx("text-text", size === "md" ? "text-xs" : "text-base")}>{project.subTitle}</div>
