@@ -10,7 +10,7 @@
       "backgroundUrl": ""
     },
     "siteUrl": {
-      "href": "/project/1",
+      "href": "/project/works",
       "external": false
     }
   },
@@ -25,7 +25,7 @@
       "backgroundUrl": ""
     },
     "siteUrl": {
-      "href": "/project/1",
+      "href": "/project/mockshop",
       "external": true
     }
   },
@@ -40,7 +40,7 @@
       "backgroundUrl": ""
     },
     "siteUrl": {
-      "href": "/project/1",
+      "href": "/project/cm",
       "external": false
     }
   },
@@ -55,7 +55,7 @@
       "backgroundUrl": ""
     },
     "siteUrl": {
-      "href": "/project/1",
+      "href": "/project/web",
       "external": false
     }
   },
@@ -70,7 +70,7 @@
       "backgroundUrl": ""
     },
     "siteUrl": {
-      "href": "/project/1",
+      "href": "/project/game",
       "external": false
     }
   },
@@ -85,7 +85,7 @@
       "backgroundUrl": ""
     },
     "siteUrl": {
-      "href": "/project/1",
+      "href": "/project/workshop",
       "external": true
     }
   },
@@ -100,7 +100,7 @@
       "backgroundUrl": ""
     },
     "siteUrl": {
-      "href": "/project/1",
+      "href": "/project/cafe",
       "external": true
     }
   },
@@ -115,7 +115,7 @@
       "backgroundUrl": ""
     },
     "siteUrl": {
-      "href": "/project/1",
+      "href": "/project/stage",
       "external": false
     }
   }
