@@ -14,7 +14,7 @@ export const SponsorAds: VFC<Props> = ({ silverSponsors, bronzeSponsors }) => {
 
   return (
     <div className="md:ml-shead">
-      <div className="flex flex-col w-9/12 max-w-[1000px] mx-auto my-16 space-y-12 md:space-y-8">
+      <div className="flex flex-col w-9/12 max-w-[1000px] mx-auto my-16 md:my-28 space-y-12 md:space-y-8">
         <SponsorsList sponsors={silverSponsors} direction={isWide ? "row" : "column"} />
         <SponsorsList sponsors={bronzeSponsors} direction={isWide ? "row" : "column"} />
       </div>
