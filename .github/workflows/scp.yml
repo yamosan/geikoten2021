@@ -36,9 +36,6 @@ jobs:
         env:
           NEXT_PUBLIC_BASE_PATH: ${{ secrets.BASE_PATH }}
 
-      - name: Change Dir
-        run: cd ./out
-
       - name: Deploy
         uses: appleboy/scp-action@master
         with:
@@ -46,6 +43,6 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           password: ${{ secrets.SSH_PASSWORD }}
           port: ${{ secrets.SSH_PORT }}
-          source: "out/index.html"
+          source: "out/**"
           target: ${{ secrets.DIR }}
           strip_components: 1
