@@ -10,3 +10,7 @@ export function getProjects(): Project[] {
 export function getProjectById(id: number): Project {
   return PROJECTS.find((project) => project.id === id);
 }
+
+export function findProject(callback: (project: Project) => boolean): Project {
+  return PROJECTS.find(callback);
+}

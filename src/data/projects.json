@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "name": "works",
     "title": "作品展示",
     "subTitle": "芸工生による作品展示",
     "description": "あいうえおあいうえおあいうえおあいうえお",
@@ -8,10 +9,14 @@
       "thumbnailUrl": "/images/project.png",
       "backgroundUrl": ""
     },
-    "siteUrl": "/project/1"
+    "siteUrl": {
+      "href": "/project/1",
+      "external": false
+    }
   },
   {
     "id": 2,
+    "name": "mockshop",
     "title": "模擬店",
     "subTitle": "芸工生による作品展示",
     "description": "あいうえおあいうえおあいうえおあいうえお",
@@ -19,72 +24,99 @@
       "thumbnailUrl": "/images/project.png",
       "backgroundUrl": ""
     },
-    "siteUrl": "https://geikousai-ncu.com/"
+    "siteUrl": {
+      "href": "/project/1",
+      "external": true
+    }
   },
   {
     "id": 3,
-    "title": "模擬店",
+    "name": "cm",
+    "title": "CM",
     "subTitle": "芸工生による作品展示",
     "description": "あいうえおあいうえおあいうえおあいうえお",
     "images": {
       "thumbnailUrl": "/images/project.png",
       "backgroundUrl": ""
     },
-    "siteUrl": "/project/1"
+    "siteUrl": {
+      "href": "/project/1",
+      "external": false
+    }
   },
   {
     "id": 4,
-    "title": "模擬店",
+    "name": "web",
+    "title": "webサイト",
     "subTitle": "芸工生による作品展示",
     "description": "あいうえおあいうえおあいうえおあいうえお",
     "images": {
       "thumbnailUrl": "/images/project.png",
       "backgroundUrl": ""
     },
-    "siteUrl": "/project/1"
+    "siteUrl": {
+      "href": "/project/1",
+      "external": false
+    }
   },
   {
     "id": 5,
-    "title": "模擬店",
+    "name": "game",
+    "title": "ゲーム",
     "subTitle": "芸工生による作品展示",
     "description": "あいうえおあいうえおあいうえおあいうえお",
     "images": {
       "thumbnailUrl": "/images/project.png",
       "backgroundUrl": ""
     },
-    "siteUrl": "/project/1"
+    "siteUrl": {
+      "href": "/project/1",
+      "external": false
+    }
   },
   {
     "id": 6,
-    "title": "模擬店",
+    "name": "workshop",
+    "title": "ワークショップ",
     "subTitle": "芸工生による作品展示",
     "description": "あいうえおあいうえおあいうえおあいうえお",
     "images": {
       "thumbnailUrl": "/images/project.png",
       "backgroundUrl": ""
     },
-    "siteUrl": "/project/1"
+    "siteUrl": {
+      "href": "/project/1",
+      "external": true
+    }
   },
   {
     "id": 7,
-    "title": "模擬店",
+    "name": "cafe",
+    "title": "カフェ",
     "subTitle": "芸工生による作品展示",
     "description": "あいうえおあいうえおあいうえおあいうえお",
     "images": {
       "thumbnailUrl": "/images/project.png",
       "backgroundUrl": ""
     },
-    "siteUrl": "/project/1"
+    "siteUrl": {
+      "href": "/project/1",
+      "external": true
+    }
   },
   {
     "id": 8,
-    "title": "模擬店",
+    "name": "stage",
+    "title": "ステージ企画",
     "subTitle": "芸工生による作品展示",
     "description": "あいうえおあいうえおあいうえおあいうえお",
     "images": {
       "thumbnailUrl": "/images/project.png",
       "backgroundUrl": ""
     },
-    "siteUrl": "/project/1"
+    "siteUrl": {
+      "href": "/project/1",
+      "external": false
+    }
   }
 ]

@@ -1,5 +1,6 @@
 export type Project = {
   id: number;
+  name: string;
   title: string;
   subTitle: string;
   description: string;
@@ -7,5 +8,8 @@ export type Project = {
     thumbnailUrl: string;
     backgroundUrl: string;
   };
-  siteUrl: string
+  siteUrl: {
+    href: string;
+    external: boolean;
+  };
 };
