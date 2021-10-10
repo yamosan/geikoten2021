@@ -38,7 +38,7 @@ export const ProjectCard = forwardRef<HTMLDivElement, Props>((props, ref) => {
             <figure className="relative h-full tape">
               <Image src={project.images.thumbnailUrl} alt={project.title} layout="fill" objectFit="contain" />
               <span className="tape" />
-              <div className="opacity-0 transition-opacity group-hover:opacity-100 duration-300">
+              <div className="opacity-0 transition-opacity md:group-hover:opacity-100 duration-300">
                 <p className="absolute inset-0 m-auto flex justify-center items-center w-full py-16 text-center text-white px-14 bg-lightBrown opacity-90 h-5/6">
                   {project.description}
                 </p>

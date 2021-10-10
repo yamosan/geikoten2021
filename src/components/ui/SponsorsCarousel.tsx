@@ -52,7 +52,7 @@ export const SponsorsCarousel: VFC<Props> = ({ sponsors, className, navigationPo
                 onClick={() => setCurrent(sponsor)}
                 className={clsx(
                   "slide-content",
-                  "block w-full h-full transition-all duration-300 opacity-100 hover:opacity-80"
+                  "block w-full h-full transition-all duration-300 opacity-100 md:hover:opacity-80"
                 )}
               >
                 <Image
@@ -69,7 +69,7 @@ export const SponsorsCarousel: VFC<Props> = ({ sponsors, className, navigationPo
         {navigationPosition === "rl" && (
           <div className="absolute left-0 z-10 flex items-center justify-between w-full h-0 transform -translate-y-1/2 top-1/2">
             <button
-              className={clsx("prev", "transform -translate-x-1/2 duration-300 hover:scale-110")}
+              className={clsx("prev", "transform -translate-x-1/2 duration-300 md:hover:scale-110")}
               id="previousButton"
             >
               <RoundedArrow direction="left" />

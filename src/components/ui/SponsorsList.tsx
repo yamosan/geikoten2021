@@ -28,7 +28,7 @@ export const SponsorsList: VFC<Props> = ({ sponsors, direction }) => {
           <button
             key={sponsor.id}
             onClick={() => setCurrent(sponsor)}
-            className="w-full transition-opacity duration-300 hover:opacity-80"
+            className="w-full transition-opacity duration-300 md:hover:opacity-80"
           >
             <Image
               src={sponsor.images.thumbnailUrl}
