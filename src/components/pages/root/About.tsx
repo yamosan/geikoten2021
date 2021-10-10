@@ -6,7 +6,7 @@ import { Button, Section } from "@/components/ui";
 export const About: VFC = () => {
   return (
     <Section heading="ABOUT" subHeading="芸工展とは" id="about">
-      <div className="px-5 md:ml-shead">
+      <div className="px-5 md:px-12 md:ml-shead">
         <div className="lg:max-w-app lg:mx-auto">
           <Paragraph>
             名古屋市立大学芸術工学部の学生による様々な企画が楽しめる、完全オンラインの展示会です。
