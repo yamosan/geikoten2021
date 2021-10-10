@@ -3,9 +3,9 @@ export type Project = {
   title: string;
   subTitle: string;
   description: string;
-  // images: {
-  //   thumbnailUrl: string;
-  //   backgroundUrl: string;
-  // };
-  siteUrl: string;
+  images: {
+    thumbnailUrl: string;
+    backgroundUrl: string;
+  };
+  siteUrl: string
 };

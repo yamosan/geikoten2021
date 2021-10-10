@@ -3,48 +3,88 @@
     "id": 1,
     "title": "作品展示",
     "subTitle": "芸工生による作品展示",
-    "description": "あいうえおあいうえおあいうえおあいうえお"
+    "description": "あいうえおあいうえおあいうえおあいうえお",
+    "images": {
+      "thumbnailUrl": "/images/project.png",
+      "backgroundUrl": ""
+    },
+    "siteUrl": "/project/1"
   },
   {
     "id": 2,
     "title": "模擬店",
     "subTitle": "芸工生による作品展示",
-    "description": "あいうえおあいうえおあいうえおあいうえお"
+    "description": "あいうえおあいうえおあいうえおあいうえお",
+    "images": {
+      "thumbnailUrl": "/images/project.png",
+      "backgroundUrl": ""
+    },
+    "siteUrl": "https://geikousai-ncu.com/"
   },
   {
     "id": 3,
     "title": "模擬店",
     "subTitle": "芸工生による作品展示",
-    "description": "あいうえおあいうえおあいうえおあいうえお"
+    "description": "あいうえおあいうえおあいうえおあいうえお",
+    "images": {
+      "thumbnailUrl": "/images/project.png",
+      "backgroundUrl": ""
+    },
+    "siteUrl": "/project/1"
   },
   {
     "id": 4,
     "title": "模擬店",
     "subTitle": "芸工生による作品展示",
-    "description": "あいうえおあいうえおあいうえおあいうえお"
+    "description": "あいうえおあいうえおあいうえおあいうえお",
+    "images": {
+      "thumbnailUrl": "/images/project.png",
+      "backgroundUrl": ""
+    },
+    "siteUrl": "/project/1"
   },
   {
     "id": 5,
     "title": "模擬店",
     "subTitle": "芸工生による作品展示",
-    "description": "あいうえおあいうえおあいうえおあいうえお"
+    "description": "あいうえおあいうえおあいうえおあいうえお",
+    "images": {
+      "thumbnailUrl": "/images/project.png",
+      "backgroundUrl": ""
+    },
+    "siteUrl": "/project/1"
   },
   {
     "id": 6,
     "title": "模擬店",
     "subTitle": "芸工生による作品展示",
-    "description": "あいうえおあいうえおあいうえおあいうえお"
+    "description": "あいうえおあいうえおあいうえおあいうえお",
+    "images": {
+      "thumbnailUrl": "/images/project.png",
+      "backgroundUrl": ""
+    },
+    "siteUrl": "/project/1"
   },
   {
     "id": 7,
     "title": "模擬店",
     "subTitle": "芸工生による作品展示",
-    "description": "あいうえおあいうえおあいうえおあいうえお"
+    "description": "あいうえおあいうえおあいうえおあいうえお",
+    "images": {
+      "thumbnailUrl": "/images/project.png",
+      "backgroundUrl": ""
+    },
+    "siteUrl": "/project/1"
   },
   {
     "id": 8,
     "title": "模擬店",
     "subTitle": "芸工生による作品展示",
-    "description": "あいうえおあいうえおあいうえおあいうえお"
+    "description": "あいうえおあいうえおあいうえおあいうえお",
+    "images": {
+      "thumbnailUrl": "/images/project.png",
+      "backgroundUrl": ""
+    },
+    "siteUrl": "/project/1"
   }
 ]
