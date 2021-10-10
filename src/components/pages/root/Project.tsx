@@ -57,19 +57,17 @@ export const Project: VFC<Props> = ({ projects }) => {
         <Image src="/images/top_bg.jpg" alt="背景" layout="fill" objectFit="cover" />
         <div className="absolute flex pl-12 my-auto space-x-24 h-4/5 max-h-[800px] md:ml-shead" ref={boxRef}>
           {projects.map((project, i) => (
-            <>
-              <Link href={project.siteUrl.href}>
-                <a>
-                  <ProjectCard
-                    key={i.toString()}
-                    project={project}
-                    index={project.id}
-                    colorLevel={(10 * (i + 1)) as ColorLevel}
-                    size="md"
-                  />
-                </a>
-              </Link>
-            </>
+            <Link href={project.siteUrl.href} key={project.id.toString()}>
+              <a>
+                <ProjectCard
+                  key={i.toString()}
+                  project={project}
+                  index={project.id}
+                  colorLevel={(10 * (i + 1)) as ColorLevel}
+                  size="md"
+                />
+              </a>
+            </Link>
           ))}
         </div>
       </div>

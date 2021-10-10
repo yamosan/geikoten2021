@@ -36,14 +36,7 @@ export const ProjectCard = forwardRef<HTMLDivElement, Props>((props, ref) => {
         <div className="absolute inset-0 w-full h-full">
           <div className="relative flex flex-col justify-between space-y-2 h-full p-[4%] bg-white">
             <figure className="relative h-full tape">
-              <Image
-                src={project.images.thumbnailUrl}
-                alt={project.title}
-                layout="fill"
-                objectFit="contain"
-                width={280}
-                height={280}
-              />
+              <Image src={project.images.thumbnailUrl} alt={project.title} layout="fill" objectFit="contain" />
               <span className="tape" />
               <div className="opacity-0 transition-opacity group-hover:opacity-100 duration-300">
                 <p className="absolute inset-0 m-auto flex justify-center items-center w-full py-16 text-center text-white px-14 bg-lightBrown opacity-90 h-5/6">
