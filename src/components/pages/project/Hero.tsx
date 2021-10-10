@@ -13,9 +13,8 @@ type Props = {
 export const Hero: VFC<Props> = ({ project }) => {
   const isWide = useMedia("(min-width: 768px)"); // TODO: tailwind.config.jsから取得
 
-  console.log(project);
   return (
-    <div className="relative" id="top">
+    <div className="relative">
       <Div100vh className="relative">
         <Image src="/images/top_bg.jpg" alt="背景" layout="fill" objectFit="cover" priority />
         <div className="md:pl-shead h-full relative">
