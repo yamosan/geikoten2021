@@ -23,7 +23,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   };
 };
 
-const ProjectId: NextPage<Props> = ({ project }) => {
+const CM: NextPage<Props> = ({ project }) => {
   return (
     <Layout>
       <Hero project={project} />
@@ -38,4 +38,4 @@ const ProjectId: NextPage<Props> = ({ project }) => {
   );
 };
 
-export default ProjectId;
+export default CM;
