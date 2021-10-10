@@ -7,6 +7,7 @@ import { useEffect, useRef } from "react";
 import { Highlight, Image, Paragraph } from "@/components/basics";
 import type { ColorLevel } from "@/components/ui";
 import { ProjectCard, Section } from "@/components/ui";
+import useMedia from "@/hooks/useMediaQuery";
 import useWindowSize from "@/hooks/useWindowSize";
 import type { Project as TProject } from "@/models";
 
@@ -18,6 +19,7 @@ export const Project: VFC<Props> = ({ projects }) => {
   const triggerRef = useRef<HTMLElement>(null);
   const boxRef = useRef<HTMLDivElement>(null);
   const anime = useRef<gsap.core.Tween>(null);
+  const isWide = useMedia("(min-width: 768px)"); // TODO: tailwind.config.jsから取得
 
   const { width } = useWindowSize();
   //TODO: リサイズした時にxを変更したい
@@ -59,14 +61,27 @@ export const Project: VFC<Props> = ({ projects }) => {
           {projects.map((project, i) => (
             <Link href={project.siteUrl.href} key={project.id.toString()}>
               <a>
-                <ProjectCard
-                  key={i.toString()}
-                  project={project}
-                  index={project.id}
-                  colorLevel={(10 * project.id) as ColorLevel}
-                  size="md"
-                  base="height"
-                />
+                {isWide ? (
+                  <ProjectCard
+                    key={i.toString()}
+                    project={project}
+                    index={project.id}
+                    colorLevel={(10 * project.id) as ColorLevel}
+                    size="lg"
+                    base="height"
+                    descriptionType="hover"
+                  />
+                ) : (
+                  <ProjectCard
+                    key={i.toString()}
+                    project={project}
+                    index={project.id}
+                    colorLevel={(10 * project.id) as ColorLevel}
+                    size="md"
+                    base="height"
+                    descriptionType="hidden"
+                  />
+                )}
               </a>
             </Link>
           ))}

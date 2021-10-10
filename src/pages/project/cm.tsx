@@ -3,7 +3,7 @@ import type { GetStaticProps, NextPage } from "next";
 import { Layout } from "@/components/layouts/Layout";
 import { Hero } from "@/components/pages/project/Hero";
 import { Project } from "@/models";
-import { findProject, getProjects } from "@/utils/getProjects";
+import { findProject } from "@/utils/getProjects";
 
 type Props = {
   project: Project;

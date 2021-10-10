@@ -19,15 +19,17 @@ export const Hero: VFC<Props> = ({ project }) => {
       <Div100vh className="relative">
         <Image src="/images/top_bg.jpg" alt="背景" layout="fill" objectFit="cover" priority />
         <div className="md:pl-shead h-full relative">
-          <div className="w-full h-full flex justify-center items-center">
+          {/* TODO: とりあえずoverflow-x-hidden */}
+          <div className="w-full h-full flex justify-center items-center overflow-x-hidden max-w-full">
             {isWide ? (
-              <div className="h-4/6">
+              <div className="h-1/2">
                 <ProjectCard
                   project={project}
                   index={project.id}
                   colorLevel={(10 * project.id) as ColorLevel}
                   size="lg"
                   base="height"
+                  descriptionType="flex"
                 />
               </div>
             ) : (
@@ -37,6 +39,7 @@ export const Hero: VFC<Props> = ({ project }) => {
                   index={project.id}
                   colorLevel={(10 * project.id) as ColorLevel}
                   size="md"
+                  base="width"
                 />
               </div>
             )}

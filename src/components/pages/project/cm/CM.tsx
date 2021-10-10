@@ -2,7 +2,7 @@ import type { VFC } from "react";
 import Div100vh from "react-div-100vh";
 
 import { Image } from "@/components/basics";
-import { ScrollDown, SponsorsCarousel, VisitorCounter } from "@/components/ui";
+import { ScrollDown, SponsorsCarousel } from "@/components/ui";
 import useMedia from "@/hooks/useMediaQuery";
 import { Sponsor } from "@/models/Sponsor";
 

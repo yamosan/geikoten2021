@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import React, { ComponentPropsWithoutRef, forwardRef } from "react";
+import React, { ComponentPropsWithoutRef, forwardRef, useLayoutEffect, useRef, useState } from "react";
 
 import { Image } from "@/components/basics";
 import { Project } from "@/models";
@@ -12,6 +12,7 @@ type Props = {
   colorLevel: ColorLevel;
   size: "md" | "lg";
   base?: "width" | "height";
+  descriptionType?: "hover" | "flex" | "hidden";
 } & ComponentPropsWithoutRef<"div">;
 
 const textColorMap = {
@@ -26,62 +27,96 @@ const textColorMap = {
 };
 
 export const ProjectCard = forwardRef<HTMLDivElement, Props>((props, ref) => {
-  const { project, index, colorLevel, base, size, className, ...attrs } = props;
+  const { project, index, colorLevel, base, size, descriptionType, className, ...attrs } = props;
+  const [{ width: fw, height: fh }, setDescriptionSize] = useState({ width: 0, height: 0 });
+  const leftRef = useRef<HTMLDivElement>(null);
 
-  console.log(size);
+  useLayoutEffect(() => {
+    if (leftRef.current === null) return;
+    if (descriptionType !== "flex") return;
+
+    setDescriptionSize({
+      width: leftRef.current.clientWidth,
+      height: leftRef.current.clientHeight,
+    });
+  }, [descriptionType]);
+
   return (
     <>
       <div
         className={clsx(
+          "relative group",
           {
             "h-full": base === "height",
-            " w-full": base === "width",
+            "w-full": base === "width",
+            flex: descriptionType === "flex",
           },
-          "relative group",
           className
         )}
         {...attrs}
         ref={ref}
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="460"
-          width="410"
-          className={clsx({
-            "w-auto h-full": base === "height",
-            "h-auto w-full": base === "width",
-          })}
-        />
+        <div className="relative" ref={leftRef}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="460"
+            width="410"
+            className={clsx({
+              "w-auto h-full": base === "height",
+              "h-auto w-full": base === "width",
+            })}
+          />
 
-        <div className="absolute inset-0 w-full h-full">
-          <div className="relative flex flex-col justify-between space-y-2 h-full p-[4%] bg-white">
-            <figure className="relative h-full tape">
-              <Image src={project.images.thumbnailUrl} alt={project.title} layout="fill" objectFit="contain" />
-              <span className="tape" />
-              <div className="opacity-0 transition-opacity md:group-hover:opacity-100 duration-300">
-                <p className="absolute inset-0 m-auto flex justify-center items-center w-full py-16 text-center text-white px-14 bg-lightBrown opacity-90 h-5/6">
-                  {project.description}
-                </p>
-              </div>
-            </figure>
-            <div className="flex items-center justify-between w-full">
-              <div className="relative h-full">
-                <div
-                  className={clsx("font-genuine", size === "md" ? "text-5xl" : "text-6xl", textColorMap[colorLevel])}
-                  style={{ position: "relative", top: "0.15em" }}
-                >
-                  {`#${index.toString().padStart(2, "0")}`}
+          <div className="absolute inset-0 w-full h-full">
+            <div className="relative flex flex-col justify-between space-y-2 h-full p-[4%] bg-white">
+              <figure className="relative h-full tape">
+                <Image src={project.images.thumbnailUrl} alt={project.title} layout="fill" objectFit="contain" />
+                <span className="tape" />
+                {descriptionType === "hover" && (
+                  <div className="opacity-0 transition-opacity md:group-hover:opacity-100 duration-300">
+                    <p
+                      className={clsx(
+                        "bg-lightBrown-70",
+                        "absolute inset-0 m-auto flex justify-center items-center w-full py-16 text-center text-white px-14 h-5/6"
+                      )}
+                    >
+                      {project.description}
+                    </p>
+                  </div>
+                )}
+              </figure>
+              <div className="flex items-center justify-between w-full">
+                <div className="relative h-full">
+                  <div
+                    className={clsx("font-genuine", size === "md" ? "text-5xl" : "text-6xl", textColorMap[colorLevel])}
+                    style={{ position: "relative", top: "0.15em" }}
+                  >
+                    {`#${index.toString().padStart(2, "0")}`}
+                  </div>
                 </div>
-              </div>
-              <div className="flex flex-col items-end">
-                <div className={clsx("font-bold text-text", size === "md" ? "text-2xl" : "text-3xl")}>
-                  {project.title}
+                <div className="flex flex-col items-end">
+                  <div className={clsx("font-bold text-text", size === "md" ? "text-2xl" : "text-3xl")}>
+                    {project.title}
+                  </div>
+                  <div className={clsx("text-text", size === "md" ? "text-xs" : "text-base")}>{project.subTitle}</div>
                 </div>
-                <div className={clsx("text-text", size === "md" ? "text-xs" : "text-base")}>{project.subTitle}</div>
               </div>
             </div>
           </div>
         </div>
+        {leftRef.current && descriptionType === "flex" && (
+          <div className="h-full flex items-center">
+            <p
+              className={clsx(
+                "bg-lightBrown-70",
+                "flex justify-center items-center py-16 text-center text-white px-14"
+              )}
+              style={{ width: `${fw * 0.8}px`, height: `${fh * 0.6}px` }}
+            >
+              {project.description}
+            </p>
+          </div>
+        )}
       </div>
 
       <style jsx>{`
@@ -100,6 +135,10 @@ export const ProjectCard = forwardRef<HTMLDivElement, Props>((props, ref) => {
           width: ${size === "md" ? "105px" : "112px"};
           height: ${size === "md" ? "30px" : "32px"};
         }
+
+        .bg-lightBrown-70 {
+          background: rgba(80, 71, 70, 0.7);
+        }
       `}</style>
     </>
   );
@@ -107,6 +146,7 @@ export const ProjectCard = forwardRef<HTMLDivElement, Props>((props, ref) => {
 
 ProjectCard.defaultProps = {
   base: "width",
+  descriptionType: "hover",
 };
 
 ProjectCard.displayName = "ProjectCard";
