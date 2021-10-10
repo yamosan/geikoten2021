@@ -6,7 +6,7 @@ import { PCLayout } from "./PCLayout";
 import { SPLayout } from "./SPLayout";
 
 type Props = {
-  children: ReactNode;
+  children?: ReactNode;
 };
 
 export const Layout: VFC<Props> = ({ children }) => {
