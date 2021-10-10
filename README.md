@@ -9,38 +9,44 @@ $ npm i
 $ npm run dev
 ```
 
-
-
-
 ### コンポーネント
-1. コンポーネント内でデータ取得をしていいのは①, ②のみ。
-2. ページ内でしか使われないものは②にベタ書きを許容(程々に)。共通化の必要が出たら③に切り出す。
-3. /components下は基本的にネストせず、index.tsからエクスポート(Barrel)。ただし⑥はネストを許容。
 
-###### ①　/pages
+1. コンポーネント内でデータ取得をしていいのは ①, ② のみ。
+2. ページ内でしか使われないものは ② にベタ書きを許容(程々に)。共通化の必要が出たら ③ に切り出す。
+3. /components 下は基本的にネストせず、index.ts からエクスポート(Barrel)。ただし ⑥ はネストを許容。
+
+###### ① 　/pages
+
 - ② コンポーネントでページのレイアウトを組む。データを流す。
 
-###### ②　/components/pages
+###### ② 　/components/pages
 
 - ① をセクションごとでコンポーネントに切り出したもの。完全にページに依存。
 - useMediaQuery を使ってアダプティブに ③ コンポーネントを出し分けする。
 
-###### ③　/components/ui
+###### ③ 　/components/ui
 
 - レスポンシブスタイルは props によって制御される。(例; size: "md" | "lg")
 
-###### ④　/components/basics
+###### ④ 　/components/basics
 
 - プリミティブなコンポーネントのみ。
 - 必ず forwardRef と ComponentProps を渡せるようにする。
 
-
-###### ⑤　/components/icons
+###### ⑤ 　/components/icons
 
 - SVG 等のアイコン。
 - 必要になったらバリアントを増やす。
 
-
-###### ⑥　/components/layouts
+###### ⑥ 　/components/layouts
 
 - PC/SP のレイアウト。ヘッダーフッター等の構成要素もここ。
+
+## デプロイ
+
+### サブディレクトリ「/sub」にエクスポート
+
+```
+$ echo NEXT_PUBLIC_BASE_PATH=/sub > .env.production.local
+$ npm run build
+```
