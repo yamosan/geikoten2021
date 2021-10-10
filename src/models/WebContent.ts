@@ -10,6 +10,7 @@ export type WebContent = {
   id: number;
   type: ContentType;
   title: string;
+  description: string;
   authors: Author[];
   thumbnailUrl: string;
   siteUrl: string;
