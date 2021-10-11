@@ -14,7 +14,7 @@ export const Event: VFC = () => {
           </span>
         </Paragraph>
       </div>
-      <div className="px-5 md:px-12 mt-6 overflow-x-hidden md:ml-shead">
+      <div className="px-5 md:px-12 mt-6 md:ml-shead">
         <div className="relative flex flex-col justify-center space-y-6 md:space-y-0 md:space-x-6 md:items-center md:flex-row lg:max-w-app lg:mx-auto">
           {/* TODO: size propsでレスポンス。projectも同様 */}
           <EventCard

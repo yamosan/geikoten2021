@@ -14,7 +14,7 @@ export const Top: VFC = () => {
       <Div100vh className="relative">
         <Image src="/images/top_bg.jpg" alt="背景" layout="fill" objectFit="cover" priority />
         <div className="md:pl-shead h-full relative">
-          <div className="w-full h-full flex justify-center items-center overflow-x-hidden max-w-full">
+          <div className="w-full h-full flex justify-center items-center max-w-full">
             <ScrollDown className="z-10 absolute bottom-0" />
           </div>
         </div>

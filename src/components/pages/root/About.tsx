@@ -1,7 +1,7 @@
 import type { VFC } from "react";
 
 import { Highlight, Paragraph } from "@/components/basics";
-import { Button, Section } from "@/components/ui";
+import { LinkButton, Section } from "@/components/ui";
 
 export const About: VFC = () => {
   return (
@@ -35,7 +35,9 @@ export const About: VFC = () => {
           <div className="h-[210px] bg-sky"></div>
           <div className="md:ml-shead">
             <div className="flex justify-center">
-              <Button direction="bottom">企画を見る</Button>
+              <LinkButton direction="bottom" href="#project">
+                企画を見る
+              </LinkButton>
             </div>
           </div>
         </div>
@@ -43,7 +45,9 @@ export const About: VFC = () => {
           <div className="h-[210px] bg-sky"></div>
           <div className="md:ml-shead">
             <div className="flex justify-center">
-              <Button direction="right">バーチャル会場について</Button>
+              <LinkButton direction="right" href="/about">
+                バーチャル会場について
+              </LinkButton>
             </div>
           </div>
         </div>

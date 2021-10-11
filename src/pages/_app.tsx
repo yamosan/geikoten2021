@@ -1,10 +1,21 @@
 import "tailwindcss/tailwind.css";
+import "scroll-behavior-polyfill";
 
-// import "scroll-behavior-polyfill";
 import type { AppProps } from "next/app";
 
 const App = (props: AppProps) => {
-  return <props.Component {...props.pageProps} />;
+  return (
+    <>
+      <div scroll-behavior="smooth">
+        <props.Component {...props.pageProps} />
+      </div>
+      <style jsx global>{`
+        html {
+          scroll-behavior: smooth;
+        }
+      `}</style>
+    </>
+  );
 };
 
 export default App;
