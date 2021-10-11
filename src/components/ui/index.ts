@@ -1,5 +1,6 @@
 export * from "./Button";
 export * from "./EventCard";
+export * from "./Process";
 export * from "./ProjectCard";
 export * from "./ScrollDown";
 export * from "./Section";
