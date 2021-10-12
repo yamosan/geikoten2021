@@ -1,15 +1,15 @@
 import { RefObject, useEffect, useState } from "react";
 
-const useIntersection = (ref: RefObject<HTMLElement>, options: IntersectionObserverInit) => {
+const useIntersection = (ref: RefObject<HTMLElement>, frozen: boolean, options: IntersectionObserverInit) => {
   const [entry, setEntry] = useState<IntersectionObserverEntry | null>(null);
 
   useEffect(() => {
     if (typeof IntersectionObserver === "undefined") return;
     if (ref.current === null) return;
-    if (!entry) return;
+    if (frozen && entry) return;
 
-    const handler = ([entries]: IntersectionObserverEntry[]) => {
-      setEntry(entries);
+    const handler = ([entry]: IntersectionObserverEntry[]) => {
+      setEntry(entry);
     };
 
     const observer = new IntersectionObserver(handler, options);
@@ -19,7 +19,7 @@ const useIntersection = (ref: RefObject<HTMLElement>, options: IntersectionObser
       setEntry(null);
       observer.disconnect();
     };
-  }, [ref, options, entry]);
+  }, [ref, options, entry, frozen]);
 
   return entry;
 };
