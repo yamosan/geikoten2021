@@ -1,8 +1,8 @@
 import clsx from "clsx";
-import { FC, useEffect, useRef, VFC } from "react";
+import { FC, VFC } from "react";
 
 import { Highlight, Image, Paragraph } from "@/components/basics";
-import { Button, LinkButton, Section } from "@/components/ui";
+import { LinkButton, Section } from "@/components/ui";
 import { Crowd, Tree } from "@/components/vectors";
 import useMedia from "@/hooks/useMediaQuery";
 
@@ -179,23 +179,3 @@ const InfiniteScroll: FC<{ className?: string }> = ({ children, className }) => 
     </>
   );
 };
-
-const ScrollToProject = () => {
-  const ref = useRef()
-
-  const handleClick = () => {
-    const target = document.getElementById("project")
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth" });
-    }
-  }
-
-  return (
-    <Button
-      direction="bottom"
-      onClick={handleClick}
-    >
-      企画を見る
-    </Button>
-  );
-}
