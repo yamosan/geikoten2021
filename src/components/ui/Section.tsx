@@ -10,7 +10,7 @@ type Props = {
 export const Section = forwardRef<HTMLElement, Props>((props, ref) => {
   const { heading, subHeading, children, className, ...attrs } = props;
   return (
-    <section className={clsx("bg-white pb-[52px] md:pt-24 md:pb-4", className)} {...attrs} ref={ref}>
+    <section className={clsx("bg-white pt-[52px] md:pt-24 md:pb-4", className)} {...attrs} ref={ref}>
       <header className="px-5 md:px-12 md:ml-shead">
         <div className="lg:max-w-app lg:mx-auto">
           <h2 className="text-5xl leading-10 font-genuine text-green-10">{heading}</h2>
