@@ -10,7 +10,7 @@ import { NAV_LINKS } from "../constants";
 
 export const GlobalNav: VFC = () => {
   const router = useRouter();
-  const isRoot = router.asPath === "/";
+  const isRoot = router.pathname === "/";
   const activeId = useActiveId(NAV_LINKS.map((item) => item.id));
 
   return (
