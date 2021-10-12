@@ -16,7 +16,6 @@
   "dependencies": {
     "@headlessui/react": "^1.4.1",
     "gsap": "^3.8.0",
-    "minimatch": "^3.0.4",
     "next": "11.1.2",
     "react": "17.0.2",
     "react-div-100vh": "^0.6.0",
