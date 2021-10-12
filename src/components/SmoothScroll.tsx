@@ -3,12 +3,18 @@ import "scroll-behavior-polyfill";
 import { useRouter } from "next/router";
 import React, { FC, useEffect } from "react";
 
+import useMedia from "@/hooks/useMediaQuery";
+
 export const SmoothScroll: FC = ({ children }) => {
   const router = useRouter();
+  const isWide = useMedia("(min-width: 768px)"); // TODO: tailwind.config.jsから取得
 
   useEffect(() => {
     const html = document.documentElement;
-    html.setAttribute("scroll-behavior", "smooth"); // polyfill
+    html.setAttribute("scroll-behavior", "smooth"); // polyfill(scrollTopButtonはSP/PC共に必要)
+
+    if (isWide) return; // SPではページ内遷移でスムーススクロールしない
+
     let scrollTimeout: ReturnType<typeof setTimeout>;
 
     const debouncedRemoveSmoothScroll = () => {
