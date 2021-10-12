@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { ComponentProps, VFC } from "react";
 import React, { useState } from "react";
 
-import useBackfaceFixed from "@/hooks/useBackfaceFixed";
+// import useBackfaceFixed from "@/hooks/useBackfaceFixed";
 import useOnScrolling from "@/hooks/useOnScrolling";
 import useWindowSize from "@/hooks/useWindowSize";
 
@@ -16,7 +16,7 @@ export const Header: VFC<ComponentProps<"header">> = ({ className, ...attrs }) =
   const toggleOpen = () => {
     setIsOpen((state) => !state);
   };
-  useBackfaceFixed(isOpen);
+  // useBackfaceFixed(isOpen); // scroll-behaviorとバッティング
   const { height } = useWindowSize();
   const isScrolled = useOnScrolling(height);
   const transition = clsx("transition duration-500 ease-in-out");
