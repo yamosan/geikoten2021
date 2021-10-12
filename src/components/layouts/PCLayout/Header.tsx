@@ -3,8 +3,8 @@ import type { ComponentProps, VFC } from "react";
 
 import { Image } from "@/components/basics/";
 import { ExternalLink } from "@/components/basics/ExternalLink";
-import { InstagramIcon } from "@/components/icons/InstagramIcon";
-import { TwitterIcon } from "@/components/icons/TwitterIcon";
+import { InstagramIcon } from "@/components/vectors/InstagramIcon";
+import { TwitterIcon } from "@/components/vectors/TwitterIcon";
 import { INSTAGRAM_URL, TWITTER_URL } from "@/constants/urls";
 
 import { GlobalNav } from "./GlobalNav";

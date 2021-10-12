@@ -1,8 +1,8 @@
 import type { VFC } from "react";
 
 import { Highlight, Image, Paragraph } from "@/components/basics";
-import { Pc, PcAppDownload, Phone } from "@/components/icons";
 import { Process, Section } from "@/components/ui";
+import { Pc, PcAppDownload, Phone } from "@/components/vectors";
 import useMedia from "@/hooks/useMediaQuery";
 
 export const Main: VFC = () => {

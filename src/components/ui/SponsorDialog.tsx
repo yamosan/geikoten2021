@@ -3,8 +3,8 @@ import type { VFC } from "react";
 import { Fragment } from "react";
 
 import { Image } from "@/components/basics";
-import { Comment, Place, Store, Tel, Time } from "@/components/icons";
 import { HamburgerMenu } from "@/components/layouts/SPLayout/HamburgerMenu";
+import { Comment, Place, Store, Tel, Time } from "@/components/vectors";
 import type { Sponsor } from "@/models/Sponsor";
 
 type Props = {

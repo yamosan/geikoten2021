@@ -2,7 +2,7 @@ import { useRouter } from "next/dist/client/router";
 import { useCallback, VFC } from "react";
 
 import { ExternalLink } from "@/components/basics";
-import { InstagramIcon, TwitterIcon } from "@/components/icons";
+import { InstagramIcon, TwitterIcon } from "@/components/vectors";
 import { INSTAGRAM_URL, TWITTER_URL } from "@/constants/urls";
 
 import { NAV_LINKS, TLink } from "../constants";

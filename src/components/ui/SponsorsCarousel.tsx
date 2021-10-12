@@ -8,8 +8,8 @@ import { A11y, Autoplay, Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { Image } from "@/components/basics";
-import { RoundedArrow } from "@/components/icons";
 import { SponsorDialog } from "@/components/ui";
+import { RoundedArrow } from "@/components/vectors";
 import { IMAGE_DIMENSIONS_BY_RANK } from "@/constants/sponsor";
 import type { Sponsor } from "@/models/Sponsor";
 

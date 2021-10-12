@@ -1,8 +1,8 @@
 import type { VFC } from "react";
 
 import { ExternalLink } from "@/components/basics/ExternalLink";
-import { ExternalLinkIcon } from "@/components/icons";
 import { ScrollToTop } from "@/components/ui/ScrollToTop";
+import { ExternalLink as ExternalLinkIcon } from "@/components/vectors";
 import { HOMEPAGE_LINK } from "@/constants/urls";
 
 export const Footer: VFC = () => {

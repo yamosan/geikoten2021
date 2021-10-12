@@ -33,9 +33,9 @@ $ npm run dev
 - プリミティブなコンポーネントのみ。
 - 必ず forwardRef と ComponentProps を渡せるようにする。
 
-###### ⑤ 　/components/icons
+###### ⑤ 　/components/vectors
 
-- SVG 等のアイコン。
+- SVG アイコン等。
 - 必要になったらバリアントを増やす。
 
 ###### ⑥ 　/components/layouts

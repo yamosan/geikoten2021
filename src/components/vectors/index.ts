@@ -1,6 +1,7 @@
 export * from "./ArrowUp";
 export * from "./Comment";
-export * from "./ExternalLinkIcon";
+export * from "./Crowd";
+export * from "./ExternalLink";
 export * from "./InstagramIcon";
 export * from "./Pc";
 export * from "./PcAppDownload";
@@ -10,4 +11,5 @@ export * from "./RoundedArrow";
 export * from "./Store";
 export * from "./Tel";
 export * from "./Time";
+export * from "./Tree";
 export * from "./TwitterIcon";

@@ -2,7 +2,7 @@ import clsx from "clsx";
 import type { ComponentPropsWithoutRef } from "react";
 import { forwardRef, useCallback } from "react";
 
-import { ArrowUp } from "../icons";
+import { ArrowUp } from "@/components/vectors";
 
 type Props = ComponentPropsWithoutRef<"button">;
 

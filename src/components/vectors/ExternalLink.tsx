@@ -9,7 +9,7 @@ const colorMap = {
   white: "#FFFFFF",
 };
 
-export const ExternalLinkIcon: VFC<Props> = ({ color }) => {
+export const ExternalLink: VFC<Props> = ({ color }) => {
   return (
     <svg width="14" height="14" fill="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -37,6 +37,6 @@ export const ExternalLinkIcon: VFC<Props> = ({ color }) => {
   );
 };
 
-ExternalLinkIcon.defaultProps = {
+ExternalLink.defaultProps = {
   color: "white",
 };
