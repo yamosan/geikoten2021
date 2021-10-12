@@ -10,9 +10,10 @@ export const SmoothScroll: FC = ({ children }) => {
   const isWide = useMedia("(min-width: 768px)"); // TODO: tailwind.config.jsから取得
 
   useEffect(() => {
+    if (!isWide) return; // SPではページ内遷移でスムーススクロールしない
+
     const html = document.documentElement;
     html.setAttribute("scroll-behavior", "smooth"); // polyfillを有効化
-    if (!isWide) return; // SPではページ内遷移でスムーススクロールしない
 
     let scrollTimeout: ReturnType<typeof setTimeout>;
 
