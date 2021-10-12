@@ -2,21 +2,23 @@
   {
     "id": 1,
     "type": "website",
-    "title": "wonwon",
-    "description": "this is the description.",
+    "title": "毎日の朝ごはん",
+    "description": "あいうえおあいうえおあいうえおあいうえおあいえうおああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ",
     "authors": [
       {
         "name": "もりころ",
         "grade": 2,
-        "class": "M"
+        "class": "M",
+        "avatarUrl": "/images/avatar.png"
       },
       {
         "name": "ぺよ",
         "grade": 2,
-        "class": "M"
+        "class": "M",
+        "avatarUrl": "/images/avatar.png"
       }
     ],
-    "thumbnailUrl": "/images/web_content",
+    "thumbnailUrl": "/images/web_content_thumbnail.png",
     "siteUrl": "https://example.com"
   },
   {
@@ -28,15 +30,17 @@
       {
         "name": "めて",
         "grade": 2,
-        "class": "M"
+        "class": "M",
+        "avatarUrl": "/images/avatar.png"
       },
       {
         "name": "からあげ",
         "grade": 2,
-        "class": "M"
+        "class": "M",
+        "avatarUrl": "/images/avatar.png"
       }
     ],
-    "thumbnailUrl": "/images/web_content",
+    "thumbnailUrl": "/images/web_content_thumbnail.png",
     "siteUrl": "https://example.com"
   },
   {
@@ -48,15 +52,17 @@
       {
         "name": "さんぴん",
         "grade": 2,
-        "class": "N"
+        "class": "N",
+        "avatarUrl": "/images/avatar.png"
       },
       {
         "name": "シャカデェス",
         "grade": 2,
-        "class": "M"
+        "class": "M",
+        "avatarUrl": "/images/avatar.png"
       }
     ],
-    "thumbnailUrl": "/images/web_content",
+    "thumbnailUrl": "/images/web_content_thumbnail.png",
     "siteUrl": "https://example.com"
   },
   {
@@ -68,15 +74,17 @@
       {
         "name": "ロン三元",
         "grade": 1,
-        "class": "M"
+        "class": "M",
+        "avatarUrl": "/images/avatar.png"
       },
       {
         "name": "まぐ",
         "grade": 1,
-        "class": "N"
+        "class": "N",
+        "avatarUrl": "/images/avatar.png"
       }
     ],
-    "thumbnailUrl": "/images/web_content",
+    "thumbnailUrl": "/images/web_content_thumbnail.png",
     "siteUrl": "https://example.com"
   },
   {
@@ -88,20 +96,23 @@
       {
         "name": "ぼん",
         "grade": 2,
-        "class": "M"
+        "class": "M",
+        "avatarUrl": "/images/avatar.png"
       },
       {
         "name": "メリテン",
         "grade": 2,
-        "class": "N"
+        "class": "N",
+        "avatarUrl": "/images/avatar.png"
       },
       {
         "name": "ばりふ",
         "grade": 3,
-        "class": "M"
+        "class": "M",
+        "avatarUrl": "/images/avatar.png"
       }
     ],
-    "thumbnailUrl": "/images/web_content",
+    "thumbnailUrl": "/images/web_content_thumbnail.png",
     "siteUrl": "https://example.com"
   },
   {
@@ -113,20 +124,23 @@
       {
         "name": "ひれもり",
         "grade": 2,
-        "class": "M"
+        "class": "M",
+        "avatarUrl": "/images/avatar.png"
       },
       {
         "name": "シャルD",
         "grade": 1,
-        "class": "M"
+        "class": "M",
+        "avatarUrl": "/images/avatar.png"
       },
       {
         "name": "ネッコアラ",
         "grade": 2,
-        "class": "M"
+        "class": "M",
+        "avatarUrl": "/images/avatar.png"
       }
     ],
-    "thumbnailUrl": "/images/web_content",
+    "thumbnailUrl": "/images/web_content_thumbnail.png",
     "siteUrl": "https://example.com"
   },
   {
@@ -138,20 +152,23 @@
       {
         "name": "ジル",
         "grade": 2,
-        "class": "M"
+        "class": "M",
+        "avatarUrl": "/images/avatar.png"
       },
       {
         "name": "うぃんぐ",
         "grade": 2,
-        "class": "N"
+        "class": "N",
+        "avatarUrl": "/images/avatar.png"
       },
       {
         "name": "えでりん",
         "grade": 2,
-        "class": "M"
+        "class": "M",
+        "avatarUrl": "/images/avatar.png"
       }
     ],
-    "thumbnailUrl": "/images/web_content",
+    "thumbnailUrl": "/images/web_content_thumbnail.png",
     "siteUrl": "https://example.com"
   },
   {
@@ -163,10 +180,11 @@
       {
         "name": "せき",
         "grade": 2,
-        "class": "M"
+        "class": "M",
+        "avatarUrl": "/images/avatar.png"
       }
     ],
-    "thumbnailUrl": "/images/web_content",
+    "thumbnailUrl": "/images/web_content_thumbnail.png",
     "siteUrl": "https://example.com"
   },
   {
@@ -178,10 +196,11 @@
       {
         "name": "たまご",
         "grade": 1,
-        "class": "M"
+        "class": "M",
+        "avatarUrl": "/images/avatar.png"
       }
     ],
-    "thumbnailUrl": "/images/web_content",
+    "thumbnailUrl": "/images/web_content_thumbnail.png",
     "siteUrl": "https://example.com"
   },
   {
@@ -193,10 +212,11 @@
       {
         "name": "でるた",
         "grade": 1,
-        "class": "N"
+        "class": "N",
+        "avatarUrl": "/images/avatar.png"
       }
     ],
-    "thumbnailUrl": "/images/web_content",
+    "thumbnailUrl": "/images/web_content_thumbnail.png",
     "siteUrl": "https://example.com"
   },
   {
@@ -208,10 +228,11 @@
       {
         "name": "ハル研",
         "grade": 2,
-        "class": "N"
+        "class": "N",
+        "avatarUrl": "/images/avatar.png"
       }
     ],
-    "thumbnailUrl": "/images/web_content",
+    "thumbnailUrl": "/images/web_content_thumbnail.png",
     "siteUrl": "https://example.com"
   },
   {
@@ -223,10 +244,11 @@
       {
         "name": "212",
         "grade": 3,
-        "class": "M"
+        "class": "M",
+        "avatarUrl": "/images/avatar.png"
       }
     ],
-    "thumbnailUrl": "/images/web_content",
+    "thumbnailUrl": "/images/web_content_thumbnail.png",
     "siteUrl": "https://example.com"
   },
   {
@@ -238,10 +260,11 @@
       {
         "name": "くれか",
         "grade": 3,
-        "class": "M"
+        "class": "M",
+        "avatarUrl": "/images/avatar.png"
       }
     ],
-    "thumbnailUrl": "/images/web_content",
+    "thumbnailUrl": "/images/web_content_thumbnail.png",
     "siteUrl": "https://example.com"
   },
   {
@@ -253,10 +276,11 @@
       {
         "name": "ラっさ",
         "grade": 3,
-        "class": "M"
+        "class": "M",
+        "avatarUrl": "/images/avatar.png"
       }
     ],
-    "thumbnailUrl": "/images/web_content",
+    "thumbnailUrl": "/images/web_content_thumbnail.png",
     "siteUrl": "https://example.com"
   },
   {
@@ -268,10 +292,11 @@
       {
         "name": "ナズナ",
         "grade": 3,
-        "class": "M"
+        "class": "M",
+        "avatarUrl": "/images/avatar.png"
       }
     ],
-    "thumbnailUrl": "/images/web_content",
+    "thumbnailUrl": "/images/web_content_thumbnail.png",
     "siteUrl": "https://example.com"
   }
 ]

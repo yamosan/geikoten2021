@@ -4,6 +4,7 @@ type Author = {
   name: string;
   grade: 1 | 2 | 3;
   class: "M" | "N" | "O";
+  avatarUrl: string;
 };
 
 export type WebContent = {
