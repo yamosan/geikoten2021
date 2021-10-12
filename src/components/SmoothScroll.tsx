@@ -11,7 +11,7 @@ export const SmoothScroll: FC = ({ children }) => {
 
   useEffect(() => {
     const html = document.documentElement;
-    html.setAttribute("scroll-behavior", "smooth"); // polyfill(scrollTopButtonはSP/PC共に必要)
+    // html.setAttribute("scroll-behavior", "smooth"); // polyfill(scrollTopButtonはSP/PC共に必要)
 
     if (isWide) return; // SPではページ内遷移でスムーススクロールしない
 
