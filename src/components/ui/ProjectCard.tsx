@@ -99,17 +99,24 @@ export const ProjectCard = forwardRef<HTMLDivElement, Props>((props, ref) => {
               <div className="flex items-center justify-between w-full">
                 <div className="relative h-full">
                   <div
-                    className={clsx("font-genuine", size === "md" ? "text-5xl" : "text-6xl", textColorMap[colorLevel])}
-                    style={{ position: "relative", top: "0.15em" }}
+                    className={clsx(
+                      "font-genuine",
+                      size === "md" ? "text-5xl" : "text-[55px]",
+                      textColorMap[colorLevel]
+                    )}
+                    // style={{ position: "relative", top: "0.15em" }}
+                    style={{ lineHeight: 0, top: "calc(50% + 0.15em)", position: "relative" }}
                   >
                     {`#${index.toString().padStart(2, "0")}`}
                   </div>
                 </div>
                 <div className="flex flex-col items-end">
-                  <div className={clsx("font-bold text-text", size === "md" ? "text-[22px]" : "text-[27px]")}>
+                  <div className={clsx("font-bold text-text", size === "md" ? "text-[22px]" : "text-[23px]")}>
                     {project.title}
                   </div>
-                  <div className={clsx("text-text", size === "md" ? "text-xs" : "text-base")}>{project.subTitle}</div>
+                  <div className={clsx("text-text", size === "md" ? "text-[12px]" : "text-[15px]")}>
+                    {project.subTitle}
+                  </div>
                 </div>
               </div>
             </div>
