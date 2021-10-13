@@ -7,9 +7,9 @@ const THEMES: {
   label: Work["theme"];
   href: string;
 }[] = [
-  { label: "シャッターの部屋", href: "" },
-  { label: "フィルムの部屋", href: "" },
-  { label: "レンズの部屋", href: "" },
+  { label: "シャッターの部屋", href: "/project/exhibition/shutter" },
+  { label: "フィルムの部屋", href: "/project/exhibition/film" },
+  { label: "レンズの部屋", href: "/project/exhibition/lens" },
 ];
 
 export const RoomSelection: VFC = () => {
