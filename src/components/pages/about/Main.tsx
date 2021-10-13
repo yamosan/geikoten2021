@@ -1,6 +1,6 @@
 import type { VFC } from "react";
 
-import { Highlight, Image, Paragraph } from "@/components/basics";
+import { ExternalLink, Highlight, Image, Paragraph } from "@/components/basics";
 import { Process, Section } from "@/components/ui";
 import { Pc, PcAppDownload, Phone } from "@/components/vectors";
 import useMedia from "@/hooks/useMediaQuery";
@@ -51,7 +51,9 @@ export const Main: VFC = () => {
                       <div className="flex flex-col items-center justify-between space-y-6 md:space-y-11">
                         <Pc />
                         <div className="pb-3">
-                          <PcAppDownload />
+                          <ExternalLink href="https://cluster.mu/downloads">
+                            <PcAppDownload />
+                          </ExternalLink>
                         </div>
                       </div>
                     </div>
