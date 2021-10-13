@@ -2,7 +2,7 @@ import clsx from "clsx";
 import type { ComponentPropsWithoutRef } from "react";
 import { forwardRef, useCallback } from "react";
 
-import { ArrowUp } from "@/components/vectors";
+import { Arrow } from "@/components/vectors";
 
 type Props = ComponentPropsWithoutRef<"button">;
 
@@ -15,7 +15,7 @@ export const ScrollToTop = forwardRef<HTMLButtonElement, Props>((props, ref) => 
   return (
     <button className={clsx("bg-brown w-[54px] h-[54px]", className)} onClick={handleClick} ref={ref}>
       <span className="flex items-center justify-center w-full h-full">
-        <ArrowUp className="w-6" />
+        <Arrow className="w-6" />
       </span>
     </button>
   );

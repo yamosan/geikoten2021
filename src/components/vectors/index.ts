@@ -1,4 +1,4 @@
-export * from "./ArrowUp";
+export * from "./Arrow";
 export * from "./Comment";
 export * from "./Crowd";
 export * from "./ExternalLink";
