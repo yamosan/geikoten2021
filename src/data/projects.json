@@ -17,9 +17,9 @@
   {
     "id": 2,
     "name": "mockshop",
-    "title": "模擬店",
-    "subTitle": "芸工生による作品展示",
-    "description": "あいうえおあいうえおあいうえおあいうえお",
+    "title": "芸工展模擬店",
+    "subTitle": "芸工生が出店する模擬店！",
+    "description": "ブース部署では今年も模擬店を募集しました！個性的な模擬店がたくさん！全てここでしか買えないグッズなので、チェック必須です！是非手に入れてくださいね〜",
     "images": {
       "thumbnailUrl": "/images/project.png",
       "backgroundUrl": ""
@@ -32,9 +32,9 @@
   {
     "id": 3,
     "name": "cm",
-    "title": "CM",
-    "subTitle": "芸工生による作品展示",
-    "description": "あいうえおあいうえおあいうえおあいうえお",
+    "title": "2021芸工展CM",
+    "subTitle": "芸工展の告知映像",
+    "description": "今年の芸工展はオンライン開催、どこからでも芸工にお越しください。",
     "images": {
       "thumbnailUrl": "/images/project.png",
       "backgroundUrl": ""
@@ -47,9 +47,9 @@
   {
     "id": 4,
     "name": "web",
-    "title": "webサイト",
-    "subTitle": "芸工生による作品展示",
-    "description": "あいうえおあいうえおあいうえおあいうえお",
+    "title": "webサイト特集",
+    "subTitle": "FUllUSHがテーマのサイト",
+    "description": "芸工展のテーマ『FUllUSH』にちなんだwebサイト特集です！1,2年生がデザイン班とコーディング班に分かれて制作しました！どのサイトも見応えバッチリ✌️🌟",
     "images": {
       "thumbnailUrl": "/images/project.png",
       "backgroundUrl": ""
@@ -62,9 +62,9 @@
   {
     "id": 5,
     "name": "game",
-    "title": "ゲーム",
-    "subTitle": "芸工生による作品展示",
-    "description": "あいうえおあいうえおあいうえおあいうえお",
+    "title": "コンテンツ班企画",
+    "subTitle": "個性豊かなゲームとお部屋",
+    "description": "web部署所属コンテンツ班による個性豊かな作品たち！！！ 1、2年生はUnityroomにてゲーム作品を、3年生はClusterにて部屋企画を公開してるぜっ",
     "images": {
       "thumbnailUrl": "/images/project.png",
       "backgroundUrl": ""
@@ -77,9 +77,9 @@
   {
     "id": 6,
     "name": "workshop",
-    "title": "ワークショップ",
-    "subTitle": "芸工生による作品展示",
-    "description": "あいうえおあいうえおあいうえおあいうえお",
+    "title": "ワークショップ企画",
+    "subTitle": "ペーパークラフト企画&WS紹介",
+    "description": "芸工生が作ったペーパークラフト10種類を配布！好きなものをDLしてお家で作ってみてね！！また、フローチャートであなたにぴったりなワークショップ企画を調べてみてね",
     "images": {
       "thumbnailUrl": "/images/project.png",
       "backgroundUrl": ""
@@ -92,9 +92,9 @@
   {
     "id": 7,
     "name": "cafe",
-    "title": "カフェ",
-    "subTitle": "芸工生による作品展示",
-    "description": "あいうえおあいうえおあいうえおあいうえお",
+    "title": "lil memory cafe",
+    "subTitle": "今年のカフェはオンライン出店！",
+    "description": "オンラインでの芸工展という、新たな状況下で開く今年のカフェ。例年のように美味しい料理を提供することはできないけれど、カフェの設計やデザート開発・グッズ販売など、カフェ部署の新たなカタチです。",
     "images": {
       "thumbnailUrl": "/images/project.png",
       "backgroundUrl": ""
@@ -107,9 +107,9 @@
   {
     "id": 8,
     "name": "stage",
-    "title": "ステージ企画",
-    "subTitle": "芸工生による作品展示",
-    "description": "あいうえおあいうえおあいうえおあいうえお",
+    "title": "楽しい☆ステージ企画",
+    "subTitle": "楽しい☆動画!!CMも見てね",
+    "description": "3Oのギャンブラー柴田明治とボートレース蒲郡に行く旅。果たして一攫千金はあるのか！？\n芸工展長の脛骨に思いを寄せる素敵な女性たちとデートをしてめ、脛骨が彼女を作るオーディション。",
     "images": {
       "thumbnailUrl": "/images/project.png",
       "backgroundUrl": ""
