@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "works",
+    "name": "exhibition",
     "title": "作品展示",
     "subTitle": "芸工生による作品展示",
     "description": "あいうえおあいうえおあいうえおあいうえお",
@@ -10,7 +10,7 @@
       "backgroundUrl": ""
     },
     "siteUrl": {
-      "href": "/project/works",
+      "href": "/project/exhibition",
       "external": false
     }
   },
