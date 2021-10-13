@@ -39,7 +39,7 @@ const Game: NextPage<Props> = ({ project, webContents }) => {
       <Hero project={project} />
       <main className="w-full md:pl-shead flex flex-col space-y-[212px] lg:space-y-[120px] items-stretch bg-white">
         <WebContents contents={webContents.game} groupLabel="ゲーム" buttonLabel="ゲームをプレイ" />
-        <WebContents contents={webContents.game} groupLabel="バーチャル会場" buttonLabel="clusterに行く" />
+        <WebContents contents={webContents.virtual} groupLabel="バーチャル会場" buttonLabel="clusterに行く" />
       </main>
       <Back />
     </Layout>

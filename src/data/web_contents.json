@@ -249,7 +249,7 @@
       }
     ],
     "thumbnailUrl": "/images/web_content_thumbnail.png",
-    "siteUrl": "https://example.com"
+    "siteUrl": "/about"
   },
   {
     "id": 13,
@@ -265,7 +265,7 @@
       }
     ],
     "thumbnailUrl": "/images/web_content_thumbnail.png",
-    "siteUrl": "https://example.com"
+    "siteUrl": "/about"
   },
   {
     "id": 14,
@@ -281,7 +281,7 @@
       }
     ],
     "thumbnailUrl": "/images/web_content_thumbnail.png",
-    "siteUrl": "https://example.com"
+    "siteUrl": "/about"
   },
   {
     "id": 15,
@@ -297,6 +297,6 @@
       }
     ],
     "thumbnailUrl": "/images/web_content_thumbnail.png",
-    "siteUrl": "https://example.com"
+    "siteUrl": "/about"
   }
 ]
