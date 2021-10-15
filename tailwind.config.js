@@ -32,6 +32,9 @@ module.exports = {
       current: "currentColor",
       transparent: "transparent",
 
+      lens: "#E38EA1",
+      film: "#A2976A",
+      shutter: "#FFF100",
       menuBg: "rgba(80, 71, 70, 0.9)",
       // aliases
       bg: "#F2F2F2", // lightGray
