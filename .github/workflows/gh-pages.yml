@@ -38,7 +38,7 @@ jobs:
         run: |
           npm run build
         env:
-          NEXT_PUBLIC_BASE_PATH: /geikouten2021
+          NEXT_PUBLIC_BASE_PATH: /geikoten2021
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
