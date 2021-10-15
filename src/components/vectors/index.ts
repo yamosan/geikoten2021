@@ -10,6 +10,7 @@ export * from "./Place";
 export * from "./RoundedArrow";
 export * from "./Store";
 export * from "./Tel";
+export * from "./ThumbUp";
 export * from "./Time";
 export * from "./Tree";
 export * from "./TwitterIcon";
