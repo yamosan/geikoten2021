@@ -6,7 +6,11 @@ type Query = {
 };
 
 export async function getWorks(query?: Query): Promise<Work[]> {
-  const res = await fetch(WORKS_URL);
+  const res = await fetch(WORKS_URL, {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
   const data: Work[] = await res.json();
 
   if (!query) return data;
