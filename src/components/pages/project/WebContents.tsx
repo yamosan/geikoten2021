@@ -13,7 +13,7 @@ type Props = {
 };
 
 export const WebContents: VFC<Props> = ({ groupLabel, contents, buttonLabel }) => {
-  const isWide = useMedia("(min-width: 1024px)"); // TODO: tailwind.config.jsから取得
+  const isWide = useMedia("(min-width: 1024px)");
 
   return (
     <section className="pt-10 md:pt-24 pb-28 md:pb-36">

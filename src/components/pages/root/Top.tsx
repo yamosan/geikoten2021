@@ -11,7 +11,7 @@ type Props = {
 };
 
 export const Top: VFC<Props> = ({ goldSponsors }) => {
-  const isWide = useMedia("(min-width: 768px)"); // TODO: tailwind.config.jsから取得
+  const isWide = useMedia("(min-width: 768px)");
 
   return (
     <div className="relative" id="top">

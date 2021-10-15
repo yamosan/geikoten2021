@@ -10,7 +10,7 @@ type Props = {
 };
 
 export const SponsorAds: VFC<Props> = ({ silverSponsors, bronzeSponsors }) => {
-  const isWide = useMedia("(min-width: 768px)"); // TODO: tailwind.config.jsから取得
+  const isWide = useMedia("(min-width: 768px)");
 
   return (
     <div className="md:ml-shead">

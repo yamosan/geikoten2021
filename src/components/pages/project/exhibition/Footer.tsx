@@ -20,7 +20,7 @@ type Props = {
 
 export const Footer: VFC<Props> = ({ currentTheme }) => {
   const { prev, next } = getPagination(currentTheme);
-  const isWide = useMedia("(min-width: 768px)"); // TODO: tailwind.config.jsから取得
+  const isWide = useMedia("(min-width: 768px)");
 
   return (
     <>

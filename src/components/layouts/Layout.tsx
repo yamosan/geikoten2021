@@ -11,7 +11,7 @@ type Props = {
 
 export const Layout: VFC<Props> = ({ children }) => {
   // TODO: 開発環境でハイドレーション関連のエラー 参考: https://mui.com/components/use-media-query/#server-side-rendering
-  const isWide = useMedia("(min-width: 768px)"); // TODO: tailwind.config.jsから取得
+  const isWide = useMedia("(min-width: 768px)");
 
   return isWide ? <PCLayout>{children}</PCLayout> : <SPLayout>{children}</SPLayout>;
 };

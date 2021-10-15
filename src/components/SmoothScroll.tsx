@@ -7,7 +7,7 @@ import useMedia from "@/hooks/useMediaQuery";
 
 export const SmoothScroll: FC = ({ children }) => {
   const router = useRouter();
-  const isWide = useMedia("(min-width: 768px)"); // TODO: tailwind.config.jsから取得
+  const isWide = useMedia("(min-width: 768px)");
 
   useEffect(() => {
     if (!isWide) return; // SPではページ内遷移でスムーススクロールしない

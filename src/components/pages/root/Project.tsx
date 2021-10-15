@@ -19,7 +19,7 @@ export const Project: VFC<Props> = ({ projects }) => {
   const triggerRef = useRef<HTMLElement>(null);
   const boxRef = useRef<HTMLDivElement>(null);
   const anime = useRef<gsap.core.Tween>(null);
-  const isWide = useMedia("(min-width: 768px)"); // TODO: tailwind.config.jsから取得
+  const isWide = useMedia("(min-width: 768px)");
 
   const { width } = useWindowSize();
   //TODO: リサイズした時にxを変更したい

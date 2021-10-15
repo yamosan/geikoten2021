@@ -7,7 +7,7 @@ import { Crowd, Tree } from "@/components/vectors";
 import useMedia from "@/hooks/useMediaQuery";
 
 export const About: VFC = () => {
-  const isWide = useMedia("(min-width: 768px)"); // TODO: tailwind.config.jsから取得
+  const isWide = useMedia("(min-width: 768px)");
 
   return (
     <>

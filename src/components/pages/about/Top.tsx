@@ -6,7 +6,7 @@ import { ScrollDown } from "@/components/ui";
 // import useMedia from "@/hooks/useMediaQuery";
 
 export const Top: VFC = () => {
-  // const isWide = useMedia("(min-width: 768px)"); // TODO: tailwind.config.jsから取得
+  // const isWide = useMedia("(min-width: 768px)");
 
   // TODO: 写真
   return (
