@@ -16,8 +16,8 @@ export const Main: VFC<Props> = ({ works, theme }) => {
     <main>
       <Section heading="WORKS" subHeading="作品" headerColor={colorKey}>
         <div className="bg-white md:pl-shead pt-3">
-          <div className="lg:max-w-app mx-auto">
-            <div className="grid grid-cols-3 gap-x-8 gap-y-14">
+          <div className="w-11/12 mx-auto lg:max-w-app ">
+            <div className="grid gap-x-8 gap-y-14 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:w-full">
               {works.map((work) => (
                 <WorkCard key={work.id} work={work} />
               ))}
