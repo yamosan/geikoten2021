@@ -1,7 +1,7 @@
 import type { GetStaticProps, NextPage } from "next";
 
 import { Layout } from "@/components/layouts/Layout";
-import { Footer } from "@/components/pages/project/exhibition";
+import { Footer, Main } from "@/components/pages/project/exhibition";
 import { Work } from "@/models";
 import { getWorks } from "@/utils/getWorks";
 
@@ -23,9 +23,11 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   };
 };
 
-const Lens: NextPage<Props> = ({ theme }) => {
+const Lens: NextPage<Props> = ({ theme, works }) => {
   return (
     <Layout>
+      {/* TODO: Hero */}
+      <Main works={works} theme={THEME} />
       <Footer currentTheme={theme} />
     </Layout>
   );
