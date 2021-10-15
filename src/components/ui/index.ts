@@ -1,4 +1,5 @@
 export * from "./Button";
+export * from "./Dialog";
 export * from "./EventCard";
 export * from "./LinkButton";
 export * from "./Process";
