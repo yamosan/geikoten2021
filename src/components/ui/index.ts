@@ -9,3 +9,5 @@ export * from "./SponsorDialog";
 export { SponsorsCarousel } from "./SponsorsCarousel"; // TODO: export * すると、Swiperのimportでエラーが出る
 export * from "./SponsorsList";
 export * from "./VisitorCounter";
+export * from "./VoteButton";
+export * from "./WorkCard";
