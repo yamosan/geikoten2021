@@ -10,7 +10,7 @@ type Props = {
 export const Shutter: VFC<Props> = ({ works }) => {
   return (
     <main>
-      <Section heading="WORKS" subHeading="作品">
+      <Section heading="WORKS" subHeading="作品" headerColor="shutter">
         <div className="bg-white md:pl-shead pt-3">
           <div className="lg:max-w-app mx-auto">
             <div className="grid grid-cols-3 gap-x-8 gap-y-14">
