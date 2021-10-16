@@ -1,4 +1,5 @@
 import { Dialog as HeadlessuiDialog, Transition } from "@headlessui/react";
+import clsx from "clsx";
 import { Fragment, ReactNode, VFC } from "react";
 
 import { HamburgerMenu } from "@/components/layouts/SPLayout/HamburgerMenu";
@@ -7,10 +8,16 @@ type Props = {
   open: boolean;
   onClose: () => void;
   children?: ReactNode;
+  borderColor?: "main" | "black";
+};
+
+const BORDER_COLOR_MAP = {
+  main: "border-green-40",
+  black: "lightBrown",
 };
 
 export const Dialog: VFC<Props> = (props) => {
-  const { open, onClose, children } = props;
+  const { open, onClose, children, borderColor } = props;
 
   return (
     <>
@@ -19,7 +26,7 @@ export const Dialog: VFC<Props> = (props) => {
           static
           open={open}
           onClose={onClose}
-          className="fixed inset-0 z-50 flex items-center justify-center"
+          className="fixed lg:ml-shead inset-0 z-50 flex items-center justify-center"
         >
           <HeadlessuiDialog.Overlay className="fixed inset-0 bg-brown bg-opacity-80" />
 
@@ -34,11 +41,16 @@ export const Dialog: VFC<Props> = (props) => {
             // leaveTo="transform scale-95 opacity-0"
           >
             <div className="flex items-center justify-center">
-              <div className="relative flex items-center justify-center bg-white border-4 rounded border-green-40">
+              <div
+                className={clsx(
+                  "relative flex items-center justify-center bg-white border-4 rounded",
+                  BORDER_COLOR_MAP[borderColor]
+                )}
+              >
                 <div className="absolute z-10 right-3 top-3">
                   <HamburgerMenu buttonRole="close" onClick={onClose} color="black" />
                 </div>
-                <div className="flex justify-center px-5 pt-16 overflow-y-auto dimension">{children}</div>
+                <div className="flex justify-center overflow-y-auto dimension">{children}</div>
               </div>
             </div>
           </Transition.Child>
@@ -47,11 +59,15 @@ export const Dialog: VFC<Props> = (props) => {
 
       <style jsx>{`
         .dimension {
-          width: 91.6666vw;
+          @apply w-[91.6666vw] lg:w-[75vw];
           max-height: 83.3333vh;
           max-width: 1200px;
         }
       `}</style>
     </>
   );
+};
+
+Dialog.defaultProps = {
+  borderColor: "main",
 };

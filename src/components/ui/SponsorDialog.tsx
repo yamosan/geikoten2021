@@ -1,7 +1,7 @@
 import type { VFC } from "react";
 
 import { Image } from "@/components/basics";
-import { Dialog } from "@/components/ui/Dialog";
+import { Dialog } from "@/components/ui/Dialog"; // TODO: なぜか/uiでimportするとエラー
 import { Comment, Place, Store, Tel, Time } from "@/components/vectors";
 import type { Sponsor } from "@/models/Sponsor";
 
@@ -18,16 +18,9 @@ export const SponsorDialog: VFC<Props> = (props) => {
     <>
       <Dialog open={open} onClose={onClose}>
         {sponsor && (
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center px-5 pt-16">
             <figure className="relative max-w-[400px] w-full">
-              <Image
-                src={sponsor.images.mainUrl}
-                width={287}
-                height={193}
-                layout="responsive"
-                loading="lazy"
-                alt={sponsor.name}
-              />
+              <Image src={sponsor.images.mainUrl} width={287} height={193} layout="responsive" alt={sponsor.name} />
             </figure>
             <div className="max-w-[560px] mt-6 flex flex-col items-start space-y-3 pb-10">
               {sponsor.name && (
@@ -75,12 +68,6 @@ export const SponsorDialog: VFC<Props> = (props) => {
         )}
       </Dialog>
       <style jsx>{`
-        .dimension {
-          width: 91.6666vw;
-          max-height: 83.3333vh;
-          max-width: 1200px;
-        }
-
         .table {
           @apply flex space-x-4 items-start;
         }
