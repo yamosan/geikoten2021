@@ -10,11 +10,11 @@ export default class MyDocument extends Document {
   }
   render(): JSX.Element {
     return (
-      <Html lang="ja">
+      <Html lang="ja" className="text-text font-medium">
         <Head>
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700;900&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500;700;900&display=swap"
             rel="stylesheet"
           />
           <link
