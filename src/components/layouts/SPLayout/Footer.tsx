@@ -9,7 +9,7 @@ export const Footer: VFC = () => {
   const HomepageLink = () => (
     <ExternalLink href={HOMEPAGE_LINK}>
       <div className="flex space-x-0.5">
-        <p className="text-xs leading-none underline">名古屋市立大学芸術工学部HP</p>
+        <p className="text-xs leading-none underline font-regular">名古屋市立大学芸術工学部HP</p>
         <ExternalLinkIcon />
       </div>
     </ExternalLink>
@@ -26,7 +26,7 @@ export const Footer: VFC = () => {
             <HomepageLink />
           </div>
           <div className="mt-5">
-            <p className="text-xs leading-loose">
+            <p className="text-xs leading-loose font-regular">
               〒464-008 名古屋市千種区北千種2丁目1番10号
               <br />
               TEL052-721-1225(代) FAX052-721-3110
@@ -34,7 +34,7 @@ export const Footer: VFC = () => {
           </div>
           <div className="mt-10 text-center">
             {/* eslint-disable-next-line jsx-a11y/accessible-emoji */}
-            <small className="text-white text-xxs">©️ Copyright 2021geikoten</small>
+            <small className="text-white text-xxs font-regular">©️ Copyright 2021geikoten</small>
           </div>
         </div>
       </div>
