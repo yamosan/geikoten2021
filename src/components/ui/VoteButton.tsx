@@ -12,7 +12,7 @@ export const VoteButton = forwardRef<HTMLButtonElement, Props>((props, ref) => {
   return (
     <button
       className={clsx(
-        "flex items-center space-x-1.5 text-[13px] text-text py-1.5 px-3 border-2 border-lightBrown rounded-md",
+        "flex items-center space-x-1.5 text-[13px] text-text py-1.5 px-3 border-2 border-lightBrown rounded-md transition-colors duration-200",
         {
           "text-text bg-white": !active,
           "text-white bg-lightBrown": active,
@@ -23,7 +23,7 @@ export const VoteButton = forwardRef<HTMLButtonElement, Props>((props, ref) => {
       {...attrs}
     >
       <ThumbUp className="w-[22px] flex-shrink-0" />
-      <span>投票する</span>
+      <span>{active ? "投票済み" : "投票する"}</span>
     </button>
   );
 });

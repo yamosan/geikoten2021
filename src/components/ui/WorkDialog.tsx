@@ -10,10 +10,12 @@ type Props = {
   onClose: () => void;
   work: Work;
   layout?: "row" | "column";
+  voted?: boolean;
+  handleClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 };
 
 export const WorkDialog: VFC<Props> = (props) => {
-  const { open, onClose, work, layout } = props;
+  const { open, onClose, work, layout, voted, handleClick } = props;
 
   return (
     <>
@@ -40,7 +42,7 @@ export const WorkDialog: VFC<Props> = (props) => {
                   {work.author?.grade}
                   {work.author?.class}・{work.author?.name}
                 </p>
-                {layout === "column" && <VoteButton className="shrink-0" />}
+                {layout === "column" && <VoteButton className="shrink-0" active={voted} onClick={handleClick} />}
               </div>
             </div>
 
@@ -48,7 +50,7 @@ export const WorkDialog: VFC<Props> = (props) => {
             <div className="flex w-full justify-between mt-6">
               {/* TODO: 作品リンクはこちら */}
 
-              {layout === "row" && <VoteButton />}
+              {layout === "row" && <VoteButton active={voted} onClick={handleClick} />}
             </div>
           </div>
         </div>
