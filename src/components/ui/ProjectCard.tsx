@@ -127,7 +127,7 @@ export const ProjectCard = forwardRef<HTMLDivElement, Props>((props, ref) => {
             <p
               className={clsx(
                 "bg-lightBrown-70",
-                "flex justify-center items-center py-16 text-center text-white px-14"
+                "flex justify-center items-center py-16 text-[15px] leading-loose text-white px-10"
               )}
               style={{ width: `${fw * 0.8}px`, height: `${fh * 0.6}px` }}
             >
