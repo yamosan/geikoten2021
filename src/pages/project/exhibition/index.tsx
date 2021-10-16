@@ -27,11 +27,11 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   };
 };
 
-const Exhibition: NextPage<Props> = ({ project }) => {
+const Exhibition: NextPage<Props> = ({ project, rooms }) => {
   return (
     <Layout>
       <Hero project={project} />
-      <RoomSelection />
+      <RoomSelection rooms={rooms}/>
       <Back />
     </Layout>
   );
