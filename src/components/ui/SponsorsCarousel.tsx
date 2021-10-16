@@ -117,7 +117,7 @@ export const SponsorsCarousel: VFC<Props> = ({ sponsors, className, navigationPo
           @apply absolute bottom-4;
         }
         .swiper-pagination-bullet {
-          @apply w-2 h-2 bg-gray;
+          @apply w-2 h-2 bg-gray opacity-100;
         }
         .swiper-pagination-bullet-active {
           @apply w-2 h-2 bg-green-10;
