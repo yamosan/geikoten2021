@@ -18,7 +18,7 @@ export const Hero: VFC<Props> = (props) => {
     <div className="relative">
       <Div100vh className="relative">
         <Image src="/images/work_bg.png" alt="背景" layout="fill" objectFit="cover" priority />
-        <div className="flex justify-center md:pl-shead h-full relative pt-thead pb-[120px]">
+        <div className="flex justify-center md:pl-shead h-full relative pt-thead pb-[80px]">
           <div className="w-11/12 lg:w-5/6 h-full flex justify-center items-center lg:max-w-app lg:mx-auto">
             <Card {...props} />
           </div>
