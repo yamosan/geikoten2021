@@ -1,7 +1,9 @@
 import { Work } from "@/models/Work";
 
+export type THEME_COLORS = "shutter" | "film" | "lens";
+
 export const THEMES: {
-  id: "shutter" | "film" | "lens";
+  id: THEME_COLORS;
   theme: Work["theme"];
   href: string;
 }[] = [
