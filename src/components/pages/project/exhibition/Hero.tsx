@@ -1,28 +1,26 @@
 import clsx from "clsx";
-import type { ReactNode, VFC } from "react";
+import type { VFC } from "react";
 import Div100vh from "react-div-100vh";
 
 import { Image } from "@/components/basics";
-import { THEME_COLORS } from "@/constants/exhibition";
+import { Theme } from "@/models/Exhibition";
 
 type Props = {
   subHeading: string;
   heading: string;
-  children?: ReactNode;
+  description: string;
   thumbnailUrl: string;
-  themeColor: THEME_COLORS;
+  themeColor: Theme;
 };
 
 export const Hero: VFC<Props> = (props) => {
-  const { children, ...attrs } = props; 
-
   return (
     <div className="relative">
       <Div100vh className="relative">
         <Image src="/images/work_bg.png" alt="背景" layout="fill" objectFit="cover" priority />
         <div className="flex justify-center md:pl-shead h-full relative pt-thead pb-[120px]">
           <div className="w-11/12 lg:w-5/6 h-full flex justify-center items-center lg:max-w-app lg:mx-auto">
-            <Card {...attrs}>{children}</Card>
+            <Card {...props} />
           </div>
         </div>
       </Div100vh>
@@ -37,7 +35,7 @@ const THEME_COLOR_MAP = {
 };
 
 const Card: VFC<Props> = (props) => {
-  const { subHeading, heading, themeColor, thumbnailUrl, children } = props;
+  const { subHeading, heading, themeColor, thumbnailUrl, description } = props;
 
   return (
     <div
@@ -58,7 +56,7 @@ const Card: VFC<Props> = (props) => {
           <h2 className="font-bold text-2xl lg:text-3xl text-text mt-1">{heading}</h2>
         </header>
 
-        <p className="text-base text-text leading-loose mt-3 lg:mt-2">{children}</p>
+        <p className="text-base text-text leading-loose mt-3 lg:mt-2 whitespace-pre-wrap">{description}</p>
       </div>
     </div>
   );

@@ -20,7 +20,11 @@ export type Work = {
   siteUrl?: string;
 };
 
-// export type Room = {
-//   id: number;
-//   theme: Theme;
-// };
+export type Room = {
+  id: number;
+  theme: Theme;
+  href: string;
+  thumbnailUrl: string;
+  title: string;
+  description: string;
+};

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "theme": "shutter",
+    "href": "/project/exhibition/shutter",
+    "thumbnailUrl": "/images/shutter_main.png",
+    "title": "シャッターの部屋",
+    "description": "君は今、どんな状況で何を思い、何に向けてシャッターを切るのか...\nそれぞれの作者の心躍る瞬間、とある物事に対しての想いが感じられる部屋。"
+  },
+  {
+    "id": 2,
+    "theme": "film",
+    "href": "/project/exhibition/film",
+    "thumbnailUrl": "/images/shutter_main.png",
+    "title": "フィルムの部屋",
+    "description": "懐かしいあの頃は、君にとってどんな存在なのだろうか。\nあの日あの頃を、君はどう過ごしてきたのだろうだろうか。作者の過去を垣間見れる、そんな世界。"
+  },
+  {
+    "id": 3,
+    "theme": "lens",
+    "href": "/project/exhibition/lens",
+    "thumbnailUrl": "/images/shutter_main.png",
+    "title": "レンズの部屋",
+    "description": "「君が思うままに世界や状況を変えられるレンズ」があったとしよう。\n君はそのレンズを何にかざし、どんな「もしも...」の世界を思い描くのか。作者の思い思いの視点で欲望のままに描かれる世界。"
+  }
+]
