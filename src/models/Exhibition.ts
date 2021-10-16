@@ -7,7 +7,7 @@ type Author = {
 
 type Genre = "平面" | "立体" | "映像作品" | "web" | "ゲーム" | "その他";
 
-type Theme = "シャッターの部屋" | "フィルムの部屋" | "レンズの部屋";
+export type Theme = "shutter" | "film" | "lens";
 
 export type Work = {
   id: number;
@@ -19,3 +19,8 @@ export type Work = {
   thumbnailUrl: string;
   siteUrl?: string;
 };
+
+// export type Room = {
+//   id: number;
+//   theme: Theme;
+// };

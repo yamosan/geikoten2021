@@ -2,12 +2,11 @@ import type { VFC } from "react";
 
 import { Section } from "@/components/ui";
 import { WorkCard } from "@/components/ui/WorkCard";
-import { THEME_COLORS } from "@/constants/exhibition";
 import useMedia from "@/hooks/useMediaQuery";
-import { Work } from "@/models";
+import { Theme, Work } from "@/models";
 type Props = {
   works: Work[];
-  themeColor: THEME_COLORS;
+  themeColor: Theme;
 };
 
 export const Main: VFC<Props> = ({ works, themeColor }) => {

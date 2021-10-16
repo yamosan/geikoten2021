@@ -1,13 +1,11 @@
-import { Work } from "@/models/Work";
-
-export type THEME_COLORS = "shutter" | "film" | "lens";
+import { Theme } from "@/models/Exhibition";
 
 export const THEMES: {
-  id: THEME_COLORS;
-  theme: Work["theme"];
+  id: Theme;
+  title: string;
   href: string;
 }[] = [
-  { id: "shutter", theme: "シャッターの部屋", href: "/project/exhibition/shutter" },
-  { id: "film", theme: "フィルムの部屋", href: "/project/exhibition/film" },
-  { id: "lens", theme: "レンズの部屋", href: "/project/exhibition/lens" },
+  { id: "shutter", title: "シャッターの部屋", href: "/project/exhibition/shutter" },
+  { id: "film", title: "フィルムの部屋", href: "/project/exhibition/film" },
+  { id: "lens", title: "レンズの部屋", href: "/project/exhibition/lens" },
 ];

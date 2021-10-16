@@ -11,7 +11,7 @@ type Props = {
   works: Work[];
 };
 
-const THEME: Work["theme"] = "フィルムの部屋";
+const THEME: Work["theme"] = "film";
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const works = await getWorks({ theme: THEME });
@@ -27,11 +27,11 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 const Film: NextPage<Props> = ({ theme, works }) => {
   return (
     <Layout>
-      <Hero themeColor="film" subHeading="THEME2" heading={THEME} thumbnailUrl="/images/shutter_main.png">
+      <Hero themeColor="film" subHeading="THEME2" heading="フィルムの部屋" thumbnailUrl="/images/shutter_main.png">
         <p>懐かしいあの頃は、君にとってどんな存在なのだろうか。</p>
         <p>あの日あの頃を、君はどう過ごしてきたのだろうだろうか。作者の過去を垣間見れる、そんな世界。</p>
       </Hero>
-      <Main works={works} themeColor="film" />
+      <Main works={works} themeColor={theme} />
       <Footer currentTheme={theme} />
     </Layout>
   );

@@ -7,10 +7,10 @@ export const RoomSelection: VFC = () => {
   return (
     <main className="bg-white md:pl-shead ">
       <div className="flex space-x-4 justify-center py-24">
-        {THEMES.map(({ theme, href }) => (
-          <div key={theme}>
+        {THEMES.map(({ id, title, href }) => (
+          <div key={id}>
             <Link href={href}>
-              <a>{theme}</a>
+              <a>{title}</a>
             </Link>
           </div>
         ))}
