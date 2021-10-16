@@ -55,7 +55,7 @@ export const Project: VFC<Props> = ({ projects }) => {
           <Highlight>ぜったい全部見てね〜！</Highlight>
         </Paragraph>
       </div>
-      <div className="flex items-center h-[66vh] bg-lightGray relative overflow-x-hidden">
+      <div className="flex items-center h-[66vh] min-h-[480px] bg-lightGray relative overflow-x-hidden">
         <Image src="/images/top_bg.jpg" alt="背景" layout="fill" objectFit="cover" />
         <div
           className="absolute flex pl-12 my-auto space-x-24 h-[65%] md:h-[73%] max-h-[800px] md:ml-shead"
