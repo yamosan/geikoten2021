@@ -35,9 +35,9 @@ export const WorkCard: FC<Props> = ({ work, dialogLayout, voted = false, handleC
       />
       <div className="flex flex-col">
         <button onClick={() => setOpen(true)}>
-          <figure className="relative flex items-center justify-center transition duration-150">
+          <figure className="relative flex items-center justify-center">
             <div className="relative border-lightBrown border-2 drop-shadow w-full">
-              <div className={clsx("w-full", loading ? "opacity-0" : "opacity-100")}>
+              <div className={clsx("w-full")}>
                 <Image
                   src={work.thumbnailUrl}
                   layout="responsive"
