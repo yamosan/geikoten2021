@@ -5,6 +5,8 @@ import { Image } from "@/components/basics";
 import { Dialog, VoteButton } from "@/components/ui"; // TODO: なぜか/uiでimportするとエラー
 import type { Work } from "@/models";
 
+import { LinkChain } from "../vectors";
+
 type Props = {
   open: boolean;
   onClose: () => void;
@@ -31,24 +33,32 @@ export const WorkDialog: VFC<Props> = (props) => {
               <Image src={work.thumbnailUrl} layout="responsive" width={283} height={213} alt={work.title} />
             </div>
           </figure>
-          <div className="flex flex-col flex-shrink flex-[3] mt-5 mx-2 md:my-3 md:mx-0">
+          <div
+            className={clsx(
+              "flex flex-col flex-shrink flex-[3] pb-20 mt-5 mx-2 md:my-3 md:mx-0",
+              layout === "row" && "min-w-[270px]"
+            )}
+          >
             <h4 className="text-text text-lg">{work.title}</h4>
             <div className="flex items-center space-x-2 mt-4 md:mt-6">
               <div className="relative rounded-full overflow-hidden flex justify-center items-center">
                 <Image src={work.author?.avatarUrl} width={38} height={38} alt={work.author.name} objectFit="cover" />
               </div>
-              <div className="flex justify-between items-center w-full">
+              <div className="flex space-x-2 justify-between items-center w-full">
                 <p className="text-text text-[13px] font-regular">
                   {work.author?.grade}
                   {work.author?.class}・{work.author?.name}
                 </p>
-                {layout === "column" && <VoteButton className="shrink-0" active={voted} onClick={handleClick} />}
+                {layout === "column" && <VoteButton className="flex-shrink-0" active={voted} onClick={handleClick} />}
               </div>
             </div>
 
             <p className="text-text text-base mt-4 leading-loose">{work.description}</p>
-            <div className="flex w-full justify-between mt-6">
-              {/* TODO: 作品リンクはこちら */}
+            <div className="flex-shrink-0 flex w-full justify-between mt-6">
+              <div className="flex space-x-1 items-center">
+                <LinkChain />
+                <p className="text-text text-[13px] pb-0.5 border-b border-gray">作品リンクはコチラ</p>
+              </div>
 
               {layout === "row" && <VoteButton active={voted} onClick={handleClick} />}
             </div>
