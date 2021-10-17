@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import React, { ComponentProps, ComponentPropsWithoutRef, FC, useCallback, useRef, useState } from "react";
+import React, { ComponentProps, ComponentPropsWithoutRef, FC, useCallback, useState } from "react";
 
 import { Image } from "@/components/basics";
 import { Work } from "@/models";
