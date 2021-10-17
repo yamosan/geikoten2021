@@ -24,6 +24,8 @@ export default class MyDocument extends Document {
             type="font/ttf"
             crossOrigin=""
           />
+          <link rel="icon" sizes="48x48" href={resolvePath("/favicon/favicon.ico")} />
+          <link rel="apple-touch-icon" sizes="180x180" href={resolvePath("/favicon/apple-touch-icon.png")} />
         </Head>
         <style jsx>{`
           @font-face {
