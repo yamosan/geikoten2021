@@ -38,13 +38,7 @@ const Film: NextPage<Props> = ({ room, works }) => {
   return (
     <>
       <Layout>
-        <Hero
-          themeColor={room.theme}
-          subHeading={`THEME${room.id}`}
-          heading={room.title}
-          thumbnailUrl={room.thumbnailUrl} // TODO:
-          description={room.description}
-        />
+        <Hero room={room} />
 
         <Main works={works} themeColor={room.theme} />
         <Footer currentTheme={room.theme} />

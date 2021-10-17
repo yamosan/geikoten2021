@@ -4,6 +4,7 @@ export * from "./EventCard";
 export * from "./LinkButton";
 export * from "./Process";
 export * from "./ProjectCard";
+export * from "./RoomInfoCard";
 export * from "./ScrollDown";
 export * from "./Section";
 export * from "./SponsorDialog";
