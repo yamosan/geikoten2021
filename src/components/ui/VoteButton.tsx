@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import React, { ComponentPropsWithoutRef, forwardRef } from "react";
+import React, { ComponentPropsWithoutRef, forwardRef, useRef } from "react";
 
 import { ThumbUp } from "@/components/vectors";
 
@@ -8,10 +8,20 @@ type Props = {
 } & ComponentPropsWithoutRef<"button">;
 
 export const VoteButton = forwardRef<HTMLButtonElement, Props>((props, ref) => {
-  const { active, className, ...attrs } = props;
+  const { active, className, onClick, ...attrs } = props;
+
+  const clickedRef = useRef<boolean>(false);
+
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    clickedRef.current = true;
+    onClick(e);
+  };
+
   return (
     <>
       <button
+        disabled={active}
+        onClick={handleClick}
         className={clsx(
           "flex items-center space-x-1.5 text-[13px] text-text py-1.5 px-3 border-2 border-lightBrown rounded-md group",
           "transform transition-all duration-200",
@@ -27,7 +37,7 @@ export const VoteButton = forwardRef<HTMLButtonElement, Props>((props, ref) => {
         <span
           className={clsx("flex-shrink-0 transform transition", {
             "group-hover:rotate-12": !active,
-            "thumb-up": active,
+            "thumb-up": active && clickedRef.current,
           })}
         >
           <ThumbUp className="w-[22px]" />
