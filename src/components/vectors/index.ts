@@ -3,6 +3,7 @@ export * from "./Comment";
 export * from "./Crowd";
 export * from "./ExternalLink";
 export * from "./InstagramIcon";
+export * from "./Loading";
 export * from "./Pc";
 export * from "./PcAppDownload";
 export * from "./Phone";
