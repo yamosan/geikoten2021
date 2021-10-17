@@ -13,10 +13,13 @@ export const HamburgerMenu: VFC<Props> = ({ onClick, buttonRole, color, transiti
   return (
     <button
       onClick={onClick}
-      className={clsx("w-10 h-10 relative focus:ring-4 focus:ring-lightGray focus:ring-opacity-50 rounded", {
-        "text-white": color === "white",
-        "text-brown": color === "black",
-      })}
+      className={clsx(
+        "w-10 h-10 relative focus:ring-4 focus:ring-lightGray focus:ring-opacity-50 focus-within:ring-4 focus-within:ring-lightGray focus-within:ring-opacity-50 rounded",
+        {
+          "text-white": color === "white",
+          "text-brown": color === "black",
+        }
+      )}
     >
       <div aria-hidden={true}>
         <div className="absolute left-1/2 top-3.5 transform -translate-x-1/2 -translate-y-1/2">
