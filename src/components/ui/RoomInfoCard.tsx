@@ -1,17 +1,17 @@
 import clsx from "clsx";
+import Link from "next/link";
 import type { VFC } from "react";
 
 import { Image } from "@/components/basics";
-import { Theme } from "@/models/Exhibition";
+import { Room } from "@/models/Exhibition";
 
+import { GoTo } from "../basics/GoTo";
 type Props = {
-  subHeading: string;
-  heading: string;
-  description: string;
-  thumbnailUrl: string;
-  themeColor: Theme;
+  room: Room;
   className?: string;
-  layout?: "row" | "column";
+  layout?: "row" | "row-reverse" | "column";
+  card?: boolean;
+  showLink?: boolean;
 };
 
 const THEME_COLOR_MAP = {
@@ -21,33 +21,50 @@ const THEME_COLOR_MAP = {
 };
 
 export const RoomInfoCard: VFC<Props> = (props) => {
-  const { subHeading, heading, themeColor, thumbnailUrl, description, className, layout } = props;
+  const { room, className, layout, card, showLink } = props;
 
   return (
     <div
       className={clsx(
-        "flex rounded-3xl w-full bg-white px-4 pt-7 pb-10 lg:py-20 lg:pl-20 lg:pr-12",
+        "flex w-full",
+        {
+          "rounded-3xl bg-white px-4 pt-7 pb-10 lg:py-20 lg:pl-20 lg:pr-12": card,
+        },
         {
           "flex-col space-y-4": layout === "column",
           "flex-row space-x-4": layout === "row",
+          "flex-row-reverse space-x-reverse space-x-4": layout === "row-reverse",
         },
         className
       )}
     >
-      <figure className="relative h-full flex-[5.5] flex items-center w-full">
+      <figure className="relative h-full flex-[5.8] flex items-center w-full">
         <div className="shadow w-full rounded-3xl overflow-hidden">
-          <Image src={thumbnailUrl} layout="responsive" width={354} height={200} alt={heading} />
+          <Image src={room.thumbnailUrl} layout="responsive" width={354} height={200} alt={room.title} />
         </div>
       </figure>
-      <div className="my-auto flex flex-col flex-[4.5]">
-        <header className={clsx("border-b-2 border-dashed pb-2 lg:pb-3", THEME_COLOR_MAP[themeColor])}>
-          <p role="doc-subtitle" className="text-lg text-text">
-            {subHeading}
-          </p>
-          <h2 className="font-bold text-2xl lg:text-3xl text-text mt-1">{heading}</h2>
-        </header>
+      <div
+        className={clsx("my-auto flex-[4.2]", {
+          "my-0 flex flex-col justify-between": showLink,
+        })}
+      >
+        <div className="flex flex-col">
+          <header className={clsx("border-b-2 border-dashed pb-2 lg:pb-3", THEME_COLOR_MAP[room.theme])}>
+            <p role="doc-subtitle" className="text-lg text-text">
+              {`THEME${room.id}`}
+            </p>
+            <h2 className="font-bold text-2xl lg:text-3xl text-text mt-1">{room.title}</h2>
+          </header>
 
-        <p className="text-base text-text leading-loose mt-3 lg:mt-2 whitespace-pre-wrap">{description}</p>
+          <p className="text-base text-text leading-[1.8] mt-3 lg:mt-2 whitespace-pre-wrap">{room.description}</p>
+        </div>
+        {showLink && (
+          <Link href={room.href}>
+            <a className="block ml-auto">
+              <GoTo borderColor={room.theme}>このテーマの作品を見る</GoTo>
+            </a>
+          </Link>
+        )}
       </div>
     </div>
   );
@@ -55,4 +72,6 @@ export const RoomInfoCard: VFC<Props> = (props) => {
 
 RoomInfoCard.defaultProps = {
   layout: "column",
+  card: false,
+  showLink: false,
 };

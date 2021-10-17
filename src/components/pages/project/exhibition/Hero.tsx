@@ -19,14 +19,7 @@ export const Hero: VFC<Props> = ({ room }) => {
         <Image src="/images/work_bg.png" alt="背景" layout="fill" objectFit="cover" priority />
         <div className="flex justify-center md:pl-shead h-full relative pt-thead md:pt-0 pb-[80px]">
           <div className="w-11/12 lg:w-5/6 h-full flex justify-center items-center lg:max-w-app lg:mx-auto">
-            <RoomInfoCard
-              themeColor={room.theme}
-              subHeading={`THEME${room.id}`}
-              heading={room.title}
-              thumbnailUrl={room.thumbnailUrl} // TODO:
-              description={room.description}
-              layout={isXWide ? "row" : "column"}
-            />
+            <RoomInfoCard room={room} layout={isXWide ? "row" : "column"} card />
           </div>
         </div>
       </Div100vh>
