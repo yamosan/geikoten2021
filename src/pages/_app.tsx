@@ -4,6 +4,7 @@ import "@/libs/firebase";
 import type { AppProps } from "next/app";
 
 import { SmoothScroll } from "@/components/SmoothScroll";
+import VisitorCountProvider from "@/store/vistorCount";
 import VotedIdsProvider from "@/store/votedIds";
 
 const App = (props: AppProps) => {
@@ -11,9 +12,11 @@ const App = (props: AppProps) => {
     <>
       {/* TODO: /topへの遷移 が上手くいかない */}
       <VotedIdsProvider>
-        <SmoothScroll>
-          <props.Component {...props.pageProps} />
-        </SmoothScroll>
+        <VisitorCountProvider>
+          <SmoothScroll>
+            <props.Component {...props.pageProps} />
+          </SmoothScroll>
+        </VisitorCountProvider>
       </VotedIdsProvider>
     </>
   );

@@ -5,6 +5,7 @@ import { Image } from "@/components/basics";
 import { ScrollDown, SponsorsCarousel, VisitorCounter } from "@/components/ui";
 import useMedia from "@/hooks/useMediaQuery";
 import { Sponsor } from "@/models/Sponsor";
+import { useVisitorCount } from "@/store/vistorCount";
 
 type Props = {
   goldSponsors: Sponsor[];
@@ -12,6 +13,7 @@ type Props = {
 
 export const Top: VFC<Props> = ({ goldSponsors }) => {
   const isWide = useMedia("(min-width: 768px)");
+  const { count } = useVisitorCount();
 
   return (
     <div className="relative" id="top">
@@ -22,11 +24,11 @@ export const Top: VFC<Props> = ({ goldSponsors }) => {
           {/* アクセスカウンタ */}
           {isWide ? (
             <div className="flex justify-end pr-4">
-              <VisitorCounter count={1234} size="lg" />
+              <VisitorCounter count={count} size="lg" />
             </div>
           ) : (
             <div className="flex justify-start pl-4">
-              <VisitorCounter count={1234} size="sm" />
+              <VisitorCounter count={count} size="sm" />
             </div>
           )}
         </div>
