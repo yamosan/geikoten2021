@@ -54,7 +54,7 @@ export const WebContents: VFC<Props> = ({ groupLabel, contents, buttonLabel }) =
                     </div>
                     <ul>
                       {item.authors.map((author, i, ary) => (
-                        <li key={author.name} className="inline-block text-sm">
+                        <li key={author.name} className="inline-block text-sm font-regular">
                           {author.grade}
                           {author.class}
                           {author.name}

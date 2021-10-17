@@ -41,7 +41,7 @@ export const WorkCard: FC<Props> = ({ work, dialogLayout, voted = false, handleC
               <div className="relative rounded-full overflow-hidden flex justify-center items-center">
                 <Image src={work.author?.avatarUrl} width={38} height={38} alt={work.author.name} objectFit="cover" />
               </div>
-              <p className="text-text text-[13px]">
+              <p className="text-text text-[13px] font-regular">
                 {work.author?.grade}
                 {work.author?.class}・{work.author?.name}
               </p>

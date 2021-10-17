@@ -38,7 +38,7 @@ export const WorkDialog: VFC<Props> = (props) => {
                 <Image src={work.author?.avatarUrl} width={38} height={38} alt={work.author.name} objectFit="cover" />
               </div>
               <div className="flex justify-between items-center w-full">
-                <p className="text-text text-[13px]">
+                <p className="text-text text-[13px] font-regular">
                   {work.author?.grade}
                   {work.author?.class}・{work.author?.name}
                 </p>
