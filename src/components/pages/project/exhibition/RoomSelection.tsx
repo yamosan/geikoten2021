@@ -18,10 +18,10 @@ export const RoomSelection: VFC<Props> = ({ rooms }) => {
   return (
     <>
       <main className="bg-white md:pl-shead pt-14 pb-20">
-        <div className="flex flex-col space-y-2 items-center px-10 w-max max-w-full mx-auto">
+        <div className="flex flex-col space-y-2 items-center px-10 w-max max-w-full overflow-hidden mx-auto">
           <div
             className={clsx(
-              "flex items-start md:items-center space-x-1.5 pb-2 md:px-3 border-b border-lightBrown border-dashed",
+              "min-w-[320px] flex items-start md:items-center space-x-1.5 pb-2 md:px-3 border-b border-lightBrown border-dashed",
               "hachinoji"
             )}
           >
@@ -40,7 +40,7 @@ export const RoomSelection: VFC<Props> = ({ rooms }) => {
           </p>
         </div>
 
-        <div className="mt-12 w-11/12 lg:px-4 lg:max-w-[845px] mx-auto">
+        <div className="mt-16 w-11/12 lg:px-4 lg:max-w-[845px] mx-auto">
           <div className={clsx("flex flex-col space-y-16 justify-center pb-24")}>
             {rooms.map((room, i) => (
               <div key={room.id}>
@@ -65,13 +65,11 @@ export const RoomSelection: VFC<Props> = ({ rooms }) => {
           @apply relative;
         }
         .hachinoji::before {
-          @apply absolute bottom-1/2 left-0 h-4/5 border-l-[3px] transform translate-y-1/2 -translate-x-4 rotate-[-30deg] origin-bottom-left
-                  sm:-rotate-45;
+          @apply absolute bottom-1/2 left-0 h-4/5 border-l-[3px] transform translate-y-1/2 -translate-x-4 rotate-[-30deg] origin-bottom-left sm:-rotate-45;
           content: "";
         }
         .hachinoji::after {
-          @apply absolute bottom-1/2 right-0 h-4/5 border-r-[3px] transform translate-y-1/2 translate-x-4 rotate-[30deg] origin-bottom-right
-                  sm:rotate-45;
+          @apply absolute bottom-1/2 right-0 h-4/5 border-r-[3px] transform translate-y-1/2 translate-x-4 rotate-[30deg] origin-bottom-right sm:rotate-45;
           content: "";
         }
       `}</style>
