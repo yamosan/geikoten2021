@@ -1,7 +1,7 @@
 import NextHeadSeo from "next-head-seo";
 import { FC } from "react";
 
-import { SITE_DOMAIN } from "@/constants/urls";
+import { resolveFullPath } from "@/utils/resolvePath";
 
 export type PageSeoProps = {
   path: string;
@@ -18,15 +18,8 @@ export const PageSeo: FC<PageSeoProps> = (props) => {
     ogImagePath = "/image/ogp.png",
   } = props;
 
-  const APP_ROOT_URL = SITE_DOMAIN + process.env.NEXT_PUBLIC_BASE_PATH;
-  console.log(APP_ROOT_URL);
-
-  const pageUrl = APP_ROOT_URL + path;
-  console.log(pageUrl);
-
-  const ogImageUrl = APP_ROOT_URL + ogImagePath;
-  console.log(ogImageUrl);
-
+  const pageUrl = resolveFullPath(path);
+  const ogImageUrl = resolveFullPath(ogImagePath);
   const title = subtitle ? `芸工展2021 - ${subtitle}` : "芸工展2021";
 
   return (
