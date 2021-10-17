@@ -39,7 +39,7 @@ export const SponsorDialog: VFC<Props> = (props) => {
                   <dd>{sponsor.address}</dd>
                 </dl>
               )}
-              {sponsor.name && (
+              {sponsor.businessHours && (
                 <dl className="table">
                   <dt aria-label="営業日">
                     <Time />
@@ -47,7 +47,7 @@ export const SponsorDialog: VFC<Props> = (props) => {
                   <dd>{sponsor.businessHours}</dd>
                 </dl>
               )}
-              {sponsor.name && (
+              {sponsor.tel && (
                 <dl className="table">
                   <dt aria-label="電話番号">
                     <Tel />
@@ -55,7 +55,7 @@ export const SponsorDialog: VFC<Props> = (props) => {
                   <dd>{sponsor.tel}</dd>
                 </dl>
               )}
-              {sponsor.name && (
+              {sponsor.comment && (
                 <dl className="table">
                   <dt aria-label="コメント">
                     <Comment />

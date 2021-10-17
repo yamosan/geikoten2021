@@ -45,7 +45,7 @@ export const SponsorsCarousel: VFC<Props> = ({ sponsors, className, navigationPo
             nextEl: ".next",
           }}
         >
-          {sponsors.slice(0, 5).map((sponsor) => (
+          {sponsors.map((sponsor) => (
             <SwiperSlide key={sponsor.id}>
               <button
                 key={sponsor.id}
