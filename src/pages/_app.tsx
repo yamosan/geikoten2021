@@ -4,7 +4,7 @@ import "@/libs/firebase";
 import type { AppProps } from "next/app";
 
 import { SmoothScroll } from "@/components/SmoothScroll";
-import VotedIdsProvider from "@/store";
+import VotedIdsProvider from "@/store/votedIds";
 
 const App = (props: AppProps) => {
   return (

@@ -4,7 +4,7 @@ import { Section } from "@/components/ui";
 import { WorkCard } from "@/components/ui/WorkCard";
 import useMedia from "@/hooks/useMediaQuery";
 import { Theme, Work } from "@/models";
-import { useVotedIds } from "@/store";
+import { useVotedIds } from "@/store/votedIds";
 type Props = {
   works: Work[];
   themeColor: Theme;

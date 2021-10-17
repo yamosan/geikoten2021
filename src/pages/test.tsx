@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 
-import { useVotedIds } from "@/store";
+import { useVotedIds } from "@/store/votedIds";
 
 const Test: NextPage = () => {
   const { votedIds, vote } = useVotedIds();
