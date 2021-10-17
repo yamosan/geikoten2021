@@ -60,7 +60,7 @@ export const RoomInfoCard: VFC<Props> = (props) => {
         </div>
         {showLink && (
           <Link href={room.href}>
-            <a className="block ml-auto">
+            <a className={clsx("block ml-auto", layout === "column" && "mt-4")}>
               <GoTo borderColor={room.theme}>このテーマの作品を見る</GoTo>
             </a>
           </Link>
