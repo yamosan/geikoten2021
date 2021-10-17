@@ -14,7 +14,7 @@ export const HamburgerMenu: VFC<Props> = ({ onClick, buttonRole, color, transiti
     <button
       onClick={onClick}
       className={clsx(
-        "w-10 h-10 relative focus:ring-4 focus:ring-lightGray focus:ring-opacity-50 focus-within:ring-4 focus-within:ring-lightGray focus-within:ring-opacity-50 rounded",
+        "w-10 h-10 relative active-visible:ring-4 active-visible:ring-lightGray active-visible:ring-opacity-50 rounded",
         {
           "text-white": color === "white",
           "text-brown": color === "black",
