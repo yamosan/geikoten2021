@@ -88,7 +88,7 @@ export const ProjectCard = forwardRef<HTMLDivElement, Props>((props, ref) => {
                     <p
                       className={clsx(
                         "bg-lightBrown-70",
-                        "absolute inset-0 m-auto flex justify-center items-center w-full py-16 text-white px-6 h-5/6"
+                        "absolute inset-0 m-auto flex justify-center items-center w-full py-16 text-white text-sm leading-[1.8] px-6 h-5/6"
                       )}
                     >
                       {project.description}
@@ -127,7 +127,7 @@ export const ProjectCard = forwardRef<HTMLDivElement, Props>((props, ref) => {
             <p
               className={clsx(
                 "bg-lightBrown-70",
-                "flex justify-center items-center py-16 text-[15px] leading-relaxed text-white px-6"
+                "flex justify-center items-center py-16 text-white text-sm leading-[1.8] px-6"
               )}
               style={{ width: `${fw * 0.8}px`, height: `${fh * 0.6}px` }}
             >
