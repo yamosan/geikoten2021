@@ -3,6 +3,7 @@ import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { Layout } from "@/components/layouts/Layout";
 import { Footer, Main } from "@/components/pages/project/exhibition";
 import { Hero } from "@/components/pages/project/exhibition/Hero";
+import { PageSeo } from "@/components/PageSeo";
 import { Room, Theme, Work } from "@/models";
 import { getRoomByTheme, getRooms } from "@/utils/getRooms";
 import { getWorks } from "@/utils/getWorks";
@@ -35,18 +36,22 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
 
 const Film: NextPage<Props> = ({ room, works }) => {
   return (
-    <Layout>
-      <Hero
-        themeColor={room.theme}
-        subHeading={`THEME${room.id}`}
-        heading={room.title}
-        thumbnailUrl={room.thumbnailUrl} // TODO:
-        description={room.description}
-      />
+    <>
+      <Layout>
+        <Hero
+          themeColor={room.theme}
+          subHeading={`THEME${room.id}`}
+          heading={room.title}
+          thumbnailUrl={room.thumbnailUrl} // TODO:
+          description={room.description}
+        />
 
-      <Main works={works} themeColor={room.theme} />
-      <Footer currentTheme={room.theme} />
-    </Layout>
+        <Main works={works} themeColor={room.theme} />
+        <Footer currentTheme={room.theme} />
+      </Layout>
+
+      <PageSeo path={`/project/exhibition/${room.theme}`} subtitle={room.title} />
+    </>
   );
 };
 

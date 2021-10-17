@@ -4,6 +4,7 @@ import { Layout } from "@/components/layouts/Layout";
 import { Back } from "@/components/pages/project/Back";
 import { Hero } from "@/components/pages/project/Hero";
 import { MovieList } from "@/components/pages/project/MovieList";
+import { PageSeo } from "@/components/PageSeo";
 import { Project } from "@/models";
 import { findProject } from "@/utils/getProjects";
 
@@ -25,16 +26,20 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
 const CM: NextPage<Props> = ({ project }) => {
   return (
-    <Layout>
-      <Hero project={project} />
-      <MovieList
-        movies={[
-          { title: "コンセプトムービー", youtubeUrl: "https://www.youtube.com/embed/w-tGNmUipk0" },
-          { title: "部署長紹介", youtubeUrl: "https://www.youtube.com/embed/whpFjeH0ZqU" },
-        ]}
-      />
-      <Back />
-    </Layout>
+    <>
+      <Layout>
+        <Hero project={project} />
+        <MovieList
+          movies={[
+            { title: "コンセプトムービー", youtubeUrl: "https://www.youtube.com/embed/w-tGNmUipk0" },
+            { title: "部署長紹介", youtubeUrl: "https://www.youtube.com/embed/whpFjeH0ZqU" },
+          ]}
+        />
+        <Back />
+      </Layout>
+
+      <PageSeo path="/project/cm" subtitle={project.title} />
+    </>
   );
 };
 

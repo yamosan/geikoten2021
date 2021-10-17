@@ -2,6 +2,7 @@ import type { GetStaticProps, NextPage } from "next";
 
 import { Layout } from "@/components/layouts/Layout";
 import { About, Event, Project, SponsorAds, Top } from "@/components/pages/root";
+import { PageSeo } from "@/components/PageSeo";
 import type { Project as TProject, Sponsor as TSponsor } from "@/models";
 import { getProjects } from "@/utils/getProjects";
 import { getSponsors } from "@/utils/getSponsors";
@@ -33,17 +34,21 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
 const Root: NextPage<Props> = ({ sponsors, projects }) => {
   return (
-    <Layout>
-      <Top goldSponsors={sponsors.gold} />
+    <>
+      <Layout>
+        <Top goldSponsors={sponsors.gold} />
 
-      <div className="bg-white">
-        <About />
-        <Project projects={projects} />
-        <Event />
-      </div>
+        <div className="bg-white">
+          <About />
+          <Project projects={projects} />
+          <Event />
+        </div>
 
-      <SponsorAds silverSponsors={sponsors.silver} bronzeSponsors={sponsors.bronze} />
-    </Layout>
+        <SponsorAds silverSponsors={sponsors.silver} bronzeSponsors={sponsors.bronze} />
+      </Layout>
+
+      <PageSeo path="/" />
+    </>
   );
 };
 
