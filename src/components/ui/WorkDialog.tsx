@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import type { VFC } from "react";
 
-import { Image } from "@/components/basics";
+import { ExternalLink, Image } from "@/components/basics";
 import { Dialog, VoteButton } from "@/components/ui"; // TODO: なぜか/uiでimportするとエラー
 import type { Work } from "@/models";
 
@@ -54,13 +54,9 @@ export const WorkDialog: VFC<Props> = (props) => {
             </div>
 
             <p className="text-text text-base mt-4 leading-loose">{work.description}</p>
-            <div className="flex-shrink-0 flex w-full justify-between mt-6">
-              <div className="flex space-x-1 items-center">
-                <LinkChain />
-                <p className="text-text text-[13px] pb-0.5 border-b border-gray">作品リンクはコチラ</p>
-              </div>
-
-              {layout === "row" && <VoteButton active={voted} onClick={handleClick} />}
+            <div className="flex-shrink-0 flex w-full items-center justify-between mt-6">
+              {work.siteUrl && <WorkLink href={work.siteUrl} />}
+              {layout === "row" && <VoteButton active={voted} onClick={handleClick} className="ml-auto" />}
             </div>
           </div>
         </div>
@@ -72,6 +68,17 @@ export const WorkDialog: VFC<Props> = (props) => {
         }
       `}</style>
     </>
+  );
+};
+
+const WorkLink: VFC<{ href: string }> = ({ href }) => {
+  return (
+    <ExternalLink href={href}>
+      <div className="flex space-x-1 items-center">
+        <LinkChain />
+        <p className="text-text text-[13px] pb-0.5 border-b border-gray">作品リンクはコチラ</p>
+      </div>
+    </ExternalLink>
   );
 };
 
