@@ -41,7 +41,7 @@ export const Footer: VFC<Props> = ({ currentTheme }) => {
       ) : (
         <div className="flex flex-col space-y-6 justify-center items-center w-full md:pl-shead h-[196px]">
           <div className="flex justify-center">
-            <Link href="/#project">
+            <Link href="/project/exhibition">
               <a className="text-text border-b border-brown">部屋選択に戻る</a>
             </Link>
           </div>
