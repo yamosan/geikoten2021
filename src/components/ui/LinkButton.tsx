@@ -40,7 +40,7 @@ export const LinkButton = forwardRef<HTMLAnchorElement, Props>((props, ref) => {
                 <path d="M1 9.5L8 18.5L15 9.5" stroke="#D3D977" strokeWidth="2" strokeLinejoin="round" />
                 <path d="M1 1L8 10L15 1" stroke="#D3D977" strokeWidth="2" strokeLinejoin="round" />
               </svg>
-              <span>{children}</span>
+              <span className="font-bold">{children}</span>
             </span>
           </div>
         </div>

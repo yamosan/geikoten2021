@@ -22,7 +22,7 @@ export const Footer: VFC = () => {
       <div className="flex items-end justify-between w-full px-4 py-16 text-white lg:px-9">
         <div className="flex flex-col w-full space-y-5">
           <div className="flex items-end space-x-3 lg:space-x-5">
-            <p className="text-xl font-medium leading-none">名古屋市立大学芸術工学部</p>
+            <p className="text-xl font-bold leading-none">名古屋市立大学芸術工学部</p>
             <HomepageLink />
           </div>
           <div className="flex items-end justify-between w-full">
