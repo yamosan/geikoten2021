@@ -15,9 +15,9 @@ export const EventCard = forwardRef<HTMLDivElement, Props>((props, ref) => {
 
   return (
     <div className={clsx("relative flex flex-col space-y-2 bg-white group", className)} {...attrs} ref={ref}>
-      <div className="flex items-end justify-between">
+      <div className="flex space-x-6 items-end justify-between">
         <div
-          className={clsx("text-xl font-bold text-text w-max", {
+          className={clsx("flex-shrink-0 text-xl font-bold text-text w-max", {
             "text-2xl": size === "lg",
             "text-xl": size === "md",
           })}
