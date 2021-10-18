@@ -59,7 +59,7 @@ export const Project: VFC<Props> = ({ projects }) => {
       </div>
       <div
         className="flex items-center min-h-[480px] bg-lightGray relative overflow-x-hidden"
-        style={{ height: height ? height * 0.66 : "66vh" }}
+        style={{ height: "66vh" }}
       >
         <Image src="/images/top_bg.jpg" alt="背景" layout="fill" objectFit="cover" />
         <div
