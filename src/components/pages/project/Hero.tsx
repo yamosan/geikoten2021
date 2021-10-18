@@ -1,7 +1,6 @@
 import type { VFC } from "react";
-import Div100vh from "react-div-100vh";
 
-import { Image } from "@/components/basics";
+import { Div100vh, Image } from "@/components/basics";
 import { ColorLevel, ProjectCard, ScrollDown } from "@/components/ui";
 import useMedia from "@/hooks/useMediaQuery";
 import { Project } from "@/models";

@@ -8,6 +8,7 @@ import { useEffect, useRef } from "react";
 import { Highlight, Image, Paragraph } from "@/components/basics";
 import type { ColorLevel } from "@/components/ui";
 import { ProjectCard, Section } from "@/components/ui";
+import { use100vh } from "@/hooks/use100vh";
 import useMedia from "@/hooks/useMediaQuery";
 import useWindowSize from "@/hooks/useWindowSize";
 import type { Project as TProject } from "@/models";
@@ -21,7 +22,7 @@ export const Project: VFC<Props> = ({ projects }) => {
   const boxRef = useRef<HTMLDivElement>(null);
   const anime = useRef<gsap.core.Tween>(null);
   const isWide = useMedia("(min-width: 768px)");
-  // const height = use100vh();
+  const height = use100vh();
 
   const { width } = useWindowSize();
   //TODO: リサイズした時にxを変更したい
@@ -59,7 +60,7 @@ export const Project: VFC<Props> = ({ projects }) => {
       </div>
       <div
         className="flex items-center min-h-[480px] bg-lightGray relative overflow-x-hidden"
-        style={{ height: "66vh" }}
+        style={{ height: height ? height * 0.66 : "66vh" }}
       >
         <Image src="/images/top_bg.jpg" alt="背景" layout="fill" objectFit="cover" />
         <div

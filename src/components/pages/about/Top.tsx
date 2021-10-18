@@ -1,7 +1,6 @@
-import type { VFC } from "react";
-import Div100vh from "react-div-100vh";
+import { VFC } from "react";
 
-import { Image } from "@/components/basics";
+import { Div100vh, Image } from "@/components/basics";
 import { ScrollDown } from "@/components/ui";
 // import useMedia from "@/hooks/useMediaQuery";
 
