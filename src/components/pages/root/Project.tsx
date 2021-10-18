@@ -3,8 +3,8 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
 import type { VFC } from "react";
 import { useEffect, useRef } from "react";
-import { use100vh } from "react-div-100vh";
 
+// import { use100vh } from "react-div-100vh";
 import { Highlight, Image, Paragraph } from "@/components/basics";
 import type { ColorLevel } from "@/components/ui";
 import { ProjectCard, Section } from "@/components/ui";
@@ -21,7 +21,7 @@ export const Project: VFC<Props> = ({ projects }) => {
   const boxRef = useRef<HTMLDivElement>(null);
   const anime = useRef<gsap.core.Tween>(null);
   const isWide = useMedia("(min-width: 768px)");
-  const height = use100vh();
+  // const height = use100vh();
 
   const { width } = useWindowSize();
   //TODO: リサイズした時にxを変更したい
