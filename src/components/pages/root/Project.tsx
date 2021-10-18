@@ -3,6 +3,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
 import type { VFC } from "react";
 import { useEffect, useRef } from "react";
+import { use100vh } from "react-div-100vh";
 
 import { Highlight, Image, Paragraph } from "@/components/basics";
 import type { ColorLevel } from "@/components/ui";
@@ -20,6 +21,7 @@ export const Project: VFC<Props> = ({ projects }) => {
   const boxRef = useRef<HTMLDivElement>(null);
   const anime = useRef<gsap.core.Tween>(null);
   const isWide = useMedia("(min-width: 768px)");
+  const height = use100vh();
 
   const { width } = useWindowSize();
   //TODO: リサイズした時にxを変更したい
@@ -55,7 +57,10 @@ export const Project: VFC<Props> = ({ projects }) => {
           <Highlight>ぜったい全部見てね〜！</Highlight>
         </Paragraph>
       </div>
-      <div className="flex items-center h-[66vh] min-h-[480px] bg-lightGray relative overflow-x-hidden">
+      <div
+        className="flex items-center min-h-[480px] bg-lightGray relative overflow-x-hidden"
+        style={{ height: height ? height * 0.66 : "66vh" }}
+      >
         <Image src="/images/top_bg.jpg" alt="背景" layout="fill" objectFit="cover" />
         <div
           className="absolute flex pl-12 my-auto space-x-24 h-[65%] md:h-[73%] max-h-[800px] md:ml-shead"
