@@ -3,6 +3,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
 import type { VFC } from "react";
 import { useEffect, useRef } from "react";
+import { isMobile } from "react-device-detect";
 
 // import { use100vh } from "react-div-100vh";
 import { Highlight, Image, Paragraph } from "@/components/basics";
@@ -25,7 +26,8 @@ export const Project: VFC<Props> = ({ projects }) => {
   const height = use100vh();
 
   const { width } = useWindowSize();
-  //TODO: リサイズした時にxを変更したい
+  // TODO: リサイズした時にxを変更したい
+  // TODO: モバイルブラウザでアドレスバーが開閉したタイミングでCLSが起きる
   useEffect(() => {
     const boxElm = boxRef.current;
     const triggerElm = triggerRef.current;
@@ -33,6 +35,11 @@ export const Project: VFC<Props> = ({ projects }) => {
 
     if (anime.current === null) {
       gsap.registerPlugin(ScrollTrigger);
+      if (isMobile) {
+        ScrollTrigger.config({
+          autoRefreshEvents: "visibilitychange,DOMContentLoaded,load",
+        });
+      }
       anime.current = gsap.to(boxElm, {
         // xPercent: -100,
         x: () => -boxElm.clientWidth + width * 0.5,
