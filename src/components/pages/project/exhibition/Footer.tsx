@@ -32,7 +32,7 @@ export const Footer: VFC<Props> = ({ currentTheme }) => {
         <div className="w-full md:pl-shead h-[165px] md:h-[245px]">
           <div className="h-full flex items-center justify-between max-w-[810px] mx-auto px-4">
             <Prev href={prev.href} text={getThemeTitle(prev.id)} />
-            <Link href="/#project">
+            <Link href="/project/exhibition">
               <a className="text-text border-b border-brown">部屋選択に戻る</a>
             </Link>
             <Next href={next.href} text={getThemeTitle(next.id)} />
