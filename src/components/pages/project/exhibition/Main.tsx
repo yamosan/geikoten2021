@@ -57,17 +57,27 @@ export const Main: VFC<Props> = ({ works: allWorks, themeColor }) => {
       <Section heading="WORKS" subHeading="作品" headerColor={themeColor} className="relative z-10 mt-[-80px] bg-white">
         <div className="md:pl-shead pt-3 pb-24 lg:pb-52">
           <div className="w-11/12 mx-auto lg:max-w-app">
-            <div className="grid gap-x-8 gap-y-14 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:w-full">
-              {works.map((work) => (
-                <WorkCard
-                  key={work.id}
-                  work={work}
-                  dialogLayout={isWide ? "row" : "column"}
-                  voted={ids.has(work.id)}
-                  handleClick={() => vote(work.id)}
-                />
-              ))}
-            </div>
+            {works.length ? (
+              <div className="grid gap-x-8 gap-y-14 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:w-full">
+                {works.map((work) => (
+                  <WorkCard
+                    key={work.id}
+                    work={work}
+                    dialogLayout={isWide ? "row" : "column"}
+                    voted={ids.has(work.id)}
+                    handleClick={() => vote(work.id)}
+                  />
+                ))}
+              </div>
+            ) : (
+              <p className="text-darkGray font-bold text-base md:text-lg text-center mt-20 md:mt-48 mx-8">
+                <span className="inline-block">条件に合う作品が</span>
+                <span className="inline-block">見つかりませんでした</span>
+                <span role="img" aria-label="innocent">
+                  😇
+                </span>
+              </p>
+            )}
           </div>
         </div>
       </Section>
