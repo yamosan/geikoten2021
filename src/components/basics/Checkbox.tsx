@@ -25,7 +25,7 @@ export const Checkbox = forwardRef<HTMLInputElement, Props>((props, ref) => {
         />
         <span
           className={clsx(
-            "relative w-5 h-5 border border-gray rounded-sm inline-flex items-center justify-center",
+            "relative w-5 h-5 border border-gray rounded-sm",
             "outline-none peer-focus-visible:ring-2 peer-focus-visible:ring-green-10",
             label && "mr-2"
           )}
@@ -33,7 +33,13 @@ export const Checkbox = forwardRef<HTMLInputElement, Props>((props, ref) => {
           aria-hidden
           aria-checked={checked}
         >
-          <span className={clsx("transition-opacity", checked ? "opacity-100" : "opacity-0")}>
+          <span
+            className={clsx(
+              "transition-opacity",
+              checked ? "opacity-100" : "opacity-0",
+              "absolute transform top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            )}
+          >
             <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M1.5 5.5L6 10L13.5 1"
