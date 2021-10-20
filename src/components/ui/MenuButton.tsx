@@ -14,6 +14,7 @@ export const MenuButton = forwardRef<HTMLButtonElement, Props>((props, ref) => {
       <button
         className={clsx(
           "min-w-[100px] text-sm py-2 px-4 rounded-md border-lightBrown inline-flex justify-between space-x-1 items-center hover:text-opacity-100",
+          "outline-none focus-visible:ring-2 focus-visible:ring-green-10",
           {
             "text-white bg-lightBrown": active,
             "text-lightBrown bg-white": !active,
