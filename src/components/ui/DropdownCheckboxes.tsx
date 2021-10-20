@@ -1,5 +1,5 @@
 import { Popover } from "@headlessui/react";
-import { useCallback, useEffect, useMemo, useState, VFC } from "react";
+import { ComponentProps, useCallback, useEffect, useMemo, useState, VFC } from "react";
 import { usePopper } from "react-popper";
 
 import { Checkbox } from "@/components/basics";
@@ -15,10 +15,11 @@ type Item = {
 type Props = {
   label: string;
   items: Item[];
+  size?: ComponentProps<typeof MenuButton>["size"];
   onChange?: (values: Item["value"][]) => void;
 };
 
-export const DropdownCheckboxes: VFC<Props> = ({ items, label, onChange }) => {
+export const DropdownCheckboxes: VFC<Props> = ({ items, label, onChange, size }) => {
   const [referenceElement, setReferenceElement] = useState<HTMLButtonElement | undefined>();
   const [popperElement, setPopperElement] = useState<HTMLDivElement | undefined>();
   const { styles, attributes } = usePopper(referenceElement, popperElement);
@@ -40,7 +41,7 @@ export const DropdownCheckboxes: VFC<Props> = ({ items, label, onChange }) => {
 
   return (
     <Popover className="relative">
-      <Popover.Button ref={setReferenceElement} as={MenuButton} active={selected} className="transition">
+      <Popover.Button ref={setReferenceElement} as={MenuButton} active={selected} size={size} className="transition">
         {label}
       </Popover.Button>
 

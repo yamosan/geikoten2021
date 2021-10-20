@@ -4,20 +4,25 @@ import React, { forwardRef } from "react";
 
 type Props = {
   active?: boolean;
+  size?: "sm" | "md";
 } & ComponentPropsWithoutRef<"button">;
 
 export const MenuButton = forwardRef<HTMLButtonElement, Props>((props, ref) => {
-  const { active, className, children, ...attrs } = props;
+  const { active, className, children, size, ...attrs } = props;
 
   return (
     <>
       <button
         className={clsx(
-          "min-w-[100px] text-sm py-2 px-4 rounded-md border border-lightBrown inline-flex justify-between space-x-1 items-center hover:text-opacity-100",
+          "py-2 rounded-md border border-lightBrown inline-flex justify-between space-x-1 items-center hover:text-opacity-100",
           "outline-none focus-visible:ring-2 focus-visible:ring-green-10",
           {
             "text-white bg-lightBrown": active,
             "text-lightBrown bg-white": !active,
+          },
+          {
+            "min-w-[100px] px-4 text-[15px]": size === "md",
+            "min-w-[87px] px-2 text-[13px]": size === "sm",
           },
           className
         )}
@@ -43,6 +48,7 @@ export const MenuButton = forwardRef<HTMLButtonElement, Props>((props, ref) => {
 
 MenuButton.defaultProps = {
   active: false,
+  size: "md",
 };
 
 MenuButton.displayName = "MenuButton";
