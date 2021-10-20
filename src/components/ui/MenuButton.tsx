@@ -7,7 +7,7 @@ type Props = {
 } & ComponentPropsWithoutRef<"button">;
 
 export const MenuButton = forwardRef<HTMLButtonElement, Props>((props, ref) => {
-  const { active, className, ...attrs } = props;
+  const { active, className, children, ...attrs } = props;
 
   return (
     <>
@@ -23,7 +23,7 @@ export const MenuButton = forwardRef<HTMLButtonElement, Props>((props, ref) => {
         ref={ref}
         {...attrs}
       >
-        <span>ジャンル</span>
+        <span>{children}</span>
         <span className="check" aria-hidden />
       </button>
 
