@@ -1,7 +1,8 @@
 import clsx from "clsx";
-import React, { ComponentProps, ComponentPropsWithoutRef, FC, useCallback, useState } from "react";
+import React, { ComponentProps, ComponentPropsWithoutRef, FC, useState } from "react";
 
 import { Image } from "@/components/basics";
+import { useIsMounted } from "@/hooks/useIsMounted";
 import { Work } from "@/models";
 
 import { Loading } from "../vectors";
@@ -18,10 +19,13 @@ type Props = {
 export const WorkCard: FC<Props> = ({ work, dialogLayout, voted = false, handleClick }) => {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(true);
+  const isMounted = useIsMounted();
 
-  const handleOnLoad = useCallback(() => {
-    setLoading(false);
-  }, []);
+  const handleOnLoad = () => {
+    if (isMounted()) {
+      setLoading(false);
+    }
+  };
 
   return (
     <>
