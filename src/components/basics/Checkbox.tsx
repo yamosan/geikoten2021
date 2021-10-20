@@ -1,20 +1,34 @@
 import clsx from "clsx";
-import type { ComponentPropsWithoutRef } from "react";
+import { ComponentPropsWithoutRef } from "react";
 import React, { forwardRef } from "react";
 
 type Props = {
-  label: string;
+  label?: string;
+  // controlled
+  checked: boolean;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 } & ComponentPropsWithoutRef<"input">;
 
 export const Checkbox = forwardRef<HTMLInputElement, Props>((props, ref) => {
-  const { label, checked, className, ...attrs } = props;
+  const { label, className, checked, onChange, ...attrs } = props;
 
   return (
     <>
       <label className={clsx("inline-flex items-center cursor-pointer select-none", "text-text text-sm", className)}>
-        <input className="sr-only" type="checkbox" ref={ref} {...attrs} />
+        <input
+          className={clsx("sr-only peer")}
+          type="checkbox"
+          checked={checked}
+          onChange={onChange}
+          ref={ref}
+          {...attrs}
+        />
         <span
-          className="relative mr-2 w-5 h-5 border border-gray rounded-sm inline-flex items-center justify-center"
+          className={clsx(
+            "relative w-5 h-5 border border-gray rounded-sm inline-flex items-center justify-center",
+            "outline-none peer-focus-visible:ring-2 peer-focus-visible:ring-green-10",
+            label && "mr-2"
+          )}
           role="checkbox"
           aria-hidden
           aria-checked={checked}
