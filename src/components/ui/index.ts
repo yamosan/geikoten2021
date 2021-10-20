@@ -1,5 +1,6 @@
 export * from "./Button";
 export * from "./Dialog";
+export * from "./DropdownCheckboxes";
 export * from "./EventCard";
 export * from "./LinkButton";
 export * from "./MenuButton";
