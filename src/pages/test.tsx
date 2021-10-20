@@ -1,21 +1,22 @@
 import type { NextPage } from "next";
 
-import { useVotedIds } from "@/store/votedIds";
+import { Checkbox } from "@/components/basics";
+import { DropdownCheckboxes } from "@/components/ui";
+
+const GENRE = [
+  { label: "平面", value: "平面" },
+  { label: "立体", value: "立体" },
+  { label: "映像作品", value: "映像作品" },
+  { label: "ゲーム", value: "ゲーム" },
+  { label: "Web", value: "Web" },
+  { label: "その他", value: "その他" },
+];
 
 const Test: NextPage = () => {
-  const { votedIds, vote } = useVotedIds();
-  console.log(votedIds);
-
   return (
     <div className="flex items-center justify-center min-h-screen bg-lightGray">
-      <button
-        className="bg-green-10"
-        onClick={() => {
-          vote(4);
-        }}
-      >
-        click me!
-      </button>
+      <DropdownCheckboxes items={GENRE} label="ジャンル" />
+      <Checkbox checked={true} onChange={() => {}} />
     </div>
   );
 };

@@ -48,7 +48,7 @@ export const DropdownCheckboxes: VFC<Props> = ({ items, label }) => {
             <Checkbox
               key={i.toString()}
               value={item.value}
-              checked={item.checked}
+              checked={!!item.checked} // controlled
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleChange(e, i)}
               label={item.label}
               className="py-1"
