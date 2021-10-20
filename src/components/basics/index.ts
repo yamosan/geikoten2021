@@ -1,4 +1,4 @@
-export * from "./CheckBox";
+export * from "./Checkbox";
 export * from "./Div100vh";
 export * from "./ExternalLink";
 export * from "./Highlight";
