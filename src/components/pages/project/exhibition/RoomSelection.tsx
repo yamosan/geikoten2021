@@ -21,7 +21,7 @@ export const RoomSelection: VFC<Props> = ({ rooms }) => {
         <div className="flex flex-col space-y-2 items-center px-10 w-max max-w-full overflow-hidden mx-auto">
           <div
             className={clsx(
-              "min-w-[320px] flex items-start md:items-center space-x-1.5 pb-2 md:px-3 border-b border-lightBrown border-dashed",
+              "min-w-max flex items-start md:items-center space-x-1.5 pb-2 md:px-3 border-b border-lightBrown border-dashed",
               "hachinoji"
             )}
           >
@@ -65,11 +65,11 @@ export const RoomSelection: VFC<Props> = ({ rooms }) => {
           @apply relative;
         }
         .hachinoji::before {
-          @apply absolute bottom-1/2 left-0 h-4/5 border-l-[3px] transform translate-y-1/2 -translate-x-4 rotate-[-30deg] origin-bottom-left sm:-rotate-45;
+          @apply absolute bottom-1/2 left-0 h-4/5 border-l-[3px] transform translate-y-1/2 -translate-x-1 rotate-[-30deg] origin-bottom-left sm:-rotate-45 sm:-translate-x-4;
           content: "";
         }
         .hachinoji::after {
-          @apply absolute bottom-1/2 right-0 h-4/5 border-r-[3px] transform translate-y-1/2 translate-x-4 rotate-[30deg] origin-bottom-right sm:rotate-45;
+          @apply absolute bottom-1/2 right-0 h-4/5 border-r-[3px] transform translate-y-1/2 translate-x-1 rotate-[30deg] origin-bottom-right sm:rotate-45 sm:translate-x-4;
           content: "";
         }
       `}</style>
