@@ -35,12 +35,22 @@ export const Main: VFC<Props> = ({ works: allWorks, themeColor }) => {
 
   return (
     <div>
-      <div className={clsx("sticky top-0 w-full md:pl-shead ml-auto z-40", "bg-white py-7")}>
+      <div
+        className={clsx("w-full md:pl-shead ml-auto z-40", {
+          "sticky top-0 bg-white py-7": isWide,
+          "fixed top-0 pt-thead": !isWide,
+        })}
+      >
         <div className="w-11/12 mx-auto lg:max-w-app flex justify-end">
-          <div className="flex space-x-4">
-            <DropdownCheckboxes items={GENRE} label="ジャンル" onChange={setGenre} />
-            <DropdownCheckboxes items={GRADE} label="学年" onChange={setAuthorGrade} />
-            <DropdownCheckboxes items={CLASS} label="学科" onChange={setAuthorClass} />
+          <div
+            className={clsx("flex", {
+              "space-x-4": isWide,
+              "space-x-3": !isWide,
+            })}
+          >
+            <DropdownCheckboxes items={GENRE} label="ジャンル" onChange={setGenre} size={isWide ? "md" : "sm"} />
+            <DropdownCheckboxes items={GRADE} label="学年" onChange={setAuthorGrade} size={isWide ? "md" : "sm"} />
+            <DropdownCheckboxes items={CLASS} label="学科" onChange={setAuthorClass} size={isWide ? "md" : "sm"} />
           </div>
         </div>
       </div>
