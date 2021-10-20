@@ -41,7 +41,7 @@ export const DropdownCheckboxes: VFC<Props> = ({ items, label }) => {
 
       <Popover.Panel ref={setPopperElement} style={styles.popper} {...attributes.popper}>
         <div
-          className="min-w-[135px] flex flex-col mt-2 space-y-2 p-4 rounded overflow-hidden bg-white opacity-95"
+          className="min-w-[100px] w-max flex flex-col mt-2 space-y-2 py-4 pl-4 pr-7 rounded overflow-hidden bg-white opacity-100 drop-shadow-md"
           role="presentation"
         >
           {state.map((item, i) => (
