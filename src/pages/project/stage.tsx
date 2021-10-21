@@ -31,8 +31,8 @@ const Stage: NextPage<Props> = ({ project }) => {
         <Hero project={project} />
         <MovieList
           movies={[
-            { title: "コンセプトムービー", youtubeUrl: "https://www.youtube.com/embed/w-tGNmUipk0" },
-            { title: "部署長紹介", youtubeUrl: "https://www.youtube.com/embed/whpFjeH0ZqU" },
+            { title: "脛骨彼女オーディション", youtubeUrl: "https://www.youtube.com/embed/w-tGNmUipk0" },
+            { title: "明治と行く開運旅", youtubeUrl: "https://www.youtube.com/embed/whpFjeH0ZqU" },
           ]}
         />
         <Back />
