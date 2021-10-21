@@ -8,16 +8,18 @@
       {
         "name": "もりころ",
         "grade": 2,
-        "class": "M"
+        "class": "M",
+        "avatarUrl": "/images/avatar.png"
       },
       {
         "name": "ぺよ",
         "grade": 2,
-        "class": "M"
+        "class": "M",
+        "avatarUrl": "/images/avatar.png"
       }
     ],
-    "thumbnailUrl": "/images/web_content",
-    "siteUrl": "/web_contents/1"
+    "thumbnailUrl": "/images/web_content_thumbnail.png",
+    "siteUrl": "https://geikousai-ncu.com//web_contents/1/index.html"
   },
   {
     "id": 2,
@@ -28,16 +30,18 @@
       {
         "name": "めて",
         "grade": 2,
-        "class": "M"
+        "class": "M",
+        "avatarUrl": "/images/avatar.png"
       },
       {
         "name": "からあげ",
         "grade": 2,
-        "class": "M"
+        "class": "M",
+        "avatarUrl": "/images/avatar.png"
       }
     ],
-    "thumbnailUrl": "/images/web_content",
-    "siteUrl": "/web_contents/2"
+    "thumbnailUrl": "/images/web_content_thumbnail.png",
+    "siteUrl": "https://geikousai-ncu.com//web_contents/2/index.html"
   },
   {
     "id": 3,
@@ -48,16 +52,18 @@
       {
         "name": "さんぴん",
         "grade": 2,
-        "class": "N"
+        "class": "N",
+        "avatarUrl": "/images/avatar.png"
       },
       {
         "name": "シャカデェス",
         "grade": 2,
-        "class": "M"
+        "class": "M",
+        "avatarUrl": "/images/avatar.png"
       }
     ],
-    "thumbnailUrl": "/images/web_content",
-    "siteUrl": "/web_contents/3"
+    "thumbnailUrl": "/images/web_content_thumbnail.png",
+    "siteUrl": "https://geikousai-ncu.com//web_contents/3/index.html"
   },
   {
     "id": 4,
@@ -68,16 +74,18 @@
       {
         "name": "ロン三元",
         "grade": 1,
-        "class": "M"
+        "class": "M",
+        "avatarUrl": "/images/avatar.png"
       },
       {
         "name": "まぐ",
         "grade": 1,
-        "class": "N"
+        "class": "N",
+        "avatarUrl": "/images/avatar.png"
       }
     ],
-    "thumbnailUrl": "/images/web_content",
-    "siteUrl": "/web_contents/4"
+    "thumbnailUrl": "/images/web_content_thumbnail.png",
+    "siteUrl": "https://geikousai-ncu.com//web_contents/4/index.html"
   },
   {
     "id": 5,
@@ -88,21 +96,24 @@
       {
         "name": "ぼん",
         "grade": 2,
-        "class": "M"
+        "class": "M",
+        "avatarUrl": "/images/avatar.png"
       },
       {
         "name": "メリテン",
         "grade": 2,
-        "class": "N"
+        "class": "N",
+        "avatarUrl": "/images/avatar.png"
       },
       {
         "name": "ばりふ",
         "grade": 3,
-        "class": "M"
+        "class": "M",
+        "avatarUrl": "/images/avatar.png"
       }
     ],
-    "thumbnailUrl": "/images/web_content",
-    "siteUrl": "/web_contents/5"
+    "thumbnailUrl": "/images/web_content_thumbnail.png",
+    "siteUrl": "https://geikousai-ncu.com//web_contents/5/index.html"
   },
   {
     "id": 6,
@@ -113,21 +124,24 @@
       {
         "name": "ひれもり",
         "grade": 2,
-        "class": "M"
+        "class": "M",
+        "avatarUrl": "/images/avatar.png"
       },
       {
         "name": "シャルD",
         "grade": 1,
-        "class": "M"
+        "class": "M",
+        "avatarUrl": "/images/avatar.png"
       },
       {
         "name": "ネッコアラ",
         "grade": 2,
-        "class": "M"
+        "class": "M",
+        "avatarUrl": "/images/avatar.png"
       }
     ],
-    "thumbnailUrl": "/images/web_content",
-    "siteUrl": "/web_contents/6"
+    "thumbnailUrl": "/images/web_content_thumbnail.png",
+    "siteUrl": "https://geikousai-ncu.com//web_contents/6/index.html"
   },
   {
     "id": 7,
@@ -138,21 +152,24 @@
       {
         "name": "ジル",
         "grade": 2,
-        "class": "M"
+        "class": "M",
+        "avatarUrl": "/images/avatar.png"
       },
       {
         "name": "うぃんぐ",
         "grade": 2,
-        "class": "N"
+        "class": "N",
+        "avatarUrl": "/images/avatar.png"
       },
       {
         "name": "えでりん",
         "grade": 2,
-        "class": "M"
+        "class": "M",
+        "avatarUrl": "/images/avatar.png"
       }
     ],
-    "thumbnailUrl": "/images/web_content",
-    "siteUrl": "/web_contents/7"
+    "thumbnailUrl": "/images/web_content_thumbnail.png",
+    "siteUrl": "https://geikousai-ncu.com//web_contents/7/index.html"
   },
   {
     "id": 8,
@@ -163,10 +180,11 @@
       {
         "name": "せき",
         "grade": 2,
-        "class": "M"
+        "class": "M",
+        "avatarUrl": "/images/avatar.png"
       }
     ],
-    "thumbnailUrl": "/images/web_content",
+    "thumbnailUrl": "/images/web_content_thumbnail.png",
     "siteUrl": "https://unityroom.com/games/ufoufoufo_se"
   },
   {
@@ -178,10 +196,11 @@
       {
         "name": "たまご将軍",
         "grade": 1,
-        "class": "M"
+        "class": "M",
+        "avatarUrl": "/images/avatar.png"
       }
     ],
-    "thumbnailUrl": "/images/web_content",
+    "thumbnailUrl": "/images/web_content_thumbnail.png",
     "siteUrl": ""
   },
   {
@@ -193,10 +212,11 @@
       {
         "name": "でるた",
         "grade": 1,
-        "class": "N"
+        "class": "N",
+        "avatarUrl": "/images/avatar.png"
       }
     ],
-    "thumbnailUrl": "/images/web_content",
+    "thumbnailUrl": "/images/web_content_thumbnail.png",
     "siteUrl": ""
   },
   {
@@ -208,10 +228,11 @@
       {
         "name": "ハル研",
         "grade": 2,
-        "class": "N"
+        "class": "N",
+        "avatarUrl": "/images/avatar.png"
       }
     ],
-    "thumbnailUrl": "/images/web_content",
+    "thumbnailUrl": "/images/web_content_thumbnail.png",
     "siteUrl": ""
   },
   {
@@ -223,10 +244,11 @@
       {
         "name": "212",
         "grade": 3,
-        "class": "M"
+        "class": "M",
+        "avatarUrl": "/images/avatar.png"
       }
     ],
-    "thumbnailUrl": "/images/web_content",
+    "thumbnailUrl": "/images/web_content_thumbnail.png",
     "siteUrl": "https://cluster.mu/w/ff666118-56ce-4828-bf28-281cb43d7f9a"
   },
   {
@@ -238,10 +260,11 @@
       {
         "name": "くれか",
         "grade": 3,
-        "class": "M"
+        "class": "M",
+        "avatarUrl": "/images/avatar.png"
       }
     ],
-    "thumbnailUrl": "/images/web_content",
+    "thumbnailUrl": "/images/web_content_thumbnail.png",
     "siteUrl": "https://cluster.mu/w/bd65654f-990c-4106-835d-5763115b0517"
   },
   {
@@ -253,10 +276,11 @@
       {
         "name": "ラっさ",
         "grade": 3,
-        "class": "M"
+        "class": "M",
+        "avatarUrl": "/images/avatar.png"
       }
     ],
-    "thumbnailUrl": "/images/web_content",
+    "thumbnailUrl": "/images/web_content_thumbnail.png",
     "siteUrl": "https://cluster.mu/w/a1ad9a80-0eb0-43d4-b1a6-9c1f06e1c73d"
   },
   {
@@ -268,10 +292,11 @@
       {
         "name": "ナズナ",
         "grade": 3,
-        "class": "M"
+        "class": "M",
+        "avatarUrl": "/images/avatar.png"
       }
     ],
-    "thumbnailUrl": "/images/web_content",
+    "thumbnailUrl": "/images/web_content_thumbnail.png",
     "siteUrl": "https://cluster.mu/w/3827cb1c-b77e-4474-9bd4-863c37480fd0"
   }
 ]
