@@ -21,7 +21,12 @@ export const RoomSelection: VFC<Props> = ({ rooms }) => {
       <div className="relative overflow-hidden bg-white md:pl-shead pt-14 pb-20">
         <div className="absolute top-0 left-0 w-full h-[1400px]">
           <Balloon color="shutter" size={232} xReverse className="absolute top-36 right-0 transform translate-x-1/2" />
-          <Balloon color="film" size={200} yReverse className="absolute top-[564px] left-0 transform translate-x-1/2" />
+          <Balloon
+            color="film"
+            size={200}
+            yReverse
+            className="absolute top-[564px] left-0 transform -translate-x-1/2"
+          />
           <Balloon
             color="lens"
             size={237}
