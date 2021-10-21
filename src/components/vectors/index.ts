@@ -1,6 +1,7 @@
 export * from "./Arrow";
 export * from "./Comment";
 export * from "./Crowd";
+export * from "./Ellipse";
 export * from "./ExternalLink";
 export * from "./InstagramIcon";
 export * from "./LinkChain";

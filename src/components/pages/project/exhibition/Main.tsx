@@ -1,7 +1,8 @@
 import clsx from "clsx";
-import { useMemo, useState, VFC } from "react";
+import { useEffect, useMemo, useRef, useState, VFC } from "react";
 
 import { DropdownCheckboxes, Section } from "@/components/ui";
+import { Balloon } from "@/components/ui/Balloon";
 import { WorkCard } from "@/components/ui/WorkCard";
 import useMedia from "@/hooks/useMediaQuery";
 import { Theme, Work } from "@/models";
@@ -33,6 +34,17 @@ export const Main: VFC<Props> = ({ works: allWorks, themeColor }) => {
 
   const ids = useMemo(() => new Set(votedIds), [votedIds]);
 
+  const [containerMaxHeight, setContainerMaxHeight] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (containerRef.current === null) return;
+
+    const containerHeight = containerRef.current.clientHeight;
+    if (containerHeight > containerMaxHeight) {
+      setContainerMaxHeight(containerHeight);
+    }
+  }, [works.length, containerMaxHeight]);
+
   return (
     <div>
       <div
@@ -55,8 +67,12 @@ export const Main: VFC<Props> = ({ works: allWorks, themeColor }) => {
         </div>
       </div>
       <Section heading="WORKS" subHeading="作品" headerColor={themeColor} className="relative z-10 mt-[-80px] bg-white">
-        <div className="md:pl-shead pt-3 pb-24 lg:pb-52">
-          <div className="w-11/12 mx-auto lg:max-w-app">
+        <div className="relative overflow-hidden md:ml-shead pt-3 pb-24 lg:pb-52" ref={containerRef}>
+          <div className="absolute top-0 left-0 w-full h-full">
+            <Bg color={themeColor} height={containerMaxHeight} />
+          </div>
+
+          <div className="relative w-11/12 mx-auto lg:max-w-app z-10">
             {works.length ? (
               <div className="grid gap-x-8 gap-y-14 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:w-full">
                 {works.map((work) => (
@@ -81,6 +97,33 @@ export const Main: VFC<Props> = ({ works: allWorks, themeColor }) => {
           </div>
         </div>
       </Section>
+    </div>
+  );
+};
+
+const Bg: VFC<{ color: Theme; height: number }> = ({ color, height = 0 }) => {
+  const space = 800;
+  const offset = 200;
+  const n = height > offset ? Math.floor((height - offset) / space) : 0;
+
+  return (
+    <div>
+      {[...Array(n)].map((v, i) => (
+        <Balloon
+          key={i.toString()}
+          color={color}
+          size={237}
+          xReverse={i % 2 !== 0}
+          yReverse={i % 3 === 0}
+          style={{
+            position: "absolute",
+            top: `${200 + i * space}px`,
+            left: i % 2 === 0 ? "0" : "auto",
+            right: i % 2 === 1 ? "0" : "auto",
+            transform: i % 2 === 0 ? "translateX(-66.6%)" : "translateX(66.6%)",
+          }}
+        />
+      ))}
     </div>
   );
 };
