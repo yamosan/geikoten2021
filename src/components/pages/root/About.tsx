@@ -63,7 +63,7 @@ const PcLayout = () => {
                 <div className="flex-1"></div>
                 <div className="flex flex-col items-center">
                   <div className="relative z-10">
-                    <Image src="/images/about/geikoto.svg" width={285} height={175} alt="芸工塔" />
+                    <Image src="/images/about/pc.png" width={285} height={175} alt="パソコン" />
                     <Tree dark className="absolute w-[34px] bottom-0 -left-10" />
                     <Tree className="absolute w-[22px] bottom-0 -right-6" />
                   </div>
@@ -76,7 +76,7 @@ const PcLayout = () => {
                 <div className="flex-1 max-w-[200px]"></div>
                 <div className="flex flex-col items-center">
                   <div className="relative z-10">
-                    <Image src="/images/about/geikoto.svg" width={285} height={175} alt="芸工塔" />
+                    <Image src="/images/about/geikoto.png" width={285} height={175} alt="芸工塔" />
                     <Tree dark className="absolute w-[34px] bottom-0 -left-12" />
                     <Tree reverse className="absolute w-[22px] bottom-0 -left-2" />
                     <Tree dark className="absolute w-[34px] bottom-0 -right-14" />
@@ -111,7 +111,7 @@ const SpLayout = () => {
             </div>
 
             <div className="relative">
-              <Image src="/images/about/geikoto.svg" width={218} height={134} alt="芸工塔" />
+              <Image src="/images/about/pc.png" width={218} height={134} alt="パソコン" />
               <Tree dark className="absolute w-[34px] bottom-0 -left-10" />
               <Tree className="absolute w-[22px] bottom-0 -right-6" />
             </div>
@@ -134,7 +134,7 @@ const SpLayout = () => {
               </InfiniteScroll>
             </div>
             <div className="relative">
-              <Image src="/images/about/geikoto.svg" width={218} height={134} alt="芸工塔" />
+              <Image src="/images/about/geikoto.png" width={218} height={134} alt="芸工塔" />
               <Tree dark className="absolute w-[34px] bottom-0 -left-12" />
               <Tree reverse className="absolute w-[22px] bottom-0 -left-2" />
               <Tree dark className="absolute w-[34px] bottom-0 -right-10" />
