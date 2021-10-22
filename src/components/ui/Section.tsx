@@ -21,9 +21,7 @@ export const Section = forwardRef<HTMLElement, Props>((props, ref) => {
     <section className={clsx("bg-white pt-[52px] md:pt-24 md:pb-4", className)} {...attrs} ref={ref}>
       <header className="px-5 md:px-12 md:ml-shead">
         <div className="lg:max-w-app lg:mx-auto">
-          <h2 className={clsx("text-5xl leading-10 font-genuine text-green-10", HEADER_COLOR_MAP[headerColor])}>
-            {heading}
-          </h2>
+          <h2 className={clsx("text-5xl leading-10 font-genuine", HEADER_COLOR_MAP[headerColor])}>{heading}</h2>
           <p role="doc-subtitle" className="font-bold text-text">
             {subHeading}
           </p>
