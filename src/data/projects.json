@@ -6,8 +6,8 @@
     "subTitle": "見て、感じ、投票しよう！",
     "description": "芸工生による作品の展示です。シャッター/フィルム/レンズという３つのテーマに対し、各々が解釈し制作した作品や展示室。作者の想いに触れ、好きな作品に投票しよう！",
     "images": {
-      "thumbnailUrl": "/images/project.png",
-      "backgroundUrl": ""
+      "thumbnailUrl": "/images/project/exhibition/thumbnail.png",
+      "backgroundUrl": "/images/project/exhibition/bg.png"
     },
     "siteUrl": {
       "href": "/project/exhibition",
@@ -21,11 +21,11 @@
     "subTitle": "芸工生が出店する模擬店！",
     "description": "ブース部署では今年も模擬店を募集しました！個性的な模擬店がたくさん！全てここでしか買えないグッズなので、チェック必須です！是非手に入れてくださいね〜",
     "images": {
-      "thumbnailUrl": "/images/project.png",
-      "backgroundUrl": ""
+      "thumbnailUrl": "/images/project/mockshop/thumbnail.png",
+      "backgroundUrl": "/images/project/mockshop/bg.png"
     },
     "siteUrl": {
-      "href": "/project/mockshop",
+      "href": "https://preview.studio.site/live/wQOVXNK4aD/1",
       "external": true
     }
   },
@@ -36,8 +36,8 @@
     "subTitle": "芸工展の告知映像",
     "description": "今年の芸工展はオンライン開催、どこからでも芸工にお越しください。",
     "images": {
-      "thumbnailUrl": "/images/project.png",
-      "backgroundUrl": ""
+      "thumbnailUrl": "/images/project/cm/thumbnail.png",
+      "backgroundUrl": "/images/project/cm/bg.png"
     },
     "siteUrl": {
       "href": "/project/cm",
@@ -51,8 +51,8 @@
     "subTitle": "FUllUSHがテーマのサイト",
     "description": "芸工展のテーマ『FUllUSH』にちなんだwebサイト特集です！1,2年生がデザイン班とコーディング班に分かれて制作しました！どのサイトも見応えバッチリ✌️🌟",
     "images": {
-      "thumbnailUrl": "/images/project.png",
-      "backgroundUrl": ""
+      "thumbnailUrl": "/images/project/web/thumbnail.png",
+      "backgroundUrl": "/images/project/web/bg.png"
     },
     "siteUrl": {
       "href": "/project/web",
@@ -66,8 +66,8 @@
     "subTitle": "個性豊かなゲームとお部屋",
     "description": "web部署所属コンテンツ班による個性豊かな作品たち！！！ 1、2年生はUnityroomにてゲーム作品を、3年生はClusterにて部屋企画を公開してるぜっ",
     "images": {
-      "thumbnailUrl": "/images/project.png",
-      "backgroundUrl": ""
+      "thumbnailUrl": "/images/project/game/thumbnail.png",
+      "backgroundUrl": "/images/project/game/bg.png"
     },
     "siteUrl": {
       "href": "/project/game",
@@ -81,11 +81,11 @@
     "subTitle": "ﾍﾟｰﾊﾟｰｸﾗﾌﾄ企画&WS紹介",
     "description": "芸工生が作ったペーパークラフト10種類を配布！好きなものをDLしてお家で作ってみてね！！また、フローチャートであなたにぴったりなワークショップ企画を調べてみてね",
     "images": {
-      "thumbnailUrl": "/images/project.png",
-      "backgroundUrl": ""
+      "thumbnailUrl": "/images/project/workshop/thumbnail.png",
+      "backgroundUrl": "/images/project/workshop/bg.png"
     },
     "siteUrl": {
-      "href": "/project/workshop",
+      "href": "https://geikousai-ncu.com/workshop/index.html",
       "external": true
     }
   },
@@ -96,8 +96,8 @@
     "subTitle": "今年のカフェはオンライン！",
     "description": "オンラインでの芸工展という、新たな状況下で開く今年のカフェ。例年のように美味しい料理を提供することはできないけれど、カフェの設計やデザート開発・グッズ販売など、カフェ部署の新たなカタチです。",
     "images": {
-      "thumbnailUrl": "/images/project.png",
-      "backgroundUrl": ""
+      "thumbnailUrl": "/images/project/cafe/thumbnail.png",
+      "backgroundUrl": "/images/project/cafe/bg.png"
     },
     "siteUrl": {
       "href": "/project/cafe",
@@ -111,8 +111,8 @@
     "subTitle": "楽しい☆動画!!CMも見てね",
     "description": "3Oのギャンブラー柴田明治とボートレース蒲郡に行く旅。果たして一攫千金はあるのか！？\n芸工展長の脛骨に思いを寄せる素敵な女性たちとデートをしてめ、脛骨が彼女を作るオーディション。",
     "images": {
-      "thumbnailUrl": "/images/project.png",
-      "backgroundUrl": ""
+      "thumbnailUrl": "/images/project/stage/thumbnail.png",
+      "backgroundUrl": "/images/project/stage/bg.png"
     },
     "siteUrl": {
       "href": "/project/stage",
