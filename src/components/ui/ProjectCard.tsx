@@ -4,6 +4,8 @@ import React, { ComponentPropsWithoutRef, forwardRef, useLayoutEffect, useRef, u
 import { Image } from "@/components/basics";
 import { Project } from "@/models";
 
+import { GoTo } from "../basics/GoTo";
+
 export type ColorLevel = 10 | 20 | 30 | 40 | 50 | 60 | 70 | 80;
 
 type Props = {
@@ -52,11 +54,13 @@ export const ProjectCard = forwardRef<HTMLDivElement, Props>((props, ref) => {
     });
   }, [descriptionType]);
 
+  // TODO: リファクタ
   return (
     <>
       <div
         className={clsx(
-          "relative group",
+          size === "lg" && "parent",
+          "relative",
           {
             "h-full": base === "height",
             "w-full": base === "width",
@@ -84,10 +88,17 @@ export const ProjectCard = forwardRef<HTMLDivElement, Props>((props, ref) => {
                 <Image src={project.images.thumbnailUrl} alt={project.title} layout="fill" objectFit="contain" />
                 <span className={clsx("tape", bgColorMap[colorLevel])} />
                 {descriptionType === "hover" && (
-                  <div className="opacity-0 transition-opacity md:group-hover:opacity-100 duration-300">
-                    <p className="absolute inset-0 m-auto flex justify-center items-center w-full py-16 text-white text-sm leading-[1.8] px-6 h-5/6 bg-lightBrown bg-opacity-80">
-                      {project.description}
-                    </p>
+                  <div className="relative h-full flex items-center">
+                    <div
+                      className={clsx("ripple", "relative flex justify-center items-center w-full py-16 px-6 h-5/6")}
+                    >
+                      <p className={clsx("ripple-text", "text-white text-sm leading-[1.8] z-10")}>
+                        {project.description}
+                      </p>
+                      <div className="absolute bottom-4 right-4">
+                        <GoTo borderColor="white" className="h-4 w-14" />
+                      </div>
+                    </div>
                   </div>
                 )}
               </figure>
@@ -130,6 +141,7 @@ export const ProjectCard = forwardRef<HTMLDivElement, Props>((props, ref) => {
       </div>
 
       <style jsx>{`
+        /* テープの装飾 */
         .tape::before {
           @apply opacity-70 z-10 transform;
           @apply absolute top-2 left-2 -translate-x-1/2 -translate-y-1/2 rotate-[-36deg];
@@ -144,6 +156,24 @@ export const ProjectCard = forwardRef<HTMLDivElement, Props>((props, ref) => {
           content: "";
           width: ${size === "md" ? "105px" : "112px"};
           height: ${size === "md" ? "30px" : "32px"};
+        }
+
+        /* ホバーアニメーション */
+        .ripple {
+          @apply relative overflow-hidden;
+        }
+        .ripple::before {
+          @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full m-auto w-96 h-96 bg-lightBrown transition delay-200 duration-700 ease-in-out scale-0 opacity-60;
+          content: "";
+        }
+        .ripple-text {
+          @apply transition-opacity duration-200 opacity-0 delay-[0];
+        }
+        .parent:hover .ripple-text {
+          @apply opacity-100 delay-700;
+        }
+        .parent:hover .ripple::before {
+          @apply opacity-80 scale-125 delay-[0];
         }
       `}</style>
     </>

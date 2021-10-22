@@ -5,13 +5,14 @@ import React, { forwardRef } from "react";
 import { Theme } from "@/models";
 
 type Props = {
-  borderColor: Theme;
+  borderColor: Theme | "white";
 } & ComponentPropsWithoutRef<"p">;
 
 const BORDER_COLOR_MAP = {
   shutter: "border-shutter after:border-shutter",
   film: "border-film after:border-film",
   lens: "border-lens after:border-lens",
+  white: "border-white after:border-white",
 };
 
 export const GoTo = forwardRef<HTMLParagraphElement, Props>((props, ref) => {
