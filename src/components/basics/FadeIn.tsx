@@ -14,7 +14,6 @@ export const FadeIn = forwardRef<HTMLDivElement, Props>((props, ref) => {
   const mergedRef = useMergeRefs<HTMLDivElement>(ref, wrapperRef);
 
   const entry = useIntersection(wrapperRef, true);
-  console.log(entry);
 
   return (
     <div
