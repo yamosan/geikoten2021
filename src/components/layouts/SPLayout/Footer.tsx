@@ -3,11 +3,11 @@ import type { VFC } from "react";
 import { ExternalLink } from "@/components/basics/ExternalLink";
 import { ScrollToTop } from "@/components/ui/ScrollToTop";
 import { ExternalLink as ExternalLinkIcon } from "@/components/vectors";
-import { HOMEPAGE_LINK } from "@/constants/urls";
+import { UNIV_HOMEPAGE_URL } from "@/constants/urls";
 
 export const Footer: VFC = () => {
   const HomepageLink = () => (
-    <ExternalLink href={HOMEPAGE_LINK}>
+    <ExternalLink href={UNIV_HOMEPAGE_URL}>
       <div className="flex space-x-0.5">
         <p className="text-xs leading-none underline font-regular">名古屋市立大学芸術工学部HP</p>
         <ExternalLinkIcon />
