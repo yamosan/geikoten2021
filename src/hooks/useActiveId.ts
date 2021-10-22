@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+// TODO: 複数のobserverが必要なので、useIntersectionが使えない。うまく共通化したい
 // strict=false: 交差が終了したタイミングでは判定しない
 export const useActiveId = (ids: string[], strict = false) => {
   const [activeId, setActiveId] = useState<string | undefined>();
