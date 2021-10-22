@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { FC, VFC } from "react";
 
-import { Highlight, Image, Paragraph } from "@/components/basics";
+import { FadeInWhenVisible, Highlight, Image, Paragraph } from "@/components/basics";
 import { LinkButton, Section } from "@/components/ui";
 import { Crowd, Tree } from "@/components/vectors";
 import useMedia from "@/hooks/useMediaQuery";
@@ -14,16 +14,22 @@ export const About: VFC = () => {
       <Section heading="ABOUT" subHeading="芸工展とは" id="about">
         <div className="px-5 md:px-12 md:ml-shead">
           <div className="lg:max-w-app lg:mx-auto">
-            <Paragraph>
-              名古屋市立大学芸術工学部の学生による様々な企画が楽しめる、完全オンラインの展示会です。
-              力を尽くして生み出した作品、見て思わず笑ってしまうステージ企画、オンラインだからこそ味わえるCGの世界など見どころ満載です！芸工生全員で作る一つの作品で、満足間違いなし。
-            </Paragraph>
-            <Paragraph>
-              今年は
-              <Highlight>web会場</Highlight>と、
-              <Highlight>バーチャル会場</Highlight>
-              の2つで開催します！
-            </Paragraph>
+            <FadeInWhenVisible>
+              <Paragraph>
+                名古屋市立大学芸術工学部の学生による様々な企画が楽しめる、完全オンラインの展示会です。
+                力を尽くして生み出した作品、見て思わず笑ってしまうステージ企画、オンラインだからこそ味わえるCGの世界など見どころ満載です！芸工生全員で作る一つの作品で、満足間違いなし。
+              </Paragraph>
+            </FadeInWhenVisible>
+
+            <FadeInWhenVisible>
+              <Paragraph>
+                今年は
+                <Highlight>web会場</Highlight>と、
+                <Highlight>バーチャル会場</Highlight>
+                の2つで開催します！
+              </Paragraph>
+            </FadeInWhenVisible>
+
             <div className="flex justify-start mt-8 md:justify-end">
               <div>
                 <div className="text-xxs text-text">開催日時</div>

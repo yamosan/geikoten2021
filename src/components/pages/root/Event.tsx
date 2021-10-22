@@ -1,18 +1,20 @@
 import Link from "next/link";
 import type { VFC } from "react";
 
-import { Paragraph } from "@/components/basics";
+import { FadeInWhenVisible, Paragraph } from "@/components/basics";
 import { EventCard, Section } from "@/components/ui";
 export const Event: VFC = () => {
   return (
     <Section heading="EVENT" subHeading="イベント" id="event">
       <div className="px-5 md:px-12 pl-4 md:ml-shead">
-        <Paragraph className="lg:max-w-app lg:mx-auto">
-          10/23.24の間にクラスターで開催されるイベントです！チェックしておこう
-          <span role="img" aria-label="eyes">
-            👀
-          </span>
-        </Paragraph>
+        <FadeInWhenVisible>
+          <Paragraph className="lg:max-w-app lg:mx-auto">
+            10/23.24の間にクラスターで開催されるイベントです！チェックしておこう
+            <span role="img" aria-label="eyes">
+              👀
+            </span>
+          </Paragraph>
+        </FadeInWhenVisible>
       </div>
       <div className="px-5 md:px-12 mt-6 md:ml-shead">
         <div className="relative flex flex-col justify-center space-y-6 md:space-y-0 md:space-x-6 md:items-center md:flex-row lg:max-w-app lg:mx-auto">

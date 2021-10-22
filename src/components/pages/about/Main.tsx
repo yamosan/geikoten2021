@@ -1,6 +1,6 @@
 import type { VFC } from "react";
 
-import { ExternalLink, Highlight, Image, Paragraph } from "@/components/basics";
+import { ExternalLink, FadeInWhenVisible, Highlight, Image, Paragraph } from "@/components/basics";
 import { Process, Section } from "@/components/ui";
 import { Pc, PcAppDownload, Phone } from "@/components/vectors";
 import useMedia from "@/hooks/useMediaQuery";
@@ -13,14 +13,18 @@ export const Main: VFC = () => {
       <Section heading="VIRTUAL VENUE" subHeading="バーチャル会場">
         <div className="px-5 md:px-12 md:ml-shead">
           <div className="lg:max-w-app lg:mx-auto">
-            <Paragraph>
-              バーチャルSNS<Highlight>「cluster」上に芸工のキャンパスが出現！</Highlight>
-              {isWide && <br />}
-              GEIKOTEN 2021」へ、スマホやPCから是非、ご来場ください。
-            </Paragraph>
-            <Paragraph>
-              ※来場するためにはWindowsかMac、またはスマホにバーチャルSNSアプリ「cluster」をインストールする必要があります。
-            </Paragraph>
+            <FadeInWhenVisible>
+              <Paragraph>
+                バーチャルSNS<Highlight>「cluster」上に芸工のキャンパスが出現！</Highlight>
+                {isWide && <br />}
+                GEIKOTEN 2021」へ、スマホやPCから是非、ご来場ください。
+              </Paragraph>
+            </FadeInWhenVisible>
+            <FadeInWhenVisible>
+              <Paragraph>
+                ※来場するためにはWindowsかMac、またはスマホにバーチャルSNSアプリ「cluster」をインストールする必要があります。
+              </Paragraph>
+            </FadeInWhenVisible>
           </div>
         </div>
         <div className="pt-16 md:pt-24 px-5 md:px-12 md:ml-shead">
@@ -64,11 +68,14 @@ export const Main: VFC = () => {
                 <div className="md:flex py-4 md:pl-24 md:py-8">
                   {isWide && <div className="w-24 h-full"></div>}
                   <div>
-                    <Paragraph className="flex-shrink-0">
-                      cluster内で「GEIKOTEN2021」のワールドを探すか、
-                      {isWide && <br />}
-                      下記リンクよりご来場いただけます。
-                    </Paragraph>
+                    <FadeInWhenVisible>
+                      <Paragraph className="flex-shrink-0">
+                        cluster内で「GEIKOTEN2021」のワールドを探すか、
+                        {isWide && <br />}
+                        下記リンクよりご来場いただけます。
+                      </Paragraph>
+                    </FadeInWhenVisible>
+
                     {/* TODO: clusterのリンクを追加 */}
                   </div>
                 </div>
