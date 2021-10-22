@@ -1,7 +1,8 @@
 import Link from "next/link";
 import type { VFC } from "react";
 
-import { FadeIn, Paragraph } from "@/components/basics";
+import { FadeIn } from "@/components/animation";
+import { Paragraph } from "@/components/basics";
 import { EventCard, Section } from "@/components/ui";
 export const Event: VFC = () => {
   return (

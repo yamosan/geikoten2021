@@ -5,8 +5,9 @@ import type { VFC } from "react";
 import { useEffect, useRef } from "react";
 import { isMobile } from "react-device-detect";
 
+import { FadeIn } from "@/components/animation";
 // import { use100vh } from "react-div-100vh";
-import { FadeIn, Highlight, Image, Paragraph } from "@/components/basics";
+import { Highlight, Image, Paragraph } from "@/components/basics";
 import type { ColorLevel } from "@/components/ui";
 import { ProjectCard, Section } from "@/components/ui";
 import { use100vh } from "@/hooks/use100vh";

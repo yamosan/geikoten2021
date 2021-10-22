@@ -1,7 +1,8 @@
 import clsx from "clsx";
 import { FC, VFC } from "react";
 
-import { FadeIn, Highlight, Image, Paragraph } from "@/components/basics";
+import { FadeIn } from "@/components/animation";
+import { Highlight, Image, Paragraph } from "@/components/basics";
 import { LinkButton, Section } from "@/components/ui";
 import { Crowd, Tree } from "@/components/vectors";
 import useMedia from "@/hooks/useMediaQuery";
