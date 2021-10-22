@@ -6,6 +6,8 @@ export const INSTAGRAM_URL = "https://instagram.com/geikoten2021";
 
 export const UNIV_HOMEPAGE_URL = "https://www.nagoya-cu.ac.jp/sda";
 export const CLUSTER_URL = "https://cluster.mu/w/533fbc5f-e85a-4cc7-b4ce-b69cb82609b7";
+export const OPENING_CEREMONY_URL = "https://cluster.mu/e/76fe3be0-507e-4393-b694-2471453c60f6";
+export const CLOSING_CEREMONY_URL = "https://cluster.mu/e/35e654b2-1d4b-428a-8ae7-b8557e4d52c4";
 
 export const WORKS_URL =
   "https://script.google.com/macros/s/AKfycbwSD5QxGBnGdZKTV5pipUpd4De83LsLUG_3YjjEzIVJiMxY-j2kHyPIDSDYL29RpSXt/exec";

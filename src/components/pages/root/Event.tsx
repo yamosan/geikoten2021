@@ -4,6 +4,7 @@ import type { VFC } from "react";
 import { FadeIn } from "@/components/animation";
 import { Paragraph } from "@/components/basics";
 import { EventCard, Section } from "@/components/ui";
+import { CLOSING_CEREMONY_URL, OPENING_CEREMONY_URL } from "@/constants/urls";
 export const Event: VFC = () => {
   return (
     <Section heading="EVENT" subHeading="イベント" id="event">
@@ -19,7 +20,7 @@ export const Event: VFC = () => {
       </div>
       <div className="px-5 md:px-12 mt-6 md:ml-shead">
         <div className="relative flex flex-col justify-center space-y-6 md:space-y-0 md:space-x-6 md:items-center md:flex-row lg:max-w-app lg:mx-auto">
-          <Link href="/about">
+          <Link href={OPENING_CEREMONY_URL}>
             <a className="block flex-1">
               <EventCard
                 title={"開会式"}
@@ -30,7 +31,7 @@ export const Event: VFC = () => {
               />
             </a>
           </Link>
-          <Link href="/about">
+          <Link href={CLOSING_CEREMONY_URL}>
             <a className="block flex-1">
               <EventCard
                 title={"閉会式"}
