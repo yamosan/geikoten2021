@@ -15,7 +15,7 @@ export const Hero: VFC<Props> = ({ project }) => {
   return (
     <div className="relative">
       <Div100vh className="relative">
-        <Image src="/images/top_bg.jpg" alt="背景" layout="fill" objectFit="cover" priority />
+        <Image src={`/images/project/${project.name}/bg.png`} alt="背景" layout="fill" objectFit="cover" priority />
         <div className="md:pl-shead h-full relative">
           {/* TODO: とりあえずoverflow-x-hidden */}
           <div className="w-full h-full flex justify-center items-center overflow-x-hidden max-w-full">
