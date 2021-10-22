@@ -181,10 +181,10 @@
         "name": "せき",
         "grade": 2,
         "class": "M",
-        "avatarUrl": "/images/project/web/works/8/seki.png"
+        "avatarUrl": "/images/project/game/works/8/seki.png"
       }
     ],
-    "thumbnailUrl": "/images/project/web/works/8/thumbnail.jpg",
+    "thumbnailUrl": "/images/project/game/works/8/thumbnail.jpg",
     "siteUrl": "https://unityroom.com/games/ufoufoufo_se"
   },
   {
@@ -197,10 +197,10 @@
         "name": "たまご将軍",
         "grade": 1,
         "class": "M",
-        "avatarUrl": "/images/project/web/works/9/egg.png"
+        "avatarUrl": "/images/project/game/works/9/egg.png"
       }
     ],
-    "thumbnailUrl": "/images/project/web/works/9/thumbnail.jpg",
+    "thumbnailUrl": "/images/project/game/works/9/thumbnail.jpg",
     "siteUrl": ""
   },
   {
@@ -213,10 +213,10 @@
         "name": "でるた",
         "grade": 1,
         "class": "N",
-        "avatarUrl": "/images/project/web/works/10/delta.png"
+        "avatarUrl": "/images/project/game/works/10/delta.png"
       }
     ],
-    "thumbnailUrl": "/images/project/web/works/10/thumbnail.jpg",
+    "thumbnailUrl": "/images/project/game/works/10/thumbnail.jpg",
     "siteUrl": ""
   },
   {
@@ -229,10 +229,10 @@
         "name": "ハル研",
         "grade": 2,
         "class": "N",
-        "avatarUrl": "/images/project/web/works/11/hal.png"
+        "avatarUrl": "/images/project/game/works/11/hal.png"
       }
     ],
-    "thumbnailUrl": "/images/project/web/works/11/thumbnail.jpg",
+    "thumbnailUrl": "/images/project/game/works/11/thumbnail.jpg",
     "siteUrl": ""
   },
   {
@@ -245,10 +245,10 @@
         "name": "212",
         "grade": 3,
         "class": "M",
-        "avatarUrl": "/images/project/web/works/12/212.png"
+        "avatarUrl": "/images/project/game/works/12/212.png"
       }
     ],
-    "thumbnailUrl": "/images/project/web/works/12/thumbnail.jpg",
+    "thumbnailUrl": "/images/project/game/works/12/thumbnail.jpg",
     "siteUrl": "https://cluster.mu/w/ff666118-56ce-4828-bf28-281cb43d7f9a"
   },
   {
@@ -261,10 +261,10 @@
         "name": "くれか",
         "grade": 3,
         "class": "M",
-        "avatarUrl": "/images/project/web/works/13/kureka.png"
+        "avatarUrl": "/images/project/game/works/13/kureka.png"
       }
     ],
-    "thumbnailUrl": "/images/project/web/works/13/thumbnail.jpg",
+    "thumbnailUrl": "/images/project/game/works/13/thumbnail.jpg",
     "siteUrl": "https://cluster.mu/w/bd65654f-990c-4106-835d-5763115b0517"
   },
   {
@@ -277,10 +277,10 @@
         "name": "ラっさ",
         "grade": 3,
         "class": "M",
-        "avatarUrl": "/images/project/web/works/14/lassa.png"
+        "avatarUrl": "/images/project/game/works/14/lassa.png"
       }
     ],
-    "thumbnailUrl": "/images/project/web/works/14/thumbnail.jpg",
+    "thumbnailUrl": "/images/project/game/works/14/thumbnail.jpg",
     "siteUrl": "https://cluster.mu/w/a1ad9a80-0eb0-43d4-b1a6-9c1f06e1c73d"
   },
   {
@@ -293,10 +293,10 @@
         "name": "ナズナ",
         "grade": 3,
         "class": "M",
-        "avatarUrl": "/images/project/web/works/15/nazuna.png"
+        "avatarUrl": "/images/project/game/works/15/nazuna.png"
       }
     ],
-    "thumbnailUrl": "/images/project/web/works/15/thumbnail.jpg",
+    "thumbnailUrl": "/images/project/game/works/15/thumbnail.jpg",
     "siteUrl": "https://cluster.mu/w/3827cb1c-b77e-4474-9bd4-863c37480fd0"
   }
 ]
