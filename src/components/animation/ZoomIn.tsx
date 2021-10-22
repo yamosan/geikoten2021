@@ -4,14 +4,14 @@ import { Animation } from "./Animation";
 
 type Props = ComponentPropsWithoutRef<"div">;
 
-export const FadeIn = forwardRef<HTMLDivElement, Props>((props, ref) => {
+export const ZoomIn = forwardRef<HTMLDivElement, Props>((props, ref) => {
   const { children, ...attrs } = props;
 
   return (
     <Animation
-      base="transition transform duration-700 delay-200"
-      enter="opacity-100 translate-y-0"
-      leave="opacity-0 translate-y-8"
+      base="transition transform origin-bottom duration-1000 delay-500"
+      enter="scale-100"
+      leave="scale-75"
       ref={ref}
       {...attrs}
     >
@@ -20,4 +20,4 @@ export const FadeIn = forwardRef<HTMLDivElement, Props>((props, ref) => {
   );
 });
 
-FadeIn.displayName = "FadeIn";
+ZoomIn.displayName = "ZoomIn";

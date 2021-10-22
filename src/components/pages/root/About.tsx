@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { FC, VFC } from "react";
 
-import { FadeIn } from "@/components/animation";
+import { FadeIn, ZoomIn } from "@/components/animation";
 import { Highlight, Image, Paragraph } from "@/components/basics";
 import { LinkButton, Section } from "@/components/ui";
 import { Crowd, Tree } from "@/components/vectors";
@@ -69,8 +69,10 @@ const PcLayout = () => {
               <div className="z-10 h-full flex items-end w-full">
                 <div className="flex-1"></div>
                 <div className="flex flex-col items-center">
-                  <div className="relative z-10 flex items-end">
-                    <Image src="/images/about/pc.png" width={285} height={175} alt="パソコン" />
+                  <div className="relative z-10">
+                    <ZoomIn className="flex items-end">
+                      <Image src="/images/about/pc.png" width={285} height={175} alt="パソコン" />
+                    </ZoomIn>
                     <Tree dark className="absolute w-[34px] bottom-0 -left-10" />
                     <Tree className="absolute w-[22px] bottom-0 -right-6" />
                   </div>
@@ -82,8 +84,10 @@ const PcLayout = () => {
                 </div>
                 <div className="flex-1 max-w-[200px]"></div>
                 <div className="flex flex-col items-center">
-                  <div className="relative z-10 flex items-end">
-                    <Image src="/images/about/geikoto.png" width={285} height={175} alt="芸工塔" />
+                  <div className="relative z-10">
+                    <ZoomIn className="flex items-end">
+                      <Image src="/images/about/geikoto.png" width={285} height={175} alt="芸工塔" />
+                    </ZoomIn>
                     <Tree dark className="absolute w-[34px] bottom-0 -left-12" />
                     <Tree reverse className="absolute w-[22px] bottom-0 -left-2" />
                     <Tree dark className="absolute w-[34px] bottom-0 -right-14" />
@@ -117,8 +121,10 @@ const SpLayout = () => {
               </InfiniteScroll>
             </div>
 
-            <div className="relative flex items-end">
-              <Image src="/images/about/pc.png" width={218} height={134} alt="パソコン" />
+            <div className="relative">
+              <ZoomIn className="flex items-end">
+                <Image src="/images/about/pc.png" width={218} height={134} alt="パソコン" />
+              </ZoomIn>
               <Tree dark className="absolute w-[34px] bottom-0 -left-10" />
               <Tree className="absolute w-[22px] bottom-0 -right-6" />
             </div>
@@ -140,8 +146,10 @@ const SpLayout = () => {
                 <Crowd reverse className="absolute w-[67px] top-[18%] right-[5%]" />
               </InfiniteScroll>
             </div>
-            <div className="relative flex items-end">
-              <Image src="/images/about/geikoto.png" width={218} height={134} alt="芸工塔" />
+            <div className="relative">
+              <ZoomIn className="flex items-end">
+                <Image src="/images/about/geikoto.png" width={218} height={134} alt="芸工塔" />
+              </ZoomIn>
               <Tree dark className="absolute w-[34px] bottom-0 -left-12" />
               <Tree reverse className="absolute w-[22px] bottom-0 -left-2" />
               <Tree dark className="absolute w-[34px] bottom-0 -right-10" />

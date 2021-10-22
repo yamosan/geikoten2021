@@ -4,25 +4,29 @@ import React, { ComponentPropsWithoutRef, forwardRef, ReactNode, useRef } from "
 import { useIntersection } from "@/hooks/useIntersection";
 import { useMergeRefs } from "@/hooks/useMergeRefs";
 
-type Props = {
-  children: ReactNode;
+export type AnimationProps = {
   base: string;
   enter: string;
   leave: string;
-} & ComponentPropsWithoutRef<"div">;
+};
 
-export const Base = forwardRef<HTMLDivElement, Props>((props, ref) => {
-  const { children, base, enter, leave, ...attrs } = props;
+type Props = {
+  children: ReactNode;
+} & AnimationProps &
+  ComponentPropsWithoutRef<"div">;
+
+export const Animation = forwardRef<HTMLDivElement, Props>((props, ref) => {
+  const { children, className, base, enter, leave, ...attrs } = props;
   const wrapperRef = useRef<HTMLDivElement>(null);
   const mergedRef = useMergeRefs<HTMLDivElement>(ref, wrapperRef);
 
   const entry = useIntersection(wrapperRef, true);
 
   return (
-    <div className={clsx(base, entry ? enter : leave)} ref={mergedRef} {...attrs}>
+    <div className={clsx(base, entry ? enter : leave, className)} ref={mergedRef} {...attrs}>
       {children}
     </div>
   );
 });
 
-Base.displayName = "Base";
+Animation.displayName = "Animation";
