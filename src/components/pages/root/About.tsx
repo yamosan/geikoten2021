@@ -62,7 +62,7 @@ const PcLayout = () => {
               <div className="z-10 h-full flex items-end w-full">
                 <div className="flex-1"></div>
                 <div className="flex flex-col items-center">
-                  <div className="relative z-10">
+                  <div className="relative z-10 flex items-end">
                     <Image src="/images/about/pc.png" width={285} height={175} alt="パソコン" />
                     <Tree dark className="absolute w-[34px] bottom-0 -left-10" />
                     <Tree className="absolute w-[22px] bottom-0 -right-6" />
@@ -75,7 +75,7 @@ const PcLayout = () => {
                 </div>
                 <div className="flex-1 max-w-[200px]"></div>
                 <div className="flex flex-col items-center">
-                  <div className="relative z-10">
+                  <div className="relative z-10 flex items-end">
                     <Image src="/images/about/geikoto.png" width={285} height={175} alt="芸工塔" />
                     <Tree dark className="absolute w-[34px] bottom-0 -left-12" />
                     <Tree reverse className="absolute w-[22px] bottom-0 -left-2" />
@@ -110,7 +110,7 @@ const SpLayout = () => {
               </InfiniteScroll>
             </div>
 
-            <div className="relative">
+            <div className="relative flex items-end">
               <Image src="/images/about/pc.png" width={218} height={134} alt="パソコン" />
               <Tree dark className="absolute w-[34px] bottom-0 -left-10" />
               <Tree className="absolute w-[22px] bottom-0 -right-6" />
@@ -133,7 +133,7 @@ const SpLayout = () => {
                 <Crowd reverse className="absolute w-[67px] top-[18%] right-[5%]" />
               </InfiniteScroll>
             </div>
-            <div className="relative">
+            <div className="relative flex items-end">
               <Image src="/images/about/geikoto.png" width={218} height={134} alt="芸工塔" />
               <Tree dark className="absolute w-[34px] bottom-0 -left-12" />
               <Tree reverse className="absolute w-[22px] bottom-0 -left-2" />
