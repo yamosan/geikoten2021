@@ -89,7 +89,7 @@ const ClusterCard: VFC = () => {
     <div className={clsx("flex flex-col space-y-2 lg:flex-row lg:space-x-6 items-center")}>
       <div className="flex-[5.8] h-full w-full relative rounded-2xl overflow-hidden">
         <Image
-          src="/images/cluster_thumbnail.png"
+          src="/images/project/exhibition/cluster.png"
           layout="responsive"
           width={475}
           height={163}
