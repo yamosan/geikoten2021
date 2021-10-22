@@ -1,25 +1,24 @@
 import { RefObject, useEffect, useState } from "react";
 
 export const useIntersection = (ref: RefObject<HTMLElement>, frozen: boolean, options?: IntersectionObserverInit) => {
-  const [entry, setEntry] = useState<IntersectionObserverEntry | null>(null);
+  const [state, setState] = useState<boolean>(false);
 
   useEffect(() => {
     if (typeof IntersectionObserver === "undefined") return;
     if (ref.current === null) return;
-    if (frozen && entry) return;
+    if (frozen && state) return;
 
     const handler = ([entry]: IntersectionObserverEntry[]) => {
-      setEntry(entry);
+      setState(entry.isIntersecting);
     };
 
     const observer = new IntersectionObserver(handler, options);
     observer.observe(ref.current);
 
     return () => {
-      setEntry(null);
       observer.disconnect();
     };
-  }, [ref, options, entry, frozen]);
+  }, [ref, options, state, frozen]);
 
-  return entry;
+  return state;
 };
