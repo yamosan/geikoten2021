@@ -43,14 +43,16 @@ export const Dialog: VFC<Props> = (props) => {
             <div className="flex items-center justify-center">
               <div
                 className={clsx(
-                  "relative flex items-center justify-center bg-white border-4 rounded",
+                  "relative flex items-center justify-center border-4 rounded-[6px] md:rounded-[8px]",
                   BORDER_COLOR_MAP[borderColor]
                 )}
               >
-                <div className="absolute z-10 right-3 top-3">
-                  <HamburgerMenu buttonRole="close" onClick={onClose} color="black" />
+                <div className="bg-white rounded-[2px] md:rounded-[4px]">
+                  <div className="absolute z-10 right-3 top-3">
+                    <HamburgerMenu buttonRole="close" onClick={onClose} color="black" />
+                  </div>
+                  <div className="flex justify-center overflow-y-auto dimension">{children}</div>
                 </div>
-                <div className="flex justify-center overflow-y-auto dimension">{children}</div>
               </div>
             </div>
           </Transition.Child>
