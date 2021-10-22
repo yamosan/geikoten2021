@@ -8,7 +8,7 @@ type Props = {
   children: ReactNode;
 } & ComponentPropsWithoutRef<"div">;
 
-export const FadeInWhenVisible = forwardRef<HTMLDivElement, Props>((props, ref) => {
+export const FadeIn = forwardRef<HTMLDivElement, Props>((props, ref) => {
   const { children, className, ...attrs } = props;
   const wrapperRef = useRef<HTMLDivElement>(null);
   const mergedRef = useMergeRefs<HTMLDivElement>(ref, wrapperRef);
@@ -34,4 +34,4 @@ export const FadeInWhenVisible = forwardRef<HTMLDivElement, Props>((props, ref) 
   );
 });
 
-FadeInWhenVisible.displayName = "FadeInWhenVisible";
+FadeIn.displayName = "FadeIn";

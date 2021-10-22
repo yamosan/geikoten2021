@@ -6,7 +6,7 @@ import { useEffect, useRef } from "react";
 import { isMobile } from "react-device-detect";
 
 // import { use100vh } from "react-div-100vh";
-import { FadeInWhenVisible, Highlight, Image, Paragraph } from "@/components/basics";
+import { FadeIn, Highlight, Image, Paragraph } from "@/components/basics";
 import type { ColorLevel } from "@/components/ui";
 import { ProjectCard, Section } from "@/components/ui";
 import { use100vh } from "@/hooks/use100vh";
@@ -60,12 +60,12 @@ export const Project: VFC<Props> = ({ projects }) => {
   return (
     <Section heading="PROJECT" subHeading="企画" ref={triggerRef} className="pb-4" id="project">
       <div className="px-5 md:px-12 mb-4 md:ml-shead">
-        <FadeInWhenVisible>
+        <FadeIn>
           <Paragraph className="lg:max-w-app lg:mx-auto">
             web会場限定！芸工生が力を合わせて企画しました！
             <Highlight>ぜったい全部見てね〜！</Highlight>
           </Paragraph>
-        </FadeInWhenVisible>
+        </FadeIn>
       </div>
       <div
         className="flex items-center min-h-[480px] bg-lightGray relative overflow-x-hidden"
