@@ -36,4 +36,4 @@ yarn-error.log*
 # esling
 .eslintcache
 
-public/web_contents/
+public/static/
