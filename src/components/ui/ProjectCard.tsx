@@ -92,10 +92,10 @@ export const ProjectCard = forwardRef<HTMLDivElement, Props>((props, ref) => {
                     <div
                       className={clsx("ripple", "relative flex justify-center items-center w-full py-16 px-6 h-5/6")}
                     >
-                      <p className={clsx("ripple-text", "text-white text-sm leading-[1.8] z-10")}>
+                      <p className={clsx("ripple-contents", "text-white text-sm leading-[1.8] z-10")}>
                         {project.description}
                       </p>
-                      <div className="absolute bottom-4 right-4">
+                      <div className={clsx("ripple-contents", "absolute bottom-4 right-4")}>
                         <GoTo borderColor="white" className="h-4 w-14" />
                       </div>
                     </div>
@@ -166,10 +166,10 @@ export const ProjectCard = forwardRef<HTMLDivElement, Props>((props, ref) => {
           @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full m-auto w-96 h-96 bg-lightBrown transition delay-200 duration-700 ease-in-out scale-0 opacity-60;
           content: "";
         }
-        .ripple-text {
+        .ripple-contents {
           @apply transition-opacity duration-200 opacity-0 delay-[0];
         }
-        .parent:hover .ripple-text {
+        .parent:hover .ripple-contents {
           @apply opacity-100 delay-700;
         }
         .parent:hover .ripple::before {
