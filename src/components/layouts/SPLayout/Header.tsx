@@ -63,7 +63,7 @@ export const Header: VFC<ComponentProps<"header">> = ({ className, ...attrs }) =
 
       <style jsx>{`
         .active {
-          background: rgba(255, 255, 255, 0.8);
+          @apply bg-white bg-opacity-80;
           backdrop-filter: blur(1px);
         }
       `}</style>

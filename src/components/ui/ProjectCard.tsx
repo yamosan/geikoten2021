@@ -85,12 +85,7 @@ export const ProjectCard = forwardRef<HTMLDivElement, Props>((props, ref) => {
                 <span className={clsx("tape", bgColorMap[colorLevel])} />
                 {descriptionType === "hover" && (
                   <div className="opacity-0 transition-opacity md:group-hover:opacity-100 duration-300">
-                    <p
-                      className={clsx(
-                        "bg-lightBrown-80",
-                        "absolute inset-0 m-auto flex justify-center items-center w-full py-16 text-white text-sm leading-[1.8] px-6 h-5/6"
-                      )}
-                    >
+                    <p className="absolute inset-0 m-auto flex justify-center items-center w-full py-16 text-white text-sm leading-[1.8] px-6 h-5/6 bg-lightBrown bg-opacity-80">
                       {project.description}
                     </p>
                   </div>
@@ -125,10 +120,7 @@ export const ProjectCard = forwardRef<HTMLDivElement, Props>((props, ref) => {
         {leftRef.current && descriptionType === "flex" && (
           <div className="h-full flex items-center">
             <p
-              className={clsx(
-                "bg-lightBrown-80",
-                "flex justify-center items-center py-16 text-white text-sm leading-[1.8] px-6"
-              )}
+              className="flex justify-center items-center py-16 text-white text-sm leading-[1.8] px-6 bg-lightBrown bg-opacity-80"
               style={{ width: `${fw * 0.8}px`, height: `${fh * 0.6}px` }}
             >
               {project.description}
@@ -152,10 +144,6 @@ export const ProjectCard = forwardRef<HTMLDivElement, Props>((props, ref) => {
           content: "";
           width: ${size === "md" ? "105px" : "112px"};
           height: ${size === "md" ? "30px" : "32px"};
-        }
-
-        .bg-lightBrown-80 {
-          background: rgba(80, 71, 70, 0.8);
         }
       `}</style>
     </>
