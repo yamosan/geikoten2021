@@ -53,7 +53,7 @@ export const RoomInfoCard: VFC<Props> = (props) => {
             <p role="doc-subtitle" className="text-lg text-text">
               {`THEME${room.id}`}
             </p>
-            <h2 className="font-bold text-2xl lg:text-3xl text-text mt-1">{room.title}</h2>
+            <h2 className="font-bold text-2xl lg:text-[26px] text-text mt-1">{room.title}</h2>
           </header>
 
           <p className="text-base text-text leading-[1.8] mt-3 lg:mt-2 whitespace-pre-wrap">{room.description}</p>
