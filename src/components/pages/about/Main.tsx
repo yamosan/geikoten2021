@@ -3,6 +3,7 @@ import type { VFC } from "react";
 import { ExternalLink, FadeIn, Highlight, Image, Paragraph } from "@/components/basics";
 import { Process, Section } from "@/components/ui";
 import { Pc, PcAppDownload, Phone } from "@/components/vectors";
+import { CLUSTER_URL } from "@/constants/urls";
 import useMedia from "@/hooks/useMediaQuery";
 
 export const Main: VFC = () => {
@@ -27,7 +28,7 @@ export const Main: VFC = () => {
             </FadeIn>
           </div>
         </div>
-        <div className="pt-16 md:pt-24 px-5 md:px-12 md:ml-shead">
+        <div className="py-16 md:py-24 px-5 md:px-12 md:ml-shead">
           <div className="lg:max-w-app lg:mx-auto">
             <h3 className="text-text text-xl font-bold">参加方法</h3>
             <div className="mt-7 md:mt-8 flex flex-col space-y-6">
@@ -76,7 +77,9 @@ export const Main: VFC = () => {
                       </Paragraph>
                     </FadeIn>
 
-                    {/* TODO: clusterのリンクを追加 */}
+                    <div className="mt-4 flex justify-center">
+                      <ClusterLinkCard />
+                    </div>
                   </div>
                 </div>
               </Process>
@@ -125,5 +128,23 @@ const GooglePlayLink = () => {
         />
       </a>
     </>
+  );
+};
+
+const ClusterLinkCard = () => {
+  return (
+    <ExternalLink href={CLUSTER_URL}>
+      <div className="flex border-2 border-lightBrown h-auto sm:h-[138px] sm:w-[530px]">
+        <div className="flex-[2.2] sm:flex-[1.8] border-r-2 border-lightBrown flex flex-col justify-center items-start p-4 md:px-6">
+          <h5 className="text-[11px] md:text-[15px] font-bold">GEIKOTEN2021</h5>
+          <p className="pt-1 text-[10px]">バーチャルSNS Cluster(クラスター)</p>
+
+          <p className="pt-2 md:pt-6 text-[10px] leading-none">{CLUSTER_URL}</p>
+        </div>
+        <div className="flex-1 relative">
+          <Image src="/images/about/card.png" layout="fill" objectFit="cover" alt="バーチャル会場" />
+        </div>
+      </div>
+    </ExternalLink>
   );
 };
