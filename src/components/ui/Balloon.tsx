@@ -14,9 +14,9 @@ type Props = {
 } & ComponentProps<"div">;
 
 const BG_COLOR_MAP = {
-  shutter: "text-shutter",
-  film: "text-film",
-  lens: "text-lens",
+  shutter: "text-shutter opacity-20",
+  film: "text-film opacity-20",
+  lens: "text-lens opacity-20",
 };
 
 export const Balloon: VFC<Props> = (props) => {

@@ -18,59 +18,46 @@ export const RoomSelection: VFC<Props> = ({ rooms }) => {
 
   return (
     <>
-      <div className="relative overflow-hidden bg-white md:pl-shead pt-14 pb-20">
-        <div className="absolute top-0 left-0 w-full h-[1400px]">
-          <Balloon color="shutter" size={232} xReverse className="absolute top-36 right-0 transform translate-x-1/2" />
-          <Balloon
-            color="film"
-            size={200}
-            yReverse
-            className="absolute top-[564px] left-0 transform -translate-x-1/2"
-          />
-          <Balloon
-            color="lens"
-            size={237}
-            yReverse
-            xReverse
-            className="absolute top-[932px] right-0 transform translate-x-1/3"
-          />
-        </div>
-
-        <div className="relative z-10">
-          <div className="flex flex-col space-y-2 items-center px-10 w-max max-w-full overflow-hidden mx-auto">
-            <div
-              className={clsx(
-                "min-w-max flex items-start md:items-center space-x-1.5 pb-2 md:px-3 border-b border-lightBrown border-dashed",
-                "hachinoji"
-              )}
-            >
-              <VoteButton disabled className="flex-shrink-0" />
-              <h4 className="font-bold text-base pt-1 md:pt-0 sm">
-                {/* inline-block × w-max がしたい。(ボックスモデル的に無理) */}
-                ボタンを押して、
-                {!isMd && <br />}
-                好きな作品に投票しよう！
-              </h4>
-            </div>
-            <p className="self-end">
-              <time>
-                【期間:<time dateTime="2021-10-23">2021/10/23</time>~<time dateTime="2021-10-24">24</time>】
-              </time>
-            </p>
+      <div className="relative overflow-hidden bg-white md:ml-shead pt-14 pb-20">
+        <div className="relative z-10 flex flex-col space-y-2 items-center px-10 w-max max-w-full overflow-hidden mx-auto">
+          <div
+            className={clsx(
+              "min-w-max flex items-start md:items-center space-x-1.5 pb-2 md:px-3 border-b border-lightBrown border-dashed",
+              "hachinoji"
+            )}
+          >
+            <VoteButton disabled className="flex-shrink-0" />
+            <h4 className="font-bold text-base pt-1 md:pt-0 sm">
+              {/* inline-block × w-max がしたい。(ボックスモデル的に無理) */}
+              ボタンを押して、
+              {!isMd && <br />}
+              好きな作品に投票しよう！
+            </h4>
           </div>
-
-          <div className="mt-16 w-11/12 lg:px-4 lg:max-w-[845px] mx-auto">
-            <div className={clsx("flex flex-col space-y-16 justify-center pb-24")}>
-              {rooms.map((room, i) => (
-                <div key={room.id}>
-                  <RoomInfoCard
-                    room={room}
-                    layout={isXWide ? (i % 2 === 0 ? "row" : "row-reverse") : "column"}
-                    showLink
-                    className="min-h-[265px]"
-                  />
-                </div>
-              ))}
+          <p className="self-end">
+            <time>
+              【期間:<time dateTime="2021-10-23">2021/10/23</time>~<time dateTime="2021-10-24">24</time>】
+            </time>
+          </p>
+        </div>
+        <div className="relative">
+          <div className="relative">
+            <div className="absolute top-0 left-0 w-full h-full">
+              <Bg />
+            </div>
+            <div className="mt-16 w-11/12 lg:px-4 lg:max-w-[845px] mx-auto">
+              <div className={clsx("flex flex-col space-y-16 justify-center pb-24")}>
+                {rooms.map((room, i) => (
+                  <div key={room.id}>
+                    <RoomInfoCard
+                      room={room}
+                      layout={isXWide ? (i % 2 === 0 ? "row" : "row-reverse") : "column"}
+                      showLink
+                      className="min-h-[265px]"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
           <hr className="border-none bg-gray h-px my-8 lg:mt-30 lg:mb-16" />
@@ -125,6 +112,16 @@ const ClusterCard: VFC = () => {
           </LinkButton>
         </div>
       </div>
+    </div>
+  );
+};
+
+const Bg: VFC = () => {
+  return (
+    <div className="relative w-full h-full flex flex-col justify-around">
+      <Balloon color="shutter" size={232} xReverse className="ml-auto transform translate-x-1/2" />
+      <Balloon color="film" size={200} yReverse className="mr-auto transform -translate-x-1/2" />
+      <Balloon color="lens" size={237} yReverse xReverse className="ml-auto transform translate-x-1/3" />
     </div>
   );
 };
