@@ -226,8 +226,8 @@
     "description": "自分で足場を作って進んでくアクションRPGです！トゲや落とし穴を回避しながらゴールを目指そう！",
     "authors": [
       {
-        "name": "ハル研",
-        "grade": 2,
+        "name": "hal研",
+        "grade": 1,
         "class": "N",
         "avatarUrl": "/images/project/game/works/11/hal.png"
       }
@@ -286,7 +286,7 @@
   {
     "id": 15,
     "type": "virtual",
-    "title": "彩色哨子と眠り華",
+    "title": "彩色硝子と眠り華",
     "description": "北千種キャンパスのM101を水浸しにしてしまいました。幻想的になってしまったM101をお楽しみください。",
     "authors": [
       {
