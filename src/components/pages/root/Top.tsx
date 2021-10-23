@@ -37,7 +37,7 @@ export const Top: VFC<Props> = ({ goldSponsors }) => {
               }
             )}
           >
-            <div className="h-full flex items-center">
+            <div className="h-full flex items-center justify-center">
               <div className="relative h-full flex items-center transform transition scale-150 sm:scale-100">
                 <Image
                   src="/images/top/main_visual.png"
