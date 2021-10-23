@@ -72,7 +72,7 @@ export const Project: VFC<Props> = ({ projects }) => {
         className="flex items-center min-h-[480px] bg-lightGray relative overflow-x-hidden"
         style={{ height: height ? height * 0.66 : "66vh" }}
       >
-        <Image src="/images/top_bg.jpg" alt="背景" layout="fill" objectFit="cover" />
+        <Image src="/images/bg.jpg" alt="背景" layout="fill" objectFit="cover" />
         <div
           className="absolute flex pl-12 my-auto space-x-24 h-[65%] md:h-[73%] max-h-[800px] md:ml-shead"
           ref={boxRef}

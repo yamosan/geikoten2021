@@ -31,7 +31,7 @@ const CM: NextPage<Props> = ({ project }) => {
         <Hero project={project} />
         <MovieList
           movies={[
-            { title: "芸工展CM", youtubeUrl: "https://youtu.be/kwIO2FBaiVA" },
+            { title: "芸工展CM", youtubeUrl: "https://www.youtube.com/embed/kwIO2FBaiVA" },
             { title: "コンセプトムービー", youtubeUrl: "https://www.youtube.com/embed/w-tGNmUipk0" },
             { title: "部署長紹介", youtubeUrl: "https://www.youtube.com/embed/whpFjeH0ZqU" },
           ]}
