@@ -28,7 +28,7 @@ export const DropdownCheckboxes: VFC<Props> = ({ items, label, onChange, size })
   const selected = useMemo(() => state.some((item) => item.checked), [state]);
 
   useEffect(() => {
-    if (!onChange) return
+    if (!onChange) return;
     onChange(state.reduce<Item["value"][]>((prev, cur) => (cur.checked ? [...prev, cur.value] : prev), []));
   }, [state, onChange]);
 

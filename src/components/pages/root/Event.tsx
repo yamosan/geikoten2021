@@ -25,7 +25,7 @@ export const Event: VFC = () => {
               <EventCard
                 title={"開会式"}
                 description={"芸工展の幕開けを見届けよう！"}
-                imageSrc={"/images/event.png"}
+                imageSrc={"/images/top/opening.png"}
                 size="md"
                 className="flex-1"
               />
@@ -36,7 +36,7 @@ export const Event: VFC = () => {
               <EventCard
                 title={"閉会式"}
                 description={"芸工祭も閉幕です！みんなで見届けよう"}
-                imageSrc={"/images/event.png"}
+                imageSrc={"/images/top/closing.png"}
                 size="md"
                 className="flex-1"
               />
