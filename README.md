@@ -47,6 +47,6 @@ $ npm run dev
 ### サブディレクトリ「/sub」にエクスポート
 
 ```
-$ echo NEXT_PUBLIC_BASE_PATH=/sub > .env.production.local
+$ echo NEXT_PUBLIC_BASE_PATH=/sub > .env
 $ npm run build
 ```
