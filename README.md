@@ -1,5 +1,7 @@
 # 芸工展 2021 本サイト
 
+[![geikoten2021](public/images/readme.png)](https://geikousai-ncu.com/2021/)
+
 ## 開発
 
 ### 環境構築
