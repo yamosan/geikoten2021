@@ -36,7 +36,7 @@ export const PageSeo: FC<PageSeoProps> = (props) => {
         siteName: "芸工展2021",
       }}
       twitter={{
-        card: "summary_large_image",
+        card: "summary",
       }}
     />
   );
