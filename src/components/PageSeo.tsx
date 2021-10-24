@@ -15,7 +15,7 @@ export const PageSeo: FC<PageSeoProps> = (props) => {
     path,
     subtitle,
     description = "芸工展2021！名古屋市立大学芸術工学部の学生による様々な企画が楽しめる完全オンラインの展示会です！",
-    ogImagePath = "/image/ogp.png",
+    ogImagePath = "/images/ogp.png",
   } = props;
 
   const pageUrl = resolveFullPath(path);
