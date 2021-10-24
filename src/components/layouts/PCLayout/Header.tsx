@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import Link from "next/link";
 import type { ComponentProps, VFC } from "react";
 
 import { Image } from "@/components/basics/";
@@ -15,7 +16,11 @@ export const Header: VFC<ComponentProps<"header">> = ({ className, ...attrs }) =
       {/* TODO: ページトップに遷移(データの取得なし) -> 再度アニメーション */}
       <div className="w-full h-full max-h-[680px] my-auto flex flex-col justify-between">
         <div className="mx-auto">
-          <Image src="/images/logo.png" alt="logo" width={123} height={116} />
+          <Link href="/">
+            <a style={{ display: "block" }}>
+              <Image src="/images/logo.png" alt="logo" width={123} height={116} />
+            </a>
+          </Link>
         </div>
         <GlobalNav />
         <div className="mx-auto">
