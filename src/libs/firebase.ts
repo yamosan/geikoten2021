@@ -30,6 +30,16 @@ export async function incrementVoteCount(workId: Work["id"]): Promise<void> {
   }
 }
 
+export async function getVoteCount(workId: Work["id"]): Promise<void> {
+  const worksRef = collection(db, "works");
+  const docRef = doc(worksRef, workId.toString());
+  const docSnap = await getDoc(docRef);
+
+  if (docSnap.exists()) {
+    return docSnap.data().like;
+  }
+}
+
 // アクセスカウンター
 export async function incrementAccessCount(): Promise<number> {
   const accessRef = collection(db, "access");
