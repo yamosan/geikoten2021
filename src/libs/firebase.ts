@@ -30,7 +30,7 @@ export async function incrementVoteCount(workId: Work["id"]): Promise<void> {
   }
 }
 
-export async function getVoteCount(workId: Work["id"]): Promise<void> {
+export async function getVoteCount(workId: Work["id"]): Promise<number> {
   const worksRef = collection(db, "works");
   const docRef = doc(worksRef, workId.toString());
   const docSnap = await getDoc(docRef);

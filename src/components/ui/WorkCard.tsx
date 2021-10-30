@@ -1,8 +1,9 @@
 import clsx from "clsx";
-import React, { ComponentProps, ComponentPropsWithoutRef, FC, useState } from "react";
+import React, { ComponentProps, ComponentPropsWithoutRef, FC, useEffect, useState } from "react";
 
 import { Image } from "@/components/basics";
 import { useIsMounted } from "@/hooks/useIsMounted";
+import { getVoteCount } from "@/libs/firebase";
 import { Work } from "@/models";
 
 import { Loading } from "../vectors";
@@ -19,6 +20,7 @@ type Props = {
 export const WorkCard: FC<Props> = ({ work, dialogLayout, voted = false, handleClick }) => {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [voteCount, setVoteCount] = useState(0);
   const isMounted = useIsMounted();
 
   const handleOnLoad = () => {
@@ -26,6 +28,15 @@ export const WorkCard: FC<Props> = ({ work, dialogLayout, voted = false, handleC
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    (async () => {
+      const votedCount = await getVoteCount(work.id);
+      if (isMounted()) {
+        setVoteCount(votedCount || 0);
+      }
+    })();
+  }, [work.id, isMounted]);
 
   return (
     <>
@@ -71,7 +82,10 @@ export const WorkCard: FC<Props> = ({ work, dialogLayout, voted = false, handleC
         </button>
 
         <div className="flex flex-col">
-          <p className="text-text text-sm pt-3 pb-2 truncate">{work.title}</p>
+          <p className="text-text text-sm pt-3 pb-2 truncate">
+            {work.title}
+            <span className="bg-black text-lg font-bold text-green-80 ml-3">{voteCount}</span>
+          </p>
           <div className="flex items-center justify-between space-x-1 w-full">
             <div className="flex items-center space-x-2">
               <div className="flex-shrink-0 relative rounded-full overflow-hidden flex justify-center items-center bg-lightGray">
