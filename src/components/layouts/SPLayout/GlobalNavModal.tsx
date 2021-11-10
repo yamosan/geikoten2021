@@ -4,6 +4,7 @@ import { useCallback, VFC } from "react";
 import { ExternalLink } from "@/components/basics";
 import { InstagramIcon, TwitterIcon } from "@/components/vectors";
 import { INSTAGRAM_URL, TWITTER_URL } from "@/constants/urls";
+import useBackfaceFixed from "@/hooks/useBackfaceFixed";
 
 import { NAV_LINKS, TLink } from "../constants";
 
@@ -24,6 +25,7 @@ export const GlobalNavModal: VFC<Props> = (props) => {
     [props, router]
   );
 
+  useBackfaceFixed(props.isOpen);
   return (
     <div className="relative flex items-center justify-center w-full h-full">
       <ul className="flex flex-col pb-24 space-y-6">

@@ -47,7 +47,7 @@ export const Header: VFC<ComponentProps<"header">> = ({ className, ...attrs }) =
                 "pointer-events-none": !isOpen,
               },
               transition,
-              "fixed inset-0 h-screen bg-green-10"
+              "fixed inset-0 bg-green-10"
             )}
           >
             <GlobalNavModal onLinkClick={toggleOpen} isOpen={isOpen} />
