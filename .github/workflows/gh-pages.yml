@@ -30,6 +30,11 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
+      
+      - name: Debug
+        run: |
+          echo ${{ secrets.DIR }}
+          echo ${{ secrets.BASE_PATH }}
 
       - name: Install Dependencies
         run: npm ci
