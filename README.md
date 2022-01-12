@@ -52,3 +52,10 @@ $ npm run dev
 $ echo NEXT_PUBLIC_BASE_PATH=/sub > .env
 $ npm run build
 ```
+
+### メモ
+
+- /cafe
+- /workshop
+- /web_contents
+のURLを手動で切り替える必要がある
